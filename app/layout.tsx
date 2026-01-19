@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Devbhomi Infotech | IT Solutions & Digital Marketing",
   description:
     "Premium IT agency offering digital marketing, web development, AI automation solutions & SEO services. Based in Rishikesh.",
-  generator: "v0.app",
+  generator: "",
   icons: {
     icon: [
       {
