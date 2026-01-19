@@ -296,9 +296,8 @@ export function BlogsContent() {
           {filteredBlogs.length > 0 && (
             <motion.div variants={itemVariants} className="mt-16 text-center">
               <Button
-                variant="outline"
                 size="lg"
-                className="border-2 text-base font-semibold hover:bg-primary/5 bg-transparent"
+                className="bg-primary text-white hover:bg-primary/90 text-base font-semibold"
               >
                 Load More Articles
               </Button>
