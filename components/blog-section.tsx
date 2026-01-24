@@ -23,35 +23,39 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: 'easeOut',
+      ease: 'easeOut' as const,   // ← This fixes all the TS2322 errors
     },
   },
 }
 
 export function BlogSection() {
   const blogs = [
-    {
-      category: 'SEO',
-      title: 'Complete Guide to Technical SEO in 2026',
-      excerpt: 'Master the fundamentals of technical SEO and boost your website\'s search visibility.',
-      image: '/technical-seo-guide.jpg',
-    },
-    {
-      category: 'AI',
-      title: 'How AI Chatbots Transform Customer Support',
-      excerpt: 'Discover how intelligent chatbots can reduce support costs while improving customer satisfaction.',
-      image: '/ai-chatbots-customer-support.jpg',
-    },
-    {
-      category: 'Web Dev',
-      title: 'Building Scalable Web Applications',
-      excerpt: 'Best practices for architecting web applications that can scale with your business growth.',
-      image: '/scalable-web-applications-architecture.jpg',
-    },
-  ]
+  {
+    category: 'AI Automation',
+    title: 'AI Lead Generation Agent for Businesses',
+    excerpt:
+      'Learn how AI-powered automation agents can capture, qualify, and manage leads automatically, saving time and increasing conversions.',
+    image: 'images/ai-lead-generation-agent.webp',
+  },
+  {
+    category: 'AI Automation',
+    title: 'Customer Support AI Agent Using Chatbots',
+    excerpt:
+      'Discover how AI customer support agents handle FAQs, ticket routing, and instant replies to improve customer experience 24/7.',
+    image: 'images/ai-chatbots-customer-support.webp',
+  },
+  {
+    category: 'AI Automation',
+    title: 'AI Workflow Automation Agent for Operations',
+    excerpt:
+      'See how AI workflow automation agents integrate tools, automate repetitive tasks, and optimize daily business operations efficiently.',
+    image: 'images/ai-workflow-automation-agent.webp',
+  },
+]
+
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
       <motion.div
         className="max-w-7xl mx-auto"
         initial="hidden"
@@ -72,7 +76,7 @@ export function BlogSection() {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8 }}
-              className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group"
+              className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor- group"
             >
               <div className="h-48 overflow-hidden bg-muted">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -88,12 +92,12 @@ export function BlogSection() {
                 </span>
                 <h3 className="text-lg font-bold text-foreground mb-2">{blog.title}</h3>
                 <p className="text-foreground/70 mb-4">{blog.excerpt}</p>
-                <Link
+                {/* <Link
                   href="/blogs"
                   className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
                 >
                   Read More <ArrowRight className="w-4 h-4" />
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           ))}
@@ -106,7 +110,7 @@ export function BlogSection() {
             size="lg"
             className="border-2 text-base font-semibold hover:bg-primary/5 bg-transparent"
           >
-            <Link href="/blogs">View All Articles</Link>
+            {/* <Link href="/blogs">View All Articles</Link> */}
           </Button>
         </motion.div>
       </motion.div>

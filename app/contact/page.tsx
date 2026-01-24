@@ -442,7 +442,7 @@ export default function Contact() {
         </motion.div>
       </section>
 
-      <Footer />
+      <footer />
     </>
   )
 }

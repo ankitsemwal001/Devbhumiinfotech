@@ -1,12 +1,16 @@
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero";
-import { StatsSection } from "@/components/stats-section";
+// import { StatsSection } from "@/components/stats-section";
 import { ServicesSection } from "@/components/ServicesSection";
 import { WhyChooseUsSection } from "@/components/why-choose-us-section";
-import { ProcessSection } from "@/components/process-section";
 import { BlogSection } from "@/components/blog-section";
-import AboutSection from "@/components/AboutSection";
-import { Footer } from "@/components/footer";
+import ProcessSection from "@/components/process-section";
+import { AboutSection } from "@/components/AboutSection";
+import { PackagesSection } from "@/components/packages-section";;
+import { ProjectsSection } from "@/components/projects-section";
+import { CtaSection } from "@/components/Cta";
+// import { FaqSection } from "@/components/faq-section";
+import Footer from "@/components/footer";
 
 
 export default function Home() {
@@ -14,11 +18,14 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground overflow-hidden">
       <Header />
       <HeroSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <AboutSection />
       <ServicesSection />
       <WhyChooseUsSection />
-      <ProcessSection />
+      <ProcessSection/>
+      <PackagesSection />
+      <ProjectsSection/>
+      <CtaSection />
       <BlogSection />
       <Footer />
     </main> 

@@ -1,9 +1,9 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, cubicBezier } from "framer-motion"
 import Link from "next/link"
 import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import Footer from "@/components/footer" // Fixed: should be uppercase F (component name)
 import { Button } from "@/components/ui/button"
 import { Award, Users, Lightbulb, Heart } from "lucide-react"
 
@@ -26,7 +26,8 @@ export default function About() {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: cubicBezier(0.25, 0.46, 0.45, 0.94), // Fixed: perfect type safety
+        // You can also use: ease: "easeOut" if you prefer the built-in string
       },
     },
   }
@@ -335,7 +336,7 @@ export default function About() {
         </motion.div>
       </section>
 
-      <Footer />
+      <Footer /> {/* Fixed: component name should be capitalized */}
     </>
   )
 }

@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import ParticleBackground from "@/components/particle-background"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import ParticleBackground from "@/components/particle-background";
 
 // Animation variants
 const containerVariants = {
@@ -16,7 +16,7 @@ const containerVariants = {
       delayChildren: 0.15,
     },
   },
-} as const
+} as const;
 
 const itemVariants = {
   hidden: { opacity: 0, y: 16 },
@@ -28,12 +28,11 @@ const itemVariants = {
       ease: "easeOut" as const,
     },
   },
-} as const
+} as const;
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen bg-background flex items-center justify-center pt-24 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      
       {/* Particle Background */}
       <ParticleBackground />
 
@@ -53,7 +52,7 @@ export function HeroSection() {
         {/* Location */}
         <motion.span
           variants={itemVariants}
-          className="inline-block text-sm font-medium text-primary mb-6 tracking-wide"
+          className="inline-block text-sm font-medium text-orange-500 mb-6 tracking-wide"
         >
           Digital Growth Partner • In Rishikesh, India
         </motion.span>
@@ -65,9 +64,7 @@ export function HeroSection() {
         >
           Building High-Impact Digital Experiences
           <br />
-          <span className="text-primary">
-            That Rank, Scale & Automate
-          </span>
+          <span className="text-blue-500">That Rank, Scale & Automate</span>
         </motion.h1>
 
         {/* Description */}
@@ -75,9 +72,9 @@ export function HeroSection() {
           variants={itemVariants}
           className="text-base md:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-10"
         >
-          Strategic SEO-first architecture, performance-driven web systems,
-          and intelligent automation — built for businesses that want
-          long-term visibility, efficiency, and measurable growth.
+          Strategic SEO-first architecture, performance-driven web systems, and
+          intelligent automation — built for businesses that want long-term
+          visibility, efficiency, and measurable growth.
         </motion.p>
 
         {/* CTAs */}
@@ -88,26 +85,30 @@ export function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium group"
+            className="bg-blue-600 text-white hover:bg-blue-700 font-medium group transition-colors duration-300"
           >
-            <Link href="/contact">
+            <Link
+              href="https://wa.me/918126006791"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Start a Conversation
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
 
-          <Button
+          {/* <Button
             asChild
             size="lg"
             variant="outline"
-            className="border-2 font-medium bg-transparent hover:bg-primary/5"
+            className="border-2 font-medium bg-transparent
+             hover:bg-orange-500 hover:text-white hover:border-orange-500
+             transition-colors duration-300"
           >
-            <Link href="/work">
-              View Capabilities
-            </Link>
-          </Button>
+            <Link href="/work">What We Do</Link>
+          </Button> */}
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }
