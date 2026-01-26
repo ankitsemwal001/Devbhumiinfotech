@@ -43,7 +43,7 @@ export function AboutSection() {
   const currentContent = tabContent[activeTab];
 
   return (
-    <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/70 dark:bg-gray-900/30 text-foreground relative">
+    <section id="about" className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/70 dark:bg-gray-900/30 text-foreground relative">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* === Left Side - Image === */}
@@ -65,7 +65,7 @@ export function AboutSection() {
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100/60 dark:bg-blue-900/20 border border-blue-200/60 dark:border-blue-800/40">
                 <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 animate-pulse" />
                 <p className="text-xs sm:text-sm font-medium text-blue-700 dark:text-blue-300">
-                  Our Trusted Support
+                 About Us
                 </p>
               </div>
 

@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Check } from "lucide-react";
+
 const whatsappNumber = "918126006791";
 
 const getWhatsappLink = (packageName: string) =>
@@ -27,7 +28,6 @@ const packages = [
       { text: "Basic SEO", included: false },
       { text: "Blog Setup", included: false },
     ],
-
     cta: "Get Started",
     popular: false,
   },
@@ -46,8 +46,6 @@ const packages = [
       { text: "Blog Setup & Configuration", included: true },
       { text: "Fast Page Load Optimization", included: true },
       { text: "Deployment & Launch Support", included: true },
-
-      //  Premium-only features
       { text: "Advanced SEO Optimization", included: false },
       { text: "Performance & Core Web Vitals Optimization", included: false },
       { text: "Priority Support", included: false },
@@ -71,8 +69,7 @@ const packages = [
       { text: "Performance & Core Web Vitals Optimization", included: true },
       { text: "Security & Basic Hardening", included: true },
       { text: "Deployment, Monitoring & Priority Support", included: true },
-     { text: "AI-Powered Chatbot with Live Agent Support", included: true }
-
+      { text: "AI-Powered Chatbot with Live Agent Support", included: true },
     ],
     cta: "Go Premium",
     popular: false,
@@ -90,13 +87,13 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring" as const,
+      type: "spring",
       stiffness: 100,
       damping: 20,
       duration: 0.6,
@@ -112,6 +109,7 @@ export function PackagesSection() {
 
   return (
     <section
+      id="packages"
       ref={ref}
       className="w-full py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950"
     >
@@ -133,14 +131,13 @@ export function PackagesSection() {
           </h2>
 
           <p className="mt-4 max-w-2xl text-lg mx-auto text-base text-gray-600 dark:text-gray-400">
-            Simple and transparent packages designed to suit different needs and
-            budgets.
+            Simple and transparent packages designed to suit different needs and budgets.
           </p>
         </div>
 
         {/* Packages Grid */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 auto-rows-fr"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -149,25 +146,27 @@ export function PackagesSection() {
             <motion.div
               key={pkg.id}
               variants={cardVariants}
-              className="h-full"
-              whileHover={{ y: -4 }}
+              className="relative h-full group"
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              {pkg.popular && (
-                <div className="flex justify-center mb-4">
-                  <span className="bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-
               <div
-                className={`relative rounded-2xl p-6 sm:p-8 h-full flex flex-col transition-all duration-300 ${
+                className={`relative rounded-2xl p-6 sm:p-8 h-full flex flex-col transition-all duration-300 border ${
                   pkg.popular
-                    ? "bg-white dark:bg-gray-900 border-2 border-indigo-500/40 shadow-xl"
-                    : "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl"
-                }`}
+                    ? "border-2 border-indigo-500/60 shadow-2xl bg-gradient-to-b from-white to-indigo-50/30 dark:from-gray-900 dark:to-indigo-950/30"
+                    : "border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-2xl bg-white dark:bg-gray-900"
+                } group-hover:scale-[1.02]`}
               >
-                <div className="mb-6">
+                {/* Most Popular Badge */}
+                {pkg.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                    <span className="bg-indigo-600 text-white px-5 py-1.5 rounded-full text-sm font-semibold shadow-lg">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                {/* Content with padding adjustment for popular badge */}
+                <div className={`mb-6 ${pkg.popular ? "mt-10" : "mt-2"}`}>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-1">
                     {pkg.name}
                   </h3>
@@ -178,7 +177,7 @@ export function PackagesSection() {
 
                 <div className="mb-6 pb-6 border-b border-slate-100 dark:border-gray-700">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl sm:text-5xl text-blue-600 dark:text-blue-400">
+                    <span className="text-4xl sm:text-5xl font-bold text-blue-600 dark:text-blue-400">
                       {pkg.price}
                     </span>
                     <span className="text-slate-600 dark:text-gray-400 text-sm font-medium">
@@ -191,13 +190,13 @@ export function PackagesSection() {
                   href={getWhatsappLink(pkg.name)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full text-center py-3 px-4 rounded-lg font-semibold text-sm sm:text-base mb-6 transition-all ${
+                  className={`w-full text-center py-3.5 px-6 rounded-xl font-semibold text-base mb-8 transition-all shadow-sm ${
                     pkg.popular
-                      ? "bg-blue-600 text-white hover:bg-blue-700"
-                      : "bg-slate-100 dark:bg-gray-800 text-slate-900 dark:text-white hover:bg-blue-200 dark:hover:bg-blue-700"
+                      ? "bg-indigo-600 text-white hover:bg-indigo-700"
+                      : "bg-slate-100 dark:bg-gray-800 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-gray-700"
                   }`}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
                 >
                   {pkg.cta}
                 </motion.a>
@@ -213,17 +212,17 @@ export function PackagesSection() {
                         className="flex items-start gap-3"
                         initial={{ opacity: 0 }}
                         animate={inView ? { opacity: 1 } : { opacity: 0 }}
-                        transition={{ delay: 0.1 * idx + 0.2 }}
+                        transition={{ delay: 0.08 * idx + 0.15 }}
                       >
                         <Check
-                          className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
+                          className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
                             feature.included
                               ? "text-emerald-500"
                               : "text-slate-300 dark:text-gray-500"
                           }`}
                         />
                         <span
-                          className={`text-sm ${
+                          className={`text-sm leading-relaxed ${
                             feature.included
                               ? "text-slate-700 dark:text-gray-200"
                               : "text-slate-400 dark:text-gray-500 line-through"
@@ -251,7 +250,7 @@ export function PackagesSection() {
             Need a custom plan?{" "}
             <a
               href="mailto:infotechdevbhoomi@gmail.com"
-              className="text-blue-600 dark:text-indigo-400 font-semibold hover:text-indigo-700 dark:hover:text-indigo-300"
+              className="text-blue-600 dark:text-indigo-400 font-semibold hover:text-indigo-700 dark:hover:text-indigo-300 underline"
             >
               Contact us
             </a>

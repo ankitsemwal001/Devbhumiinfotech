@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react"
 

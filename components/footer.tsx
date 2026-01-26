@@ -10,6 +10,7 @@ import {
   Youtube,
   Twitter,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,15 +23,23 @@ export default function Footer() {
           {/* Left Side: Company Info & Links */}
           <div className="space-y-8">
             {/* Logo & About */}
+            {/* Logo & About */}
+            {/* Logo & About */}
             <div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                Devbhoomi Infotech
-              </h3>
+              <Image
+                src="/logo/DBI-official-logo-devbhoomi-infotech-white.png"
+                alt="Devbhoomi Infotech Logo"
+                width={300}
+                height={105}
+                className="mb-4 h-16 md:h-20 w-auto object-contain"
+              />
+
               <p className="text-slate-400 text-base leading-relaxed max-w-sm">
                 Award-winning digital agency delivering web development, SEO
                 services, and AI automation solutions across Uttarakhand.
               </p>
             </div>
+
             <div className="flex items-center gap-4">
               <a
                 href="https://instagram.com/"
