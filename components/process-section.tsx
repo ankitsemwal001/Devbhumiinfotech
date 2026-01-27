@@ -19,7 +19,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: "easeOut" as const,   // ← This fixes the TypeScript error
+      ease: "easeOut" as const, 
     },
   },
 }
@@ -27,11 +27,12 @@ const itemVariants = {
 export default function ProcessSection() {
 const steps = [
   { number: "01", label: "Planning" },
-  { number: "02", label: "SEO" },
-  { number: "03", label: "Design & Dev" },
-  { number: "04", label: "Optimization" },
+ { number: "02", label: "Development" },
+  { number: "03", label: "Optimization" },
+  { number: "04", label: "SEO" },
   { number: "05", label: "Growth" },
-]
+];
+
 
 
   return (

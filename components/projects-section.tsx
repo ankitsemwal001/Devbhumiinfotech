@@ -44,28 +44,30 @@ const dummyProjects: Project[] = [
     solution:
       'We delivered a complete A–Z website solution with calm design, fast performance, SEO-optimized content, Google-friendly structure, booking forms, and local SEO to attract yoga students searching in Rishikesh.',
   },
-  {
-    _id: '2',
-    title: 'Camping & Trekking Website for Adventure Companies',
-    description:
-      'Professional website for camping and trekking companies in Rishikesh. Includes tour packages, itineraries, galleries, inquiry forms, and SEO optimization to increase adventure tour bookings.',
-    image:
-      'images/devbhoomi-infotech-trekking-camping-website-rishikesh.webp',
-    category: 'web',
-    technologies: [
-      'Custom Business Website',
-      'Mobile-First Design',
-      'Tour & Package Pages',
-      'Image & Gallery Optimization',
-      'Inquiry & Booking Forms',
-      'On-Page & Technical SEO',
-      'Local SEO Optimization',
-    ],
-    challenge:
-      'Adventure and trekking businesses need strong online visibility and trust to convert visitors into tour inquiries.',
-    solution:
-      'We built an adventure-focused website with SEO-friendly pages, fast loading speed, optimized images, and local SEO targeting Rishikesh trekking and camping searches.',
-  },
+{
+  _id: '2',
+  title: 'School & College Website Development in Rishikesh',
+  description:
+    'Professional school and college website development services in Rishikesh. Ideal for schools, colleges, and educational institutions to showcase courses, admissions, faculty, campus life, and improve online visibility with SEO optimization.',
+  image:
+    'images/school-college-website-rishikesh.webp',
+  category: 'web',
+  technologies: [
+    'Custom School & College Website',
+    'Mobile-First Responsive Design',
+    'Admissions & Inquiry Forms',
+    'Courses & Departments Pages',
+    'Faculty & Staff Management',
+    'Gallery & Campus Showcase',
+    'On-Page & Technical SEO',
+    'Local SEO Optimization for Rishikesh',
+  ],
+  challenge:
+    'Schools and colleges in Rishikesh face challenges in online visibility, student admissions, and building trust with parents due to outdated or non-optimized websites.',
+  solution:
+    'We developed a modern, SEO-optimized school and college website focused on admissions, academics, and campus life, with fast loading speed and local SEO targeting Rishikesh school and college searches.',
+},
+
   {
     _id: '3',
     title: 'Hotel & Resort Booking Website And digital Solution',

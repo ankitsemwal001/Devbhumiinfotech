@@ -167,8 +167,8 @@
 ========================= */
 @media (max-width: 768px) {
   .whatsapp-float {
-    width: 50px;   /* 👈 small */
-    height: 50px;
+    width: 56px;   
+    height: 56px;
     left: 12px;
     bottom: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
@@ -184,10 +184,10 @@
 ========================= */
 @media (max-width: 480px) {
   .whatsapp-float {
-    width: 40px;   /* 👈 extra small */
-    height: 40px;
-    left: 10px;
-    bottom: 10px;
+    width: 50px;   /* 👈 extra small */
+    height: 50px;
+    left: 12px;
+    bottom: 18px;
   }
 }
 

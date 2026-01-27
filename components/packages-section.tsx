@@ -15,8 +15,8 @@ const packages = [
   {
     id: 1,
     name: "Starter Website",
-    price: "₹10,000",
-    period: "/year",
+    price: "₹15,000",
+    period: "",
     description: "Perfect for getting started",
     features: [
       { text: "5 Pages Website", included: true },
@@ -34,8 +34,8 @@ const packages = [
   {
     id: 2,
     name: "Standard Website",
-    price: "₹20,000",
-    period: "/year",
+    price: "₹25,000",
+    period: "",
     description: "Most Popular Choice",
     features: [
       { text: "8–10 Pages Website", included: true },
@@ -56,8 +56,8 @@ const packages = [
   {
     id: 3,
     name: "Premium Website",
-    price: "₹30,000",
-    period: "/year",
+    price: "₹40,000",
+    period: "",
     description: "Enterprise solutions",
     features: [
       { text: "15–20 Pages Website", included: true },

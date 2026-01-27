@@ -30,7 +30,7 @@ export function Header() {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "#about" },
+    { label: "About Us", href: "/about" },
     {
       label: "Services",
       href: "#services",
@@ -44,7 +44,7 @@ export function Header() {
       href: "#projects",
       badge: "",
     },
-    { label: "Blogs", href: "#blog" },
+    { label: "Contact us", href: "/contact" },
   ];
 
   return (

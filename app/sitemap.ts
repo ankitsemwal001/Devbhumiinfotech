@@ -2,63 +2,66 @@ import { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
+const baseUrl = "https://www.devbhoomiinfotech.com";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.devbhoomiinfotech.com";
+  const lastModified = new Date();
 
   return [
+    // ===== CORE PAGES =====
     {
       url: `${baseUrl}/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/projects`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blogs`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
 
-    // GEO / SERVICE PAGES
+    // ===== GEO / SERVICE PAGES (HIGH PRIORITY) =====
+    {
+      url: `${baseUrl}/seo-company-rishikesh`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
     {
       url: `${baseUrl}/web-development-company-rishikesh`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "weekly",
       priority: 0.95,
     },
     {
       url: `${baseUrl}/ai-automation-company-rishikesh`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/seo-company-rishikesh`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "weekly",
       priority: 0.95,
     },

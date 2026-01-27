@@ -111,7 +111,7 @@ export function CtaSection() {
                      text-xs sm:text-sm md:text-base
                      text-gray-600 text-center"
         >
-          ✓ 50+ Projects Delivered &nbsp;|&nbsp; ✓ 2 Years Experience &nbsp;|&nbsp;
+          ✓ 50+ Projects Delivered &nbsp;|&nbsp; ✓ 7 Years Experience &nbsp;|&nbsp;
           ✓ 120+ Happy Clients &nbsp;|&nbsp; ✓ 24/7 Support
         </motion.p>
       </motion.div>

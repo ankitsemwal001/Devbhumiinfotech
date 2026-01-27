@@ -22,74 +22,164 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.devbhoomiinfotech.com"),
 
   title: {
-    default: "Devbhoomi Infotech Solutions | IT, AI & Digital Services",
-    template: "%s | Devbhoomi Infotech Solutions",
+    default: "Best SEO & IT Company in Rishikesh | Devbhoomi Infotech",
+    template: "%s | Devbhoomi Infotech",
   },
 
   description:
-    "Devbhoomi Infotech Solutions is an IT, AI automation and digital marketing company in Rishikesh providing web development, SEO and intelligent business solutions.",
-
-  applicationName: "Devbhoomi Infotech Solutions",
-  generator: "Next.js",
-  category: "Technology",
+    "Devbhoomi Infotech is the best SEO, web development, AI automation and IT solutions company in Rishikesh, Uttarakhand. We help local and global businesses grow online with SEO, website development, UI/UX design, automation and digital marketing services.",
 
   /* =====================
-     ICONS
-  ====================== */
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+     KEYWORDS (SEO + GEO)
+     NOTE: Google ignores mostly, but AI & some engines still read
+  ===================== */
+  keywords: [
+    // PRIMARY
+    "best seo company in rishikesh",
+    "best it company in rishikesh",
+    "best web development company in rishikesh",
+    "devbhoomi infotech",
+    "devbhoomi infotech rishikesh",
+
+    // SEO SERVICES
+    "seo services rishikesh",
+    "local seo rishikesh",
+    "google ranking services rishikesh",
+    "seo agency rishikesh",
+    "seo expert rishikesh",
+    "seo consultant rishikesh",
+    "on page seo rishikesh",
+    "off page seo rishikesh",
+    "technical seo rishikesh",
+
+    // WEB DEVELOPMENT
+    "web development company rishikesh",
+    "website design rishikesh",
+    "responsive web design rishikesh",
+    "custom website development rishikesh",
+    "business website rishikesh",
+    "corporate website rishikesh",
+    "ecommerce website rishikesh",
+    "wordpress development rishikesh",
+    "shopify development rishikesh",
+
+    // FULL STACK / TECH
+    "full stack development rishikesh",
+    "react developer rishikesh",
+    "nextjs developer rishikesh",
+    "node js developer rishikesh",
+    "software development company rishikesh",
+    "custom software rishikesh",
+
+    // UI UX
+    "ui ux design rishikesh",
+    "website ui design rishikesh",
+    "user experience design rishikesh",
+
+    // AUTOMATION / AI
+    "ai automation rishikesh",
+    "business automation rishikesh",
+    "process automation rishikesh",
+    "automation company rishikesh",
+    "ai solutions rishikesh",
+
+    // DIGITAL MARKETING
+    "digital marketing company rishikesh",
+    "online marketing rishikesh",
+    "lead generation rishikesh",
+    "google my business optimization rishikesh",
+    "social media marketing rishikesh",
+
+    // LOCAL INTENT
+    "it company near me rishikesh",
+    "seo company near me rishikesh",
+    "web developer near me rishikesh",
+    "software company rishikesh",
+    "tech company rishikesh",
+    "digital agency rishikesh",
+
+    // INDUSTRY SPECIFIC
+    "seo for yoga schools rishikesh",
+    "seo for hotels rishikesh",
+    "seo for local business rishikesh",
+    "website for schools rishikesh",
+    "website for startups rishikesh",
+  ],
+
+  applicationName: "Devbhoomi Infotech",
+  generator: "Next.js",
+  category: "Technology",
+  authors: [{ name: "Devbhoomi Infotech", url: "https://www.devbhoomiinfotech.com" }],
+  publisher: "Devbhoomi Infotech",
+
+  /* =====================
+     AEO / AI SEARCH
+  ===================== */
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+
+  /* =====================
+     GEO / LOCAL SEO
+  ===================== */
+  other: {
+    "geo.region": "IN-UT",
+    "geo.placename": "Rishikesh",
+    "geo.position": "30.0869;78.2676",
+    ICBM: "30.0869, 78.2676",
   },
 
   /* =====================
      ROBOTS
-  ====================== */
+  ===================== */
   robots: {
     index: true,
     follow: true,
   },
 
   /* =====================
-     OPEN GRAPH (GLOBAL FALLBACK)
-  ====================== */
+     OPEN GRAPH
+  ===================== */
   openGraph: {
     type: "website",
-    siteName: "Devbhoomi Infotech Solutions",
+    siteName: "Devbhoomi Infotech",
     url: "https://www.devbhoomiinfotech.com",
     locale: "en_IN",
+    title: "Best SEO & IT Company in Rishikesh | Devbhoomi Infotech",
+    description:
+      "Top-rated SEO, web development and AI automation company in Rishikesh helping businesses grow online.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Devbhoomi Infotech Solutions",
+        alt: "Devbhoomi Infotech - Best IT Company in Rishikesh",
       },
     ],
   },
 
   /* =====================
      TWITTER / X
-  ====================== */
+  ===================== */
   twitter: {
     card: "summary_large_image",
-    site: "@devbhoomiinfo",
-    creator: "@devbhoomiinfo",
+    title: "Best SEO Company in Rishikesh | Devbhoomi Infotech",
+    description:
+      "SEO, Web Development & AI Automation Company in Rishikesh",
     images: ["/og-image.jpg"],
   },
+
+  /* =====================
+     GOOGLE VERIFICATION
+  ===================== */
+  verification: {
+    google: "kKMGJgVN_JKMPqadBIV5KEUnsPCNYyFMELH3V7FRjnU",
+  },
 };
+
 
 /* =====================
    ROOT LAYOUT
