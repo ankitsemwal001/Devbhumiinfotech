@@ -18,6 +18,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://www.devbhoomiinfotech.com/sitemap.xml",
-    host: "https://www.devbhoomiinfotech.com",
   };
 }

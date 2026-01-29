@@ -2,6 +2,8 @@
 const nextConfig = {
   output: "export",
 
+  trailingSlash: true, // ⭐ THIS IS THE FIX
+
   typescript: {
     ignoreBuildErrors: true,
   },

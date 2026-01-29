@@ -124,26 +124,63 @@ export default function Contact() {
         <Header />
 
       {/* Hero Section */}
-      <section className="relative h-96 md:h-[450px] w-full overflow-hidden bg-gradient-to-r from-teal-800/80 to-teal-900/80">
-        <Image
-          src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
-          alt="Best SEO Company in Rishikesh - Devbhoomi Infotech Team Working Together"
-          fill
-          className="absolute inset-0 object-cover -z-10"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40"></div>
+    <section className="relative h-96 md:h-[450px] w-full overflow-hidden bg-gradient-to-r from-teal-800/90 to-teal-950/90">
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4">
-            Devbhoomi Infotech – Contact us
-          </h1>
-          <p className="text-xl md:text-2xl font-semibold text-orange-300/90">
-            Grow Your Business Online in Rishikesh Today
-          </p>
+  {/* Floating abstract shapes - Bottom Left */}
+  <div className="absolute bottom-0 left-0 w-48 h-48 md:w-64 md:h-64 pointer-events-none z-0 opacity-40 md:opacity-50">
+    <div className="absolute bottom-6 left-6 w-20 h-20 md:w-32 md:h-32 bg-orange-400/20 rounded-full animate-float-slow blur-xl"></div>
+    <div className="absolute bottom-12 left-20 w-16 h-16 md:w-24 md:h-24 bg-teal-300/30 rounded-xl rotate-45 animate-float-medium"></div>
+    <div className="absolute bottom-4 left-32 w-24 h-24 md:w-36 md:h-36 border-2 border-white/30 rounded-full animate-pulse-slow"></div>
+  </div>
 
-        </div>
-      </section>
+  {/* Floating abstract shapes - Bottom Right */}
+  <div className="absolute bottom-0 right-0 w-48 h-48 md:w-64 md:h-64 pointer-events-none z-0 opacity-40 md:opacity-50">
+    <div className="absolute bottom-8 right-8 w-24 h-24 md:w-40 md:h-40 bg-teal-400/15 rounded-full animate-float-medium blur-lg"></div>
+    <div className="absolute bottom-16 right-20 w-20 h-20 md:w-28 md:h-28 bg-orange-300/25 rounded-3xl -rotate-12 animate-float-slow"></div>
+    <div className="absolute bottom-6 right-32 w-16 h-16 md:w-24 md:h-24 border border-white/40 rounded-full animate-pulse"></div>
+  </div>
+
+  {/* Main content */}
+  <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-6 sm:px-8">
+
+    {/* H1 – SEO focused */}
+    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-5 drop-shadow-xl">
+      Contact Us  DevBhoomi Infotech
+    </h1>
+
+    {/* Sub-heading */}
+    <p className="text-xl md:text-2xl font-bold text-orange-300/95 tracking-wide mb-6 drop-shadow-lg">
+      Professional Website Design & Development Services in Rishikesh, Uttarakhand
+    </p>
+
+    {/* Description */}
+    <p className="text-base md:text-lg text-gray-100 max-w-3xl mb-8 leading-relaxed font-light drop-shadow-md">
+      Looking for a reliable website design company in Rishikesh, Uttarakhand?
+      Devbhoomi Infotech offers custom website design, responsive web development
+      and SEO-friendly solutions to help your business grow online.
+    </p>
+
+    {/* Breadcrumb */}
+    <nav aria-label="Breadcrumb" className="text-sm md:text-base text-gray-300/90">
+      <ol className="flex flex-wrap items-center justify-center gap-2.5">
+        <li>
+          <a
+            href="https://www.devbhoomiinfotech.com/"
+            className="hover:text-orange-400 transition-colors font-medium"
+          >
+            Dev-Bhoomi Infotech
+          </a>
+        </li>
+        <li className="text-gray-200">›</li>
+        <li className="text-orange-400 font-semibold">Contact Us</li>
+      </ol>
+    </nav>
+
+  </div>
+</section>
+
 
       {/* Contact Form + Info Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">

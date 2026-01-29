@@ -5,6 +5,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Footer from "@/components/footer";
 import { useState } from "react";
+import { Code2, Palette, Zap } from "lucide-react";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("mission");
@@ -14,19 +15,21 @@ export default function About() {
     { id: "vision", label: "OUR VISION" },
     { id: "goal", label: "OUR GOAL" },
   ];
+
   return (
     <>
       <Head>
         <title>
-          Best SEO & Web Development Company in Rishikesh | Devbhoomi Infotech
+          Best Website Design & Web Development Company in Rishikesh,
+          Uttarakhand
         </title>
         <meta
           name="description"
-          content="Devbhoomi Infotech is the best SEO company in Rishikesh, Uttarakhand offering high-intent SEO services, web development, full stack development, digital marketing, automation solutions, website design, UI/UX, software development & business automation in Rishikesh. Get top Google ranking, lead generation & business growth with the leading SEO agency and web development company in Rishikesh."
+          content="Devbhoomi Infotech is the best website design, web development and SEO company in Rishikesh, Uttarakhand helping businesses rank higher and generate leads."
         />
         <meta
           name="keywords"
-          content="best seo company in rishikesh, seo services rishikesh, best seo agency rishikesh, top seo company in rishikesh, seo expert rishikesh, affordable seo services rishikesh, seo company rishikesh uttarakhand, local seo rishikesh, google ranking rishikesh, seo agency near me rishikesh, digital marketing company rishikesh, digital marketing agency rishikesh, best digital marketing agency in rishikesh, web development company in rishikesh, website development rishikesh, full stack development rishikesh, full stack developer rishikesh, best web development company rishikesh, web design company rishikesh, ui ux design rishikesh, custom website development rishikesh, ecommerce website development rishikesh, software development company rishikesh, app development rishikesh, automation services rishikesh, business automation rishikesh, robotic process automation rishikesh, best automation company in rishikesh, devbhoomi infotech rishikesh, devbhoomi infotech seo rishikesh, devbhoomi infotech web development rishikesh, best seo company near me rishikesh, top web developer rishikesh, leading seo agency rishikesh, high intent seo rishikesh, local business seo rishikesh, organic seo rishikesh, best full stack company rishikesh, react developer rishikesh, nextjs developer rishikesh, node js developer rishikesh, best website company rishikesh uttarakhand, digital transformation rishikesh, online marketing rishikesh, lead generation rishikesh, google my business optimization rishikesh, seo audit rishikesh, keyword research rishikesh, backlink building rishikesh, content marketing rishikesh, social media marketing rishikesh, ppc services rishikesh, best automation agency rishikesh, business process automation rishikesh, devbhoomi infotech automation, devbhoomi infotech full stack, devbhoomi infotech seo services, top rated seo company rishikesh, number 1 seo agency rishikesh, best seo company rishikesh 2025, best web development services rishikesh, professional website design rishikesh, responsive web design rishikesh, wordpress development rishikesh, shopify development rishikesh, custom software development rishikesh, erp development rishikesh, crm development rishikesh, ai automation rishikesh, machine learning services rishikesh, best digital agency rishikesh, top digital marketing company rishikesh uttarakhand, seo specialist rishikesh, seo consultant rishikesh, seo freelancer rishikesh, best seo package rishikesh, monthly seo services rishikesh, enterprise seo rishikesh, small business seo rishikesh, ecommerce seo rishikesh, local seo expert rishikesh, google ads agency rishikesh, facebook ads rishikesh, instagram marketing rishikesh, youtube seo rishikesh, video marketing rishikesh, branding agency rishikesh, logo design rishikesh, graphic design rishikesh, best it company rishikesh, software company rishikesh, tech company rishikesh, devbhoomi infotech best seo, devbhoomi infotech rishikesh automation, devbhoomi infotech web dev rishikesh"
+          content="best seo company in rishikesh, seo services rishikesh, best seo agency rishikesh, top seo company in rishikesh, seo expert rishikesh, affordable seo services rishikesh, seo company rishikesh uttarakhand, local seo rishikesh, google ranking rishikesh, seo agency near me rishikesh, digital marketing company rishikesh, digital marketing agency rishikesh, best digital marketing agency in rishikesh, web development company in rishikesh, website development rishikesh, full stack development rishikesh, full stack developer rishikesh, best web development company rishikesh, web design company rishikesh, ui ux design rishikesh, custom website development rishikesh, ecommerce website development rishikesh, software development company rishikesh, app development rishikesh, automation services rishikesh, business automation rishikesh, robotic process automation rishikesh, best automation company in rishikesh, devbhoomi infotech rishikesh, devbhoomi infotech seo rishikesh, devbhoomi infotech web development rishikesh, best seo company near me rishikesh, top web developer rishikesh, leading seo agency rishikesh, high intent seo rishikesh, local business seo rishikesh, organic seo rishikesh, best full stack company rishikesh, react developer rishikesh, nextjs developer rishikesh, node js developer rishikesh, best website company rishikesh uttarakhand, digital transformation rishikesh, online marketing rishikesh, lead generation rishikesh, google my business optimization rishikesh, seo audit rishikesh, keyword research rishikesh, backlink building rishikesh, content marketing rishikesh, social media marketing rishikesh, ppc services rishikesh, best automation agency rishikesh, business process automation rishikesh, devbhoomi infotech automation, devbhoomi infotech full stack, devbhoomi infotech seo services, top rated seo company rishikesh, number 1 seo agency rishikesh, best seo company rishikesh 2025, best web development services rishikesh, professional website design rishikesh, responsive web design rishikesh, wordpress development rishikesh, shopify development rishikesh, custom software development rishikesh, erp development rishikesh, crm development rishikesh, ai automation rishikesh, machine learning services rishikesh, best digital agency rishikesh, top digital marketing company rishikesh uttarakhand, seo specialist rishikesh, seo consultant rishikesh, seo freelancer rishikesh, best seo package rishikesh, monthly seo services rishikesh, enterprise seo rishikesh, small business seo rishikesh, ecommerce seo rishikesh, local seo expert rishikesh, google ads agency rishikesh, facebook ads rishikesh, instagram marketing rishikesh, youtube seo rishikesh, video marketing rishikesh, branding agency rishikesh, logo design rishikesh, graphic design rishikesh, best it company rishikesh, software company rishikesh, tech company rishikesh, devbhoomi infotech best seo, devbhoomi infotech rishikesh automation, devbhoomi infotech web dev rishikesh, best it company in rishikesh, website designing company in rishikesh, web development company in rishikesh, best website designing course in rishikesh, web development training institute in rishikesh, seo company in rishikesh, seo services rishikesh, local seo rishikesh, digital marketing company rishikesh, web design and development services rishikesh, full stack development rishikesh, full stack web developer rishikesh, responsive web design rishikesh, ui ux design services rishikesh, custom website development rishikesh, ecommerce website development rishikesh, software development company rishikesh, automation services rishikesh, business automation rishikesh, ai automation rishikesh, google ranking services rishikesh, devbhoomi infotech rishikesh, it training institute rishikesh, professional web design rishikesh "
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -70,23 +73,62 @@ export default function About() {
 
       <div className="min-h-screen bg-white">
         {/* Hero Section with Dark Overlay */}
-        <section className="relative h-96 md:h-[450px] w-full overflow-hidden bg-gradient-to-r from-teal-800/80 to-teal-900/80">
-          <Image
-            src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
-            alt="Best SEO Company in Rishikesh - Devbhoomi Infotech Team Working Together"
-            fill
-            className="absolute inset-0 object-cover -z-10"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/40"></div>
+        <section className="relative h-96 md:h-[450px] w-full overflow-hidden bg-gradient-to-r from-teal-800/90 to-teal-950/90">
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/50"></div>
 
-          <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4">
-              Devbhoomi Infotech - About us
+          {/* Floating shapes - Left */}
+          <div className="absolute bottom-0 left-0 w-48 h-48 md:w-64 md:h-64 pointer-events-none z-0 opacity-40 md:opacity-50">
+            <div className="absolute bottom-6 left-6 w-20 h-20 md:w-32 md:h-32 bg-orange-400/20 rounded-full animate-float-slow blur-xl"></div>
+            <div className="absolute bottom-12 left-20 w-16 h-16 md:w-24 md:h-24 bg-teal-300/30 rounded-xl rotate-45 animate-float-medium"></div>
+            <div className="absolute bottom-4 left-32 w-24 h-24 md:w-36 md:h-36 border-2 border-white/30 rounded-full animate-pulse-slow"></div>
+          </div>
+
+          {/* Floating shapes - Right */}
+          <div className="absolute bottom-0 right-0 w-48 h-48 md:w-64 md:h-64 pointer-events-none z-0 opacity-40 md:opacity-50">
+            <div className="absolute bottom-8 right-8 w-24 h-24 md:w-40 md:h-40 bg-teal-400/15 rounded-full animate-float-medium blur-lg"></div>
+            <div className="absolute bottom-16 right-20 w-20 h-20 md:w-28 md:h-28 bg-orange-300/25 rounded-3xl -rotate-12 animate-float-slow"></div>
+            <div className="absolute bottom-6 right-32 w-16 h-16 md:w-24 md:h-24 border border-white/40 rounded-full animate-pulse"></div>
+          </div>
+
+          {/* Main content */}
+          <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-6 sm:px-8">
+            {/* H1 – same style */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-5 drop-shadow-xl">
+              About Us - Devbhoomi Infotech
             </h1>
-            <p className="text-xl md:text-2xl font-semibold text-orange-300/90">
+
+            {/* Orange sub-heading – same */}
+            <p className="text-xl md:text-2xl font-bold text-orange-300/95 tracking-wide mb-6 drop-shadow-lg">
               Best SEO, Web Development & Automation Company in Rishikesh
             </p>
+
+            {/* Description – same */}
+            <p className="text-base md:text-lg text-gray-100 max-w-3xl mb-8 leading-relaxed font-light drop-shadow-md">
+              Devbhoomi Infotech is a leading digital solutions company in
+              Rishikesh, helping businesses grow with result-oriented SEO,
+              modern website design, scalable web development and smart
+              automation solutions.
+            </p>
+
+            {/* Breadcrumb – same */}
+            <nav
+              aria-label="Breadcrumb"
+              className="text-sm md:text-base text-gray-300/90"
+            >
+              <ol className="flex flex-wrap items-center justify-center gap-2.5">
+                <li>
+                  <a
+                    href="https://www.devbhoomiinfotech.com/"
+                    className="hover:text-orange-400 transition-colors font-medium"
+                  >
+                    Dev-Bhoomi Infotech
+                  </a>
+                </li>
+                <li className="text-gray-200">›</li>
+                <li className="text-orange-400 font-semibold">About Us</li>
+              </ol>
+            </nav>
           </div>
         </section>
 
@@ -210,7 +252,7 @@ export default function About() {
 
         {/* Stats Section */}
         {/* Stats Section - Height reduced for better attractiveness */}
-        <section className="bg-teal-600 text-white py-12 px-6 md:py-8">
+        <section className="text-white py-12 px-6 md:py-8 bg-gradient-to-b from-teal-950 to-teal-900 text-white">
           {" "}
           {/* Reduced py-20 to py-12/16 for shorter height */}
           <div className="max-w-7xl mx-auto">
@@ -249,7 +291,7 @@ export default function About() {
         </section>
 
         {/* Mission Section */}
-        <section className="py-20 px-6 md:px-12 lg:px-24 max-w-8xl mx-auto">
+        <section className="py-20 px-6 md:px-12 lg:px-24 max-w-8xl mx-auto bg-blue-100">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content with Tabs */}
             <div>
@@ -362,104 +404,120 @@ export default function About() {
             </div>
           </div>
         </section>
-<section className="py-20 px-6 md:px-12 lg:px-24 max-w-8xl mx-auto bg-gray-50">
-  {/* Centered Heading */}
-  <div className="text-center mb-10">
-    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-      We Teach & Deliver <span className="italic text-teal-600">Top Digital Skills</span> in Rishikesh
-    </h2>
-  </div>
+        <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
+          <div className="max-w-8xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Left Column - Content (Ab paragraphs mein) */}
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100/60 border border-blue-200/60 mb-6">
+                  <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+                  <p className="text-xs sm:text-sm font-medium text-blue-700">
+                    Devbhoomi Infotech Training
+                  </p>
+                </div>
 
-  {/* Paragraphs */}
-  <div className="max-w-6xl mx-auto text-center mb-16">
-    <p className="text-gray-700 text-lg leading-relaxed mb-6">
-      Devbhoomi Infotech is the leading IT training and service provider in Rishikesh, Uttarakhand. We don't just build — we teach businesses and students how to master <strong>website design Rishikesh</strong>, <strong>website development Rishikesh</strong>, <strong>AI automation Rishikesh</strong>, and <strong>SEO services Rishikesh</strong>. Whether you're a tourism startup, hotel, local shop, student, freelancer or enterprise, we help you learn, implement, and grow with high-performance digital tools that rank on Google, automate tasks, and attract real customers.
-    </p>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  What We Teach & Train
+                </h2>
 
-    <p className="text-gray-700 text-lg leading-relaxed">
-      Our expert team provides hands-on training + full project implementation so Rishikesh businesses and individuals become self-reliant while achieving fast, measurable results in today's digital world.
-    </p>
-  </div>
+                <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                  Devbhoomi Infotech Solution is the best website designing and
+                  web development training institute in Rishikesh, offering
+                  practical, job-oriented, and industry-ready IT courses. If you
+                  are looking for the best website designing course in Rishikesh
+                  or web development training near you, we provide hands-on
+                  learning with live projects and expert mentorship for
+                  students, freshers, and working professionals.
+                </p>
 
-  {/* 4 Cards in a single row – balanced height & width */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-    {/* Card 1 */}
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col">
-      <div className="relative h-60">
-        <Image
-          src="https://brandpoets.com/wp-content/uploads/2021/03/BP-Responsive-Websites-Palace.jpg"
-          alt="Website Design Rishikesh training - responsive modern layouts"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-      </div>
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-teal-700 mb-3">Website Design Rishikesh</h3>
-        <p className="text-gray-600 text-base leading-relaxed flex-grow">
-          Stunning, mobile-first designs with UI/UX focus — beautiful layouts and branding that convert visitors into customers for tourism & local businesses.
-        </p>
-      </div>
-    </div>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Palette className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-2 text-xl">
+                        Best Website Designing Course in Rishikesh
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        Join the best website designing institute in Rishikesh
+                        and learn modern UI/UX design, responsive website
+                        layouts, Figma and Adobe XD, color theory, typography,
+                        and real client projects. This website designing course
+                        in Rishikesh with placement support helps you build a
+                        strong portfolio and start your career in website
+                        designing companies in Rishikesh and nearby locations.
+                      </p>
+                    </div>
+                  </div>
 
-    {/* Card 2 */}
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col">
-      <div className="relative h-60">
-        <Image
-          src="https://images.pexels.com/photos/34804007/pexels-photo-34804007/free-photo-of-working-on-code-with-laptop-indoors.jpeg"
-          alt="Website Development Rishikesh course - coding and frameworks"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-      </div>
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-orange-700 mb-3">Website Development Rishikesh</h3>
-        <p className="text-gray-600 text-base leading-relaxed flex-grow">
-          Custom development with HTML, CSS, JS, PHP, React, Next.js, WordPress — fast, secure, SEO-ready websites that scale perfectly.
-        </p>
-      </div>
-    </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Code2 className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-2 text-xl">
+                        Best Web Development Training Institute in Rishikesh
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        Enroll in the best web development course in Rishikesh
+                        and master full-stack development by learning HTML, CSS,
+                        JavaScript, React, Next.js, Node.js, Express, MongoDB,
+                        Tailwind CSS, Git, and live deployment. This
+                        job-oriented web development training in Rishikesh is
+                        designed to help you build real-world projects and grow
+                        as a professional web developer.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-    {/* Card 3 */}
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col">
-      <div className="relative h-60">
-        <Image
-          src="https://images.pexels.com/photos/32026165/pexels-photo-32026165.jpeg"
-          alt="AI Automation Rishikesh training - workflow and bots"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-      </div>
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-purple-700 mb-3">AI Automation Rishikesh</h3>
-        <p className="text-gray-600 text-base leading-relaxed flex-grow">
-          Intelligent workflows, RPA, CRM/ERP bots — save time, reduce errors, and scale operations smartly for local businesses.
-        </p>
-      </div>
-    </div>
+                <button className="mt-10 px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors">
+                  Start Your Learning Journey
+                </button>
+              </div>
 
-    {/* Card 4 */}
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col">
-      <div className="relative h-60">
-        <Image
-          src="https://bytezeroinc.com/wp-content/uploads/2025/08/Gemini_Generated_Image_f6p9vwf6p9vwf6p9-scaled.png"
-          alt="SEO Services Rishikesh - ranking growth dashboard"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-      </div>
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-green-700 mb-3">SEO Services Rishikesh</h3>
-        <p className="text-gray-600 text-base leading-relaxed flex-grow">
-          High-intent SEO training & services — local SEO, keyword research, GMB, content & backlinks to get #1 rankings fast.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+              {/* Right Column - Cards Grid (waise hi rakha hai – yaha map rakh sakte ho kyuki cards ka design acha lagta hai) */}
+              <div className="grid grid-cols-1 gap-6">
+                {[
+                  {
+                    icon: Palette,
+                    title: "Web Design",
+                    description:
+                      "Learn professional and modern web design with the Best Website Designing Course in Rishikesh. We teach UI/UX, responsive layouts, and creative website design techniques to help you become a skilled web designer and work with top website designing companies in Rishikesh.",
+                  },
+                  {
+                    icon: Code2,
+                    title: "Web Development",
+                    description:
+                      "Master full-stack web development with the Best Web Development Training Institute in Rishikesh. Learn to build fast, secure, and scalable websites using industry-standard technologies from the best web development company in Rishikesh.",
+                  },
+                ].map((service, index) => {
+                  const IconComponent = service.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="group p-8 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl hover:shadow-xl hover:border-blue-300 transition-all duration-300"
+                    >
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center group-hover:bg-orange-100 transition-colors">
+                          <IconComponent className="w-6 h-6 text-blue-600 group-hover:text-orange-600 transition-colors" />
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                          {service.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-600 leading-relaxed text-md">
+                        {service.description}
+                      </p>
+                      <div className="mt-4 h-1 w-0 bg-orange-600 group-hover:w-12 transition-all duration-300" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <Footer />
     </>

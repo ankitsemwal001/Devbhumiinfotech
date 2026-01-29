@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "/",
+    canonical: "https://www.devbhoomiinfotech.com/",
   },
 };
 

@@ -83,7 +83,7 @@ export function Header() {
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* LOGO */}
-            <Link href="#hero" className="flex-shrink-0 group flex items-center">
+            <Link href="/" className="flex-shrink-0 group flex items-center">
               <Image
                 src="/logo/DBI-official-logo-devbhoomi-infotech-rishikeshi.png"
                 alt="Devbhoomi Infotech Logo"
