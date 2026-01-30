@@ -1,178 +1,173 @@
-'use client'
-import { useState, useRef } from 'react'
-import { motion, AnimatePresence, useInView } from 'framer-motion'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import { Dialog, DialogContent } from '@/components/ui/dailog'
-import { Badge } from '@/components/ui/badge'
-import { ExternalLink, X, ArrowRight } from 'lucide-react'
-import Link from 'next/link'
+"use client";
+import { useState, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dailog";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, X, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 type Project = {
-  _id: string
-  title: string
-  description: string
-  image: string
-  category: 'web' | 'automation' | 'seo'
-  technologies: string[]
-  liveLink?: string
-  codeLink?: string
-  challenge: string
-  solution: string
-}
+  _id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: "web" | "automation" | "seo";
+  technologies: string[];
+  liveLink?: string;
+  codeLink?: string;
+  challenge: string;
+  solution: string;
+};
 
 const dummyProjects: Project[] = [
   {
-    _id: '1',
-    title: 'Yoga Retreat & Wellness Website And digital Solution',
+    _id: "1",
+    title: "Yoga Retreat & Wellness Website And digital Solution",
     description:
-      'Complete website solution for yoga retreats and wellness centers in Rishikesh. We design, develop, and optimize yoga websites with booking systems, blogs, and full SEO to help yoga businesses get more inquiries and retreat bookings.',
-    image:
-      '/images/yoga-wellness-website-template-dark-green.webp',
-    category: 'web',
+      "Complete website solution for yoga retreats and wellness centers in Rishikesh. We design, develop, and optimize yoga websites with booking systems, blogs, and full SEO to help yoga businesses get more inquiries and retreat bookings.",
+    image: "/images/yoga-wellness-website-template-dark-green.webp",
+    category: "web",
     technologies: [
-      'Custom Website Development',
-      'On-Page SEO',
-      'Responsive & Mobile-Friendly Design',
-      'Technical SEO (Speed, Indexing, Schema)',
-      'Off-Page SEO & Backlinks',
-      'Online Booking & Inquiry System',
-      'Blog & Content Management',
+      "Custom Website Development",
+      "On-Page SEO",
+      "Responsive & Mobile-Friendly Design",
+      "Technical SEO (Speed, Indexing, Schema)",
+      "Off-Page SEO & Backlinks",
+      "Online Booking & Inquiry System",
+      "Blog & Content Management",
     ],
     challenge:
-      'Yoga retreat businesses in Rishikesh need websites that build trust, rank on Google, and convert visitors into bookings.',
+      "Yoga retreat businesses in Rishikesh need websites that build trust, rank on Google, and convert visitors into bookings.",
     solution:
-      'We delivered a complete A–Z website solution with calm design, fast performance, SEO-optimized content, Google-friendly structure, booking forms, and local SEO to attract yoga students searching in Rishikesh.',
+      "We delivered a complete A–Z website solution with calm design, fast performance, SEO-optimized content, Google-friendly structure, booking forms, and local SEO to attract yoga students searching in Rishikesh.",
   },
-{
-  _id: '2',
-  title: 'School & College Website Development in Rishikesh',
-  description:
-    'Professional school and college website development services in Rishikesh. Ideal for schools, colleges, and educational institutions to showcase courses, admissions, faculty, campus life, and improve online visibility with SEO optimization.',
-  image:
-    'images/school-college-website-rishikesh.webp',
-  category: 'web',
-  technologies: [
-    'Custom School & College Website',
-    'Mobile-First Responsive Design',
-    'Admissions & Inquiry Forms',
-    'Courses & Departments Pages',
-    'Faculty & Staff Management',
-    'Gallery & Campus Showcase',
-    'On-Page & Technical SEO',
-    'Local SEO Optimization for Rishikesh',
-  ],
-  challenge:
-    'Schools and colleges in Rishikesh face challenges in online visibility, student admissions, and building trust with parents due to outdated or non-optimized websites.',
-  solution:
-    'We developed a modern, SEO-optimized school and college website focused on admissions, academics, and campus life, with fast loading speed and local SEO targeting Rishikesh school and college searches.',
-},
+  {
+    _id: "2",
+    title: "School & College Website Development in Rishikesh",
+    description:
+      "Professional school and college website development services in Rishikesh. Ideal for schools, colleges, and educational institutions to showcase courses, admissions, faculty, campus life, and improve online visibility with SEO optimization.",
+    image: "images/school-college-website-rishikesh.webp",
+    category: "web",
+    technologies: [
+      "Custom School & College Website",
+      "Mobile-First Responsive Design",
+      "Admissions & Inquiry Forms",
+      "Courses & Departments Pages",
+      "Faculty & Staff Management",
+      "Gallery & Campus Showcase",
+      "On-Page & Technical SEO",
+      "Local SEO Optimization for Rishikesh",
+    ],
+    challenge:
+      "Schools and colleges in Rishikesh face challenges in online visibility, student admissions, and building trust with parents due to outdated or non-optimized websites.",
+    solution:
+      "We developed a modern, SEO-optimized school and college website focused on admissions, academics, and campus life, with fast loading speed and local SEO targeting Rishikesh school and college searches.",
+  },
 
   {
-    _id: '3',
-    title: 'Hotel & Resort Booking Website And digital Solution',
+    _id: "3",
+    title: "Hotel & Resort Booking Website And digital Solution",
     description:
-      'Complete hotel and resort website solution for businesses in Rishikesh. Includes room pages, pricing, photo galleries, booking inquiries, and SEO to increase direct hotel bookings.',
-    image:
-      'images/devbhoomi-infotech-hotel-resort-website-rishikesh.webp',
-    category: 'web',
+      "Complete hotel and resort website solution for businesses in Rishikesh. Includes room pages, pricing, photo galleries, booking inquiries, and SEO to increase direct hotel bookings.",
+    image: "images/devbhoomi-infotech-hotel-resort-website-rishikesh.webp",
+    category: "web",
     technologies: [
-      'Custom Website Development',
-      'Premium UI & Branding',
-      'Room & Pricing Pages',
-      'Booking & Inquiry Forms',
-      'On-Page SEO',
-      'Technical SEO & Speed Optimization',
-      'Local SEO for Hotels',
+      "Custom Website Development",
+      "Premium UI & Branding",
+      "Room & Pricing Pages",
+      "Booking & Inquiry Forms",
+      "On-Page SEO",
+      "Technical SEO & Speed Optimization",
+      "Local SEO for Hotels",
     ],
     challenge:
-      'Hotels in Rishikesh depend too much on third-party booking platforms and need more direct bookings.',
+      "Hotels in Rishikesh depend too much on third-party booking platforms and need more direct bookings.",
     solution:
-      'We created a premium hotel website with fast loading pages, SEO-optimized room content, local search optimization, and clear booking calls-to-action to increase direct inquiries.',
+      "We created a premium hotel website with fast loading pages, SEO-optimized room content, local search optimization, and clear booking calls-to-action to increase direct inquiries.",
   },
   {
-    _id: '4',
-    title: 'Custom SEO Blog & Content Dashboard System',
+    _id: "4",
+    title: "Custom SEO Blog & Content Dashboard System",
     description:
-      'Fully custom SEO blog and content dashboard that connects with any website. Ideal for businesses in Rishikesh that want full control over blogs, SEO content, and website performance.',
-    image:
-      'images/custom-blog-editor-dashboard.webp',
-    category: 'seo',
+      "Fully custom SEO blog and content dashboard that connects with any website. Ideal for businesses in Rishikesh that want full control over blogs, SEO content, and website performance.",
+    image: "images/custom-blog-editor-dashboard.webp",
+    category: "seo",
     technologies: [
-      'Custom CMS & Dashboard',
-      'Dynamic Content Management',
-      'SEO Content Controls',
-      'Schema & Structured Data',
-      'Website Performance Optimization',
-      'Scalable Architecture',
+      "Custom CMS & Dashboard",
+      "Dynamic Content Management",
+      "SEO Content Controls",
+      "Schema & Structured Data",
+      "Website Performance Optimization",
+      "Scalable Architecture",
     ],
     challenge:
-      'Businesses need SEO-friendly content management without slow and heavy CMS platforms.',
+      "Businesses need SEO-friendly content management without slow and heavy CMS platforms.",
     solution:
-      'We built a lightweight, fast, and scalable custom dashboard with SEO fields, schema automation, easy publishing, and seamless integration with any website.',
+      "We built a lightweight, fast, and scalable custom dashboard with SEO fields, schema automation, easy publishing, and seamless integration with any website.",
   },
   {
-    _id: '5',
-    title: 'Business Automation & AI Services And digital Solution',
+    _id: "5",
+    title: "Business Automation & AI Services And digital Solution",
     description:
-      'Complete business automation and AI services in Rishikesh including lead automation, WhatsApp automation, email marketing, CRM automation, social media automation, and AI workflows.',
-    image:
-      'images/best-n8n-ai-workflow-services-in-rishikesh.webp',
-    category: 'automation',
+      "Complete business automation and AI services in Rishikesh including lead automation, WhatsApp automation, email marketing, CRM automation, social media automation, and AI workflows.",
+    image: "images/best-n8n-ai-workflow-services-in-rishikesh.webp",
+    category: "automation",
     technologies: [
-      'AI-Based Automation',
-      'Workflow Automation',
-      'Business Process Automation',
-      'Social Media Automation',
-      'CRM & Lead Automation',
-      'Email & WhatsApp Automation',
-      'API & Tool Integrations',
+      "AI-Based Automation",
+      "Workflow Automation",
+      "Business Process Automation",
+      "Social Media Automation",
+      "CRM & Lead Automation",
+      "Email & WhatsApp Automation",
+      "API & Tool Integrations",
     ],
     challenge:
-      'Manual work like lead follow-ups, social media posting, and customer communication wastes time and money.',
+      "Manual work like lead follow-ups, social media posting, and customer communication wastes time and money.",
     solution:
-      'We delivered smart automation workflows using AI and automation tools to handle leads, messages, CRM updates, and marketing tasks automatically for businesses in Rishikesh.',
+      "We delivered smart automation workflows using AI and automation tools to handle leads, messages, CRM updates, and marketing tasks automatically for businesses in Rishikesh.",
   },
-]
+];
 
 const categoryColors: Record<
   string,
   { bg: string; badge: string; text: string }
 > = {
   ai: {
-    bg: 'from-blue-50 to-blue-100/50',
-    badge: 'bg-blue-100 text-blue-700 border-blue-200',
-    text: 'text-blue-900',
+    bg: "from-blue-50 to-blue-100/50",
+    badge: "bg-blue-100 text-blue-700 border-blue-200",
+    text: "text-blue-900",
   },
   web: {
-    bg: 'from-orange-50 to-orange-100/50',
-    badge: 'bg-orange-100 text-orange-700 border-orange-200',
-    text: 'text-orange-900',
+    bg: "from-orange-50 to-orange-100/50",
+    badge: "bg-orange-100 text-orange-700 border-orange-200",
+    text: "text-orange-900",
   },
   automation: {
-    bg: 'from-blue-50 to-purple-100/50',
-    badge: 'bg-blue-100 text-blue-700 border-blue-200',
-    text: 'text-blue-900',
+    bg: "from-blue-50 to-purple-100/50",
+    badge: "bg-blue-100 text-blue-700 border-blue-200",
+    text: "text-blue-900",
   },
   seo: {
-    bg: 'from-orange-50 to-amber-100/50',
-    badge: 'bg-orange-100 text-orange-700 border-orange-200',
-    text: 'text-orange-900',
+    bg: "from-orange-50 to-amber-100/50",
+    badge: "bg-orange-100 text-orange-700 border-orange-200",
+    text: "text-orange-900",
   },
-}
+};
 
 function MasonryCard({
   project,
   index,
   onClick,
 }: {
-  project: Project
-  index: number
-  onClick: () => void
+  project: Project;
+  index: number;
+  onClick: () => void;
 }) {
-  const ref = useRef<HTMLDivElement>(null)
-  const isInView = useInView(ref, { once: true, margin: '-50px' })
-  const colors = categoryColors[project.category]
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const colors = categoryColors[project.category];
 
   return (
     <motion.div
@@ -186,7 +181,7 @@ function MasonryCard({
     >
       <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden">
         <Image
-          src={project.image || '/placeholder.svg'}
+          src={project.image || "/placeholder.svg"}
           alt={project.title}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -199,8 +194,8 @@ function MasonryCard({
             size="sm"
             className="gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-lg"
             onClick={(e) => {
-              e.stopPropagation()
-              onClick()
+              e.stopPropagation();
+              onClick();
             }}
           >
             View Details
@@ -234,7 +229,7 @@ function MasonryCard({
         </p>
       </div>
     </motion.div>
-  )
+  );
 }
 
 function ProjectModal({
@@ -242,12 +237,12 @@ function ProjectModal({
   isOpen,
   onClose,
 }: {
-  project: Project | null
-  isOpen: boolean
-  onClose: () => void
+  project: Project | null;
+  isOpen: boolean;
+  onClose: () => void;
 }) {
-  if (!project) return null
-  const colors = categoryColors[project.category]
+  if (!project) return null;
+  const colors = categoryColors[project.category];
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -255,7 +250,7 @@ function ProjectModal({
         {/* Image Section */}
         <div className="relative h-48 sm:h-64 md:h-96 overflow-hidden">
           <Image
-            src={project.image || '/placeholder.svg'}
+            src={project.image || "/placeholder.svg"}
             alt={project.title}
             fill
             className="object-cover"
@@ -345,28 +340,27 @@ function ProjectModal({
                 </Button>
               </Link>
             )}
-            {/* अगर codeLink भी दिखाना हो तो यहाँ डाल सकते हो */}
           </div>
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
 
 export function ProjectsSection() {
-  const [filter, setFilter] = useState<string>('all')
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [filter, setFilter] = useState<string>("all");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filteredProjects =
-    filter === 'all'
+    filter === "all"
       ? dummyProjects
-      : dummyProjects.filter((p) => p.category === filter)
+      : dummyProjects.filter((p) => p.category === filter);
 
   const openModal = (project: Project) => {
-    setSelectedProject(project)
-    setIsModalOpen(true)
-  }
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
 
   return (
     <section id="projects" className="py-16 md:py-24 bg-blue-50">
@@ -388,11 +382,13 @@ export function ProjectsSection() {
               Our Projects
             </p>
           </div>
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-gray-900">
-            Industry-Specific Projects We Deliver End-to-End
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+            Industry-Focused <span className="text-orange-600">Projects</span>
           </h2>
+
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We build complete digital solutions tailored for real business industries — from idea to automation.
+            We build complete digital solutions tailored for real business
+            industries — from idea to automation.
           </p>
         </motion.div>
 
@@ -404,19 +400,19 @@ export function ProjectsSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex justify-center flex-wrap gap-3 md:gap-4 mb-12 md:mb-16"
         >
-          {['all', 'web', 'automation', 'seo'].map((cat) => (
+          {["all", "web", "automation", "seo"].map((cat) => (
             <Button
               key={cat}
-              variant={filter === cat ? 'default' : 'outline'}
+              variant={filter === cat ? "default" : "outline"}
               size="sm"
               onClick={() => setFilter(cat)}
               className={`capitalize px-6 py-2 font-medium rounded-full transition-all ${
                 filter === cat
-                  ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                  : 'border-2 border-gray-300 text-gray-700 hover:border-blue-600'
+                  ? "bg-blue-600 hover:bg-blue-700 text-white"
+                  : "border-2 border-gray-300 text-gray-700 hover:border-blue-600"
               }`}
             >
-              {cat === 'all' ? 'All' : cat.toUpperCase()}
+              {cat === "all" ? "All" : cat.toUpperCase()}
             </Button>
           ))}
         </motion.div>
@@ -437,11 +433,11 @@ export function ProjectsSection() {
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 auto-rows-max"
             >
               {filteredProjects.slice(0, 5).map((project, index) => {
-                let desktopSpan = ''
+                let desktopSpan = "";
                 if (index === 0) {
-                  desktopSpan = 'lg:col-span-2'
+                  desktopSpan = "lg:col-span-2";
                 } else if (index === 2) {
-                  desktopSpan = 'lg:row-span-2'
+                  desktopSpan = "lg:row-span-2";
                 }
                 return (
                   <div key={project._id} className={desktopSpan}>
@@ -451,7 +447,7 @@ export function ProjectsSection() {
                       onClick={() => openModal(project)}
                     />
                   </div>
-                )
+                );
               })}
             </motion.div>
           )}
@@ -464,5 +460,5 @@ export function ProjectsSection() {
         />
       </div>
     </section>
-  )
+  );
 }

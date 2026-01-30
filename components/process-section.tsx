@@ -56,9 +56,9 @@ const steps = [
               Our Process
             </span>
           </motion.div>
-          <h2 className="text-5xl md:text-5xl font-semibold bg-gradient-to-r from-foreground via-foreground to-foreground/60 bg-clip-text text-transparent mb-6">
-            How We Work
-          </h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 mt-2">
+             How <span className="text-orange-600"> We </span> Work
+            </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             A proven methodology designed to deliver exceptional results at every stage of your journey
           </p>

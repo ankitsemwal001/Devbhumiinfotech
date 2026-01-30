@@ -87,10 +87,10 @@ export function WhyChooseUsSection() {
           </div>
 
           {/* Heading */}
-          <h2 className="max-w-4xl mx-auto text-4xl md:text-4xl lg:text-5xl  tracking-tight text-gray-950 dark:text-white leading-[1.06]">
-            Enterprise-grade solutions
-            <span className="block text-gray-700 dark:text-gray-300">you can trust</span>
-          </h2>
+
+            <h2 className="max-w-4xl mx-auto text-4xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+              Why Choose <span className="text-orange-600">Our </span>  Solutions
+            </h2>
         </div>
 
         <motion.div

@@ -32,8 +32,12 @@ export function Header() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     {
-      label: "Services",
-      href: "#services",
+      label: "Web Development",
+      href: "#",
+      submenu: [
+        { label: "Website Design", href: "/website-design-services-in-rishikesh-uttarakhand" },
+        { label: "Website Development", href: "/web-development-services-in-rishikesh-uttarakhand" },
+      ],
     },
     {
       label: "Packages",
@@ -103,7 +107,7 @@ export function Header() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "px-4 py-2.5 text-lg font-medium text-gray-800 hover:text-blue-700 transition-colors duration-200 flex items-center gap-1.5 relative tracking-wide",
+                      "px-4 py-2.5 text-lg font-medium text-gray-800 hover:text-blue-700 transition-colors duration-200 flex items-center gap-1.5 relative whitespace-nowrap tracking-wide",
                       item.badge && "pr-12"
                     )}
                   >
@@ -112,11 +116,27 @@ export function Header() {
                       <ChevronDown className="w-5 h-5 transition-transform duration-300 group-hover:rotate-180" />
                     )}
                     {item.badge && (
-                      <span className="absolute -top-1 right-0 px-2.5 py-1 text-xs font-extrabold bg-green-500 text-white rounded-full uppercase">
+                      <span className="absolute -top-1 right-0 ml-1.5 px-2.5 py-1 text-xs font-extrabold bg-green-500 text-white rounded-full tracking-wider uppercase">
                         {item.badge}
-                      </span>
+                      </span> 
                     )}
                   </Link>
+
+                  {/* Desktop Dropdown */}
+                  {"submenu" in item && item.submenu && (
+                    <div className="absolute left-0 mt-1 w-56 bg-white border border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
+                      {item.submenu.map((subitem) => (
+                        <Link
+                          key={subitem.label}
+                          href={subitem.href}
+                          className="flex items-center justify-between px-4 py-2.5 text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-all duration-200"
+                        >
+                          <span>{subitem.label}</span>
+                          <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </nav>
@@ -163,7 +183,9 @@ export function Header() {
       {/* =====================
           MOBILE NAVIGATION
       ===================== */}
-      {isOpen && (
+     
+      {/* Mobile Navigation */}
+         {isOpen && (
         <div
     className={cn(
       "lg:hidden bg-white border-t border-gray-200 z-40",
@@ -172,19 +194,47 @@ export function Header() {
         : "relative"
     )}
   >
-          <div className="space-y-1 pt-4 px-2 pb-6">
+          <div className="space-y-2 pt-4">
             {menuItems.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                onClick={() => {
-                  setIsOpen(false);
-                  setOpenDropdown(null);
-                }}
-                className="block px-4 py-3 text-lg font-medium text-gray-800 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-all duration-200"
-              >
-                {item.label}
-              </Link>
+              <div key={item.label}>
+                <button
+                  onClick={() => ("submenu" in item ? toggleDropdown(item.label) : setIsOpen(false))}
+                  className="w-full text-left px-4 py-3 text-lg font-medium text-gray-800 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-all duration-200 flex items-center justify-between tracking-wide"
+                >
+                  <div className="flex items-center gap-2">
+                    <span>{item.label}</span>
+                    {item.badge && (
+                      <span className="px-2.5 py-1 text-xs font-extrabold bg-green-500 text-white rounded-full tracking-wider uppercase">
+                        {item.badge}
+                      </span>
+                    )}
+                  </div>
+                  {"submenu" in item && (
+                    <ChevronDown
+                      className={`w-5 h-5 transition-transform duration-300 ${
+                        openDropdown === item.label ? "rotate-180" : ""
+                      }`}
+                    />
+                  )}
+                </button>
+
+                {/* Mobile Dropdown */}
+                {"submenu" in item && item.submenu && openDropdown === item.label && (
+                  <div className="pl-4 space-y-1 mt-1">
+                    {item.submenu.map((subitem) => (
+                      <Link
+                        key={subitem.label}
+                        href={subitem.href}
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center justify-between px-4 py-2.5 text-base font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-all duration-200"
+                      >
+                        <span>{subitem.label}</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 

@@ -67,9 +67,10 @@ export function ServicesSection() {
             </p>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4">
-            Our Digital Solution Services
-          </h2>
+          
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+              Our <span className="text-orange-600"> Digital Solution</span> Services
+            </h2>
 
           <p className="text-base sm:text-lg text-foreground/70 max-w-3xl mx-auto">
             We help businesses in Rishikesh, Uttarakhand & beyond grow with modern websites, powerful SEO, and smart automation.

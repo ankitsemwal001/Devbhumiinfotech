@@ -328,7 +328,7 @@ export default function WebsiteDesign() {
         <meta property="og:locale" content="en_IN" />
         <meta
           property="og:image"
-          content="https://www.devbhoomiinfotech.com/website-design-rishikesh.jpg"
+          content="https://www.devbhoomiinfotech.com/og/website-design-rishikesh.webp"
         />
 
         {/* ================= TWITTER ================= */}
@@ -343,7 +343,7 @@ export default function WebsiteDesign() {
         />
         <meta
           name="twitter:image"
-          content="https://www.devbhoomiinfotech.com/website-design-rishikesh.jpg"
+          content="https://www.devbhoomiinfotech.com/og/website-design-rishikesh.webp"
         />
 
         <meta name="theme-color" content="#0f766e" />
@@ -366,7 +366,7 @@ export default function WebsiteDesign() {
               url: "https://www.devbhoomiinfotech.com/website-design-services-in-rishikesh-uttarakhand/",
               logo: "https://www.devbhoomiinfotech.com/logo.png",
               image:
-                "https://www.devbhoomiinfotech.com/website-design-rishikesh.jpg",
+                "https://www.devbhoomiinfotech.com/og/website-design-rishikesh.webp",
               description:
                 "Devbhoomi Infotech provides professional website design services in Rishikesh, Uttarakhand.",
               address: {
@@ -635,68 +635,65 @@ export default function WebsiteDesign() {
         </div>
       </section>
       <section className="py-20 px-6 md:px-12 lg:px-24 max-w-8xl mx-auto bg-orange-50">
-  <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Content */}
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100/60 border border-blue-200/60">
+              <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+              <p className="text-xs sm:text-sm font-medium text-blue-700">
+                Why Choose Us
+              </p>
+            </div>
 
-    {/* Left: Content */}
-    <div>
-      <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100/60 border border-blue-200/60">
-        <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-        <p className="text-xs sm:text-sm font-medium text-blue-700">
-          Why Choose Us
-        </p>
-      </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
+              Why Choose{" "}
+              <span className="text-orange-600">Devbhoomi Infotech</span> in
+              Rishikesh
+            </h2>
 
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
-        Why Choose <span className="text-orange-600">Devbhoomi Infotech</span> in
-        Rishikesh
-      </h2>
+            {/* Paragraphs */}
+            <div className="space-y-6 text-gray-600 leading-relaxed">
+              {/* Paragraph 1 – ~50 words */}
+              <p className="text-lg md:text-md">
+                Devbhoomi Infotech is a trusted IT and website design company in
+                Rishikesh, Uttarakhand, delivering custom-built digital
+                solutions for local businesses, startups and global clients. We
+                focus on unique designs, strong branding and user-first
+                experiences that help businesses build credibility and grow
+                online.
+              </p>
 
-      {/* Paragraphs */}
-      <div className="space-y-6 text-gray-600 leading-relaxed">
+              {/* Paragraph 2 – ~35 words */}
+              <p className="text-md md:text-md font-medium">
+                Our websites are fast, mobile-first and SEO-friendly. We
+                integrate modern web development, AI automation and local SEO
+                strategies to help Rishikesh businesses rank higher on Google
+                and attract genuine leads.
+              </p>
 
-        {/* Paragraph 1 – ~50 words */}
-        <p className="text-lg md:text-md">
-          Devbhoomi Infotech is a trusted IT and website design company in
-          Rishikesh, Uttarakhand, delivering custom-built digital solutions for
-          local businesses, startups and global clients. We focus on unique
-          designs, strong branding and user-first experiences that help
-          businesses build credibility and grow online.
-        </p>
+              {/* Paragraph 3 – ~25 words */}
+              <p className="text-md md:text-md font-semibold text-gray-800">
+                With transparent pricing, on-time delivery and long-term
+                support, we understand Rishikesh’s tourism and business
+                ecosystem and deliver results that drive sustainable growth.
+              </p>
+            </div>
+          </div>
 
-        {/* Paragraph 2 – ~35 words */}
-        <p className="text-md md:text-md font-medium">
-          Our websites are fast, mobile-first and SEO-friendly. We integrate
-          modern web development, AI automation and local SEO strategies to help
-          Rishikesh businesses rank higher on Google and attract genuine leads.
-        </p>
-
-        {/* Paragraph 3 – ~25 words */}
-        <p className="text-md md:text-md font-semibold text-gray-800">
-          With transparent pricing, on-time delivery and long-term support, we
-          understand Rishikesh’s tourism and business ecosystem and deliver
-          results that drive sustainable growth.
-        </p>
-
-      </div>
-    </div>
-
-    {/* Right: Image (unchanged) */}
-    <div className="order-first lg:order-last">
-      <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-        <Image
-          src="https://images.pexels.com/photos/7792836/pexels-photo-7792836.jpeg"
-          alt="Devbhoomi Infotech best IT company in Rishikesh offering website design, SEO and AI automation services in Uttarakhand"
-          width={600}
-          height={500}
-          className="w-full h-auto object-cover"
-        />
-      </div>
-    </div>
-
-  </div>
-</section>
-
-      
+          {/* Right: Image (unchanged) */}
+          <div className="order-first lg:order-last">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="https://images.pexels.com/photos/7792836/pexels-photo-7792836.jpeg"
+                alt="Devbhoomi Infotech best IT company in Rishikesh offering website design, SEO and AI automation services in Uttarakhand"
+                width={600}
+                height={500}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <ServicesSection />
 
@@ -710,8 +707,9 @@ export default function WebsiteDesign() {
                 Dev-Bhoomi Infotech
               </p>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-orange-600 mb-4">
-              Web Design Services in Rishikesh
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+              Web Design <span className="text-orange-600"> Services</span> in
+              Rishikesh
             </h2>
 
             {/* ─── Fixed part ─── */}

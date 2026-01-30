@@ -69,9 +69,10 @@ export function AboutSection() {
                 </p>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                Building the Future with State-of-the-Art IT Solutions
-              </h2>
+
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+             Building the Future with <span className="text-orange-600"> State-of-the-Art</span> IT Solutions
+            </h2>
             </div>
 
             {/* Tabs */}

@@ -126,9 +126,9 @@ export function PackagesSection() {
             </p>
           </div>
 
-          <h2 className="max-w-4xl mx-auto text-4xl md:text-4xl lg:text-5xl tracking-tight text-gray-950 dark:text-white leading-[1.06]">
-            Choose Your Package
-          </h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+              Choose <span className="text-orange-600"> Your</span> Package
+            </h2>
 
           <p className="mt-4 max-w-2xl text-lg mx-auto text-base text-gray-600 dark:text-gray-400">
             Simple and transparent packages designed to suit different needs and budgets.

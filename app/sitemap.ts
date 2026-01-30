@@ -48,19 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ===== GEO / SERVICE PAGES (HIGH PRIORITY) =====
     {
-      url: `${baseUrl}/seo-company-rishikesh`,
+      url: `${baseUrl}/website-design-services-in-rishikesh-uttarakhand`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/web-development-company-rishikesh`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/ai-automation-company-rishikesh`,
+      url: `${baseUrl}/web-development-services-in-rishikesh-uttarakhand`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.95,
