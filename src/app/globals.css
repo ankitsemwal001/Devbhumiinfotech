@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ==========================================================================
+   Parrot Media Typography Stack:
+   - Heading/Brand: ibrand (custom font) & Playfair Display (editorial serif)
+   - Body/Paragraphs: Neue Plak Regular / SemiBold / Bold / Light
+   ========================================================================== */
+
+@font-face {
+  font-family: 'ibrand';
+  src: url('/fonts/ibrand.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Regular';
+  src: url('/fonts/Neue-Plak-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak SemiBold';
+  src: url('/fonts/Neue-Plak-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Bold';
+  src: url('/fonts/Neue-Plak-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Light';
+  src: url('/fonts/Neue-Plak-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Unified font-family 'Neue Plak' with standard weights */
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('/fonts/Neue-Plak-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('/fonts/Neue-Plak-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('/fonts/Neue-Plak-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('/fonts/Neue-Plak-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Color scheme for Devbhoomi Infotech Solution */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.094 0 0);
+  --card: oklch(0.985 0.002 0);
+  --card-foreground: oklch(0.094 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.094 0 0);
+  --primary: oklch(0.39 0.173 247.88);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.005 0);
+  --secondary-foreground: oklch(0.094 0 0);
+  --muted: oklch(0.93 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.516 0.195 144.76);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.93 0 0);
+  --input: oklch(0.97 0 0);
+  --ring: oklch(0.39 0.173 247.88);
+  --chart-1: oklch(0.39 0.173 247.88);
+  --chart-2: oklch(0.516 0.195 144.76);
+  --chart-3: oklch(0.5 0.1 200);
+  --chart-4: oklch(0.55 0.15 120);
+  --chart-5: oklch(0.6 0.12 300);
+  --radius: 0.5rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.094 0 0);
+  --sidebar-primary: oklch(0.39 0.173 247.88);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.516 0.195 144.76);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.93 0 0);
+  --sidebar-ring: oklch(0.39 0.173 247.88);
+
+  /* Typography Variables */
+  --font-ibrand: 'ibrand', sans-serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-neue-plak: 'Neue Plak Regular', 'Neue Plak', 'Plus Jakarta Sans', sans-serif;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@theme {
+  --font-sans: 'Neue Plak Regular', 'Neue Plak', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'ibrand', 'Playfair Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-ibrand: 'ibrand', sans-serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-neue-plak: 'Neue Plak Regular', 'Neue Plak', 'Plus Jakarta Sans', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Neue Plak Regular', 'Neue Plak', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  p, span, li, a, button, input, textarea, select {
+    font-family: 'Neue Plak Regular', 'Neue Plak', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1 {
+    font-family: 'ibrand', 'Playfair Display', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', 'ibrand', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: 'ibrand', 'Playfair Display', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Explicit Utility Font Classes (matching parrotmedia) */
+.font-ibrand {
+  font-family: 'ibrand', sans-serif !important;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+.font-neue-plak {
+  font-family: 'Neue Plak Regular', 'Neue Plak', 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.font-neue-plak-bold {
+  font-family: 'Neue Plak Bold', 'Neue Plak', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.font-neue-plak-semibold {
+  font-family: 'Neue Plak SemiBold', 'Neue Plak', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.font-neue-plak-light {
+  font-family: 'Neue Plak Light', 'Neue Plak', sans-serif !important;
+  font-weight: 300 !important;
+}
+
+.whatsapp-float {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background: #1ebe5d;
+}
+
+/* TABLET (<= 1024px) */
+@media (max-width: 1024px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    left: 16px;
+    bottom: 16px;
+  }
+}
+
+/* MOBILE (<= 768px) */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 56px;   
+    height: 56px;
+    left: 12px;
+    bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  .whatsapp-float:hover {
+    transform: none;
+  }
+}
+
+/* SMALL MOBILE (<= 480px) */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    left: 12px;
+    bottom: 18px;
+  }
+}
+
+@layer utilities {
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(10px); }
+  }
+  @keyframes float-medium {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+  }
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 12s ease-in-out infinite;
+  }
+  .animate-float-medium {
+    animation: float-medium 9s ease-in-out infinite;
+  }
+  .animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
