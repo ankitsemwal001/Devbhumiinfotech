@@ -8,7 +8,6 @@ export interface StatItem {
  * Single source of truth for verified company metrics.
  * Rules:
  * - Only confirmed, verifiable facts.
- * - No unverified claims ("7 years", "120+ clients", "15+ awards", "10+ experts").
  */
 export const verifiedStats: StatItem[] = [
   {

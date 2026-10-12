@@ -233,7 +233,7 @@ export default function AboutPage() {
                 Performance Over Bloat
               </h3>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                We avoid heavy page builders and unoptimized plugins. Every component is engineered for sub-second load times and 90+ Core Web Vitals.
+                We avoid heavy page builders and unoptimized plugins. Every component is engineered for fast load times and strong Core Web Vitals performance.
               </p>
             </div>
 

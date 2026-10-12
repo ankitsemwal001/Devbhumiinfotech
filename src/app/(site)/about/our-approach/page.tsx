@@ -41,7 +41,7 @@ export default function OurApproachPage() {
     {
       icon: ShieldCheck,
       number: "01",
-      title: "Architectural Rigor & Zero Bloat",
+      title: "Architectural Rigor & Clean Code",
       summary:
         "We build websites and web applications using Next.js, React, TypeScript, and semantic CSS rather than fragile page builders.",
       points: [
@@ -115,13 +115,13 @@ export default function OurApproachPage() {
     },
     {
       metric: "Page Speed & Vitals",
-      devbhoomi: "Sub-second TTFB, 90+ Lighthouse",
+      devbhoomi: "Optimized Core Web Vitals, 90+ Lighthouse targets",
       traditional: "Often 4–8s load time with plugin bloat",
       builders: "Moderate, limited custom optimization",
     },
     {
-      metric: "Code & IP Ownership",
-      devbhoomi: "100% Client Owned, Zero Lock-in",
+      metric: "Code & Project Access",
+      devbhoomi: "Direct repository handover, zero lock-in",
       traditional: "Varies; often agency dependent",
       builders: "0% Ownership (Rented platform)",
     },

@@ -20,7 +20,7 @@ export const digitalMarketingService: ServicePageData = {
   heroDescription:
     "Strategic SEO, performance advertising, and digital campaigns designed to boost your Google rankings, attract qualified leads, and maximize revenue.",
   overview: {
-    heading: "Dominate Search Rankings & Accelerate Business Revenue",
+    heading: "Improve Search Rankings & Accelerate Business Revenue",
     content: [
       "In today's digital landscape, getting seen by the right customer at the right moment is essential. Devbhoomi Infotech provides end-to-end digital marketing and search engine optimization tailored to local and global businesses.",
       "We replace guesswork with actionable data, structured keyword strategies, and high-converting marketing funnels that deliver consistent ROI.",
@@ -31,7 +31,7 @@ export const digitalMarketingService: ServicePageData = {
     {
       title: "Search Engine Optimization (SEO)",
       description:
-        "Comprehensive on-page, off-page, and technical SEO designed to secure first-page Google rankings for your high-intent keywords.",
+        "Comprehensive on-page, off-page, and technical SEO designed to improve search visibility and rankings for your high-intent keywords.",
     },
     {
       title: "Google Ads & PPC Campaigns",
@@ -41,7 +41,7 @@ export const digitalMarketingService: ServicePageData = {
     {
       title: "Local SEO & Google Maps Optimization",
       description:
-        "Dominate the Google Local 3-Pack in Rishikesh and surrounding regions to drive phone calls and walk-in customers.",
+        "Optimize Google Business Profile and local search visibility in Rishikesh and surrounding regions to drive phone calls and walk-in customers.",
     },
     {
       title: "Conversion Rate Optimization (CRO)",

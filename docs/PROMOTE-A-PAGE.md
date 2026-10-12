@@ -12,7 +12,7 @@ Ensure all information for the target page is factual, non-superlative, and veri
 - Structured data models defined in `src/content/`.
 
 ### Step 2: Relocate the Route Folder
-Next.js ignores directories with leading underscores (`_planned/`). To make a route active:
+Next.js ignores directories with initial underscores (`_planned/`). To make a route active:
 1. Locate the route folder inside `src/app/(site)/_planned/`.
    *Example:* `src/app/(site)/_planned/industries/`
 2. Move it up into `src/app/(site)/`.

@@ -56,14 +56,14 @@ export default function WhyChooseUsPage() {
       title: "Disciplined 3-Stage Milestone Payment Protection",
       description:
         "We follow an equitable payment structure: 50% Kickoff & Blueprint, 30% Staging Demonstration, and 20% on final production deployment.",
-      benefit: "Financial safety with guaranteed verification checkpoints before releasing major funds.",
+      benefit: "Financial safety with clear verification checkpoints before releasing major funds.",
     },
     {
       icon: Gauge,
-      title: "Sub-Second Core Web Vitals & Speed Guarantees",
+      title: "Fast Core Web Vitals & Performance Engineering",
       description:
-        "We build exclusively with Next.js App Router, modern CSS, and edge caching rather than heavy page builders and bloated WordPress templates.",
-      benefit: "Sub-second load times that reduce bounce rates, boost mobile user retention, and rank higher on Google.",
+        "We build with performance targets (LCP ≤ 2.5 s, CLS ≤ 0.1, INP ≤ 200 ms) using modern Next.js architecture and edge caching.",
+      benefit: "Fast, lightweight pages that reduce bounce rates and support mobile user retention.",
     },
     {
       icon: Code2,

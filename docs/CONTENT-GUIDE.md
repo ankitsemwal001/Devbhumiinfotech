@@ -49,7 +49,7 @@ The platform actively serves two primary economic regions: **Uttarakhand** and *
 When writing or expanding geo-specific content, adhere to these localized industry profiles:
 
 1. **Rishikesh & Ganga Valley**: Yoga teacher training (YTT), wellness centers, luxury riverside camps, white-water rafting agencies, organic cafes, ayurvedic clinics.
-2. **Dehradun & Doon Valley**: Premier boarding schools, universities, IT Park software firms, dental & multi-specialty hospitals, retail showrooms, architects.
+2. **Dehradun & Doon Valley**: Regional boarding schools, universities, IT Park software firms, dental & multi-specialty hospitals, retail showrooms, architects.
 3. **Delhi & National Capital Region (NCR)**: High-growth tech startups, SaaS platforms, direct-to-consumer (D2C) brands, financial consulting firms, corporate agencies.
 4. **Noida & IT Corridor**: Software product companies, commercial real estate developers, fintech applications, industrial logistics.
 5. **Haridwar & SIDCUL**: Manufacturing facilities, pharmaceutical formulations, packaging units, pilgrimage hospitality.

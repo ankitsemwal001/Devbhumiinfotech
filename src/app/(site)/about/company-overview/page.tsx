@@ -60,7 +60,7 @@ export default function CompanyOverviewPage() {
       icon: Compass,
       title: "Measurable Business Outcomes",
       description:
-        "We evaluate our deliverables by real performance metrics: sub-second load times, organic search impressions, and qualified lead conversion.",
+        "We evaluate our deliverables by real performance metrics: fast page load times, organic search impressions, and qualified lead conversion.",
     },
   ];
 
@@ -97,7 +97,7 @@ export default function CompanyOverviewPage() {
               Bridging Modern Engineering and Regional Enterprise
             </h2>
             <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-              Devbhoomi Infotech Solutions was founded with a straightforward mandate: to bring world-class modern software engineering, responsive web platforms, and data-driven search visibility to enterprises in Uttarakhand and across India.
+              Devbhoomi Infotech Solutions was founded with a straightforward mandate: to bring modern software engineering, responsive web platforms, and data-driven search visibility to enterprises in Uttarakhand and across India.
             </p>
             <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
               Too many business owners are trapped between overpriced metropolitan agencies that pass work to junior freelancers and low-cost template shops that deliver bloated, slow-loading websites. We operate differently: disciplined milestone delivery, direct engineer access, and clean code that performs.
@@ -212,7 +212,7 @@ export default function CompanyOverviewPage() {
                 <h3 className="font-bold text-slate-900 dark:text-white text-base">
                   Rishikesh Headquarters
                 </h3>
-                <span className="text-xs text-slate-500">Uttarakhand, India (249201)</span>
+                <span className="text-xs text-slate-500">Uttarakhand, India (249137)</span>
               </div>
             </div>
 

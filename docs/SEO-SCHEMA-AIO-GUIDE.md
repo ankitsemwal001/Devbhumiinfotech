@@ -115,6 +115,9 @@ Geo landing pages (`[geoSlug]`) and core service pages automatically inject:
 - `Service` schema linking provider to `#localbusiness`.
 - `FAQPage` schema pairing every question with direct, answer-first solutions.
 
+> [!NOTE]
+> Google now shows FAQ rich results only for a narrow set of authoritative government and health sites. We keep `FAQPage` markup for machine readability and semantic clarity, but do not promise or claim visual rich results.
+
 ---
 
 ## 3. Generative Engine Optimization (GEO / AIO)
@@ -151,13 +154,11 @@ Every FAQ, service section, and localized overview starts with a concise 1-to-2 
 
 ---
 
-## 5. Core Web Vitals Benchmarks
+## 5. Core Web Vitals & Performance
 
-The website is engineered to maintain perfect Core Web Vitals on real mobile connections:
+Performance targets are tracked in [PERFORMANCE-REPORT.md](./PERFORMANCE-REPORT.md). Rather than advertising unverified guarantees, we maintain disciplined engineering practices:
 
-| Metric                              | Google "Good" Threshold | Devbhoomi Infotech Benchmark | Engineering Technique                                       |
-| :---------------------------------- | :---------------------- | :--------------------------- | :---------------------------------------------------------- |
-| **First Contentful Paint (FCP)**    | < 1.8s                  | **< 0.8s**                   | Static HTML pre-rendering, local font preloading            |
-| **Largest Contentful Paint (LCP)**  | < 2.5s                  | **< 1.2s**                   | Optimized WebP/SVG imagery, zero client render block        |
-| **Cumulative Layout Shift (CLS)**   | < 0.1                   | **0.00**                     | Strict explicit width/height on images & font fallback swap |
-| **Interaction to Next Paint (INP)** | < 200ms                 | **< 50ms**                   | Minimal client-side JavaScript, unbundled CSS               |
+- Static pre-rendering (`output: "export"`) with minimal runtime overhead.
+- Explicit image width and height attributes to prevent layout shifts.
+- Local font optimization and CSS purging.
+- For verified lab test data, see [docs/PERFORMANCE-REPORT.md](./PERFORMANCE-REPORT.md).

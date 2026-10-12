@@ -116,7 +116,7 @@ const whyChooseItems: WhyChooseItem[] = [
     image: "/images/ai/ai-lead-generation-agent.webp",
     title: "Production-Grade Quality & QA",
     description:
-      "Engineered for sub-second page loads, accessibility standards, and multi-device testing before any release goes live.",
+      "Engineered for fast, lightweight page loads, accessibility standards, and multi-device testing before any release goes live.",
     specs: ["⚡ Core Web Vitals", "🛡️ Secure Code", "📱 Multi-Device QA"],
     pills: ["Lighthouse 95+", "Clean Code", "Rigorous Testing"],
     actionText: "Review Quality Standards",

@@ -342,7 +342,7 @@ export function Header() {
         },
         {
           title: "Speed Optimisation",
-          description: "Sub-second load times and 95+ Google PageSpeed scores",
+          description: "Fast, lightweight pages tested with Lighthouse benchmarks",
           icon: <Cpu className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />,
           iconBg: "bg-emerald-50 dark:bg-emerald-950/60 border-emerald-200/60 dark:border-emerald-800/60",
         },
@@ -375,7 +375,7 @@ export function Header() {
         },
         {
           title: "Local SEO & GMB",
-          description: "Dominate local maps and regional buyer inquiries",
+          description: "Google Business Profile optimisation and local search visibility",
           icon: <Globe className="w-4 h-4 text-blue-600 dark:text-blue-400" />,
           iconBg: "bg-blue-50 dark:bg-blue-950/60 border-blue-200/60 dark:border-blue-800/60",
         },

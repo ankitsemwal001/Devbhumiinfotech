@@ -10,9 +10,9 @@ Devbhoomi Infotech Solutions delivers 5 primary technology engineering and digit
         ┌───────────────────┬────────────┴───────┬───────────────────┐
         ▼                   ▼                    ▼                   ▼
 1. Website Design   2. Web Development   3. AI Automation   4. Digital Growth & SEO
-   - Bespoke UI/UX     - Next.js 16         - AI Chatbots      - Local GBP Domination
+   - Bespoke UI/UX     - Next.js 16         - AI Chatbots      - Local GBP Improvement
    - Mobile-First      - Headless CMS       - WhatsApp Bots    - Technical SEO Audits
-   - Figma Prototypes  - High Concurrency   - CRM Automation   - Schema & GEO
+   - Wireframes        - Modern Architecture - CRM Automation   - Schema & GEO
         │
         └────────────────────────────────────────┬───────────────────┘
                                                  ▼
@@ -29,47 +29,46 @@ Devbhoomi Infotech Solutions delivers 5 primary technology engineering and digit
 ### 2.1 Modern Website Design
 - **Focus**: Bespoke visual brand identity, modern typography, mobile-first responsive layout, and conversion-engineered user funnels.
 - **Technology Stack**: Figma, Tailwind CSS v4, Lucide Icons, Framer Motion.
-- **Turnaround Time**: 7 to 14 Business Days.
+- **Turnaround Time**: Standard project timelines based on scope.
 - **Deliverables**:
-  - Figma interactive wireframes and design tokens.
-  - 100% responsive fluid grid layouts (Mobile, Tablet, Desktop).
+  - Interactive wireframes and design tokens.
+  - Responsive fluid grid layouts on mobile, tablet and desktop.
   - High-conversion CTA placement and micro-interactions.
-  - Sub-second first contentful paint (FCP) layout architecture.
+  - Fast layout architecture.
 
 ### 2.2 High-Performance Web Development
 - **Focus**: Custom web applications built on modern JavaScript/TypeScript architectures that eliminate slow CMS overhead.
 - **Technology Stack**: Next.js 16 (App Router), React 19, TypeScript, Radix UI.
-- **Turnaround Time**: 10 to 21 Business Days.
+- **Turnaround Time**: Timelines aligned with project milestones.
 - **Deliverables**:
-  - Zero-bloat static HTML generation (`output: "export"`).
-  - 100/100 Core Web Vitals optimization.
-  - Complete full-source code handover and intellectual property transfer.
+  - Clean static HTML generation (`output: "export"`).
+  - Core Web Vitals performance targets.
   - Seamless integration with payment gateways, booking systems, and headless APIs.
 
 ### 2.3 AI & Process Automation
-- **Focus**: Eliminating manual data entry, automating customer service, and streamlining lead qualification.
-- **Technology Stack**: OpenAI API, WhatsApp Cloud API, Webhooks, Python, Node.js.
-- **Turnaround Time**: 7 to 15 Business Days.
+- **Focus**: Eliminating manual data entry, assisting customer inquiries, and streamlining lead qualification.
+- **Technology Stack**: AI integrations, WhatsApp Cloud API, Webhooks, Python, Node.js.
+- **Turnaround Time**: Phased rollout by workflow.
 - **Deliverables**:
-  - 24/7 intelligent WhatsApp conversational bots.
-  - Automatic lead capture and real-time CRM / Google Sheets routing.
-  - Smart notification triggers and automated appointment booking.
-  - Cost-efficient token utilization and fail-safe human handoff.
+  - WhatsApp conversational bots that can respond outside office hours.
+  - Automatic lead capture and CRM / Google Sheets routing.
+  - Notification triggers and booking assistance.
+  - Human handoff options.
 
 ### 2.4 Digital Marketing & Local SEO
-- **Focus**: High-commercial-intent organic Google search rankings and Google Maps 3-Pack domination.
-- **Technology Stack**: Google Search Console, GA4, Schema.org JSON-LD, Screaming Frog.
-- **Engagement Model**: Monthly retainers with transparent keyword tracking.
+- **Focus**: High-commercial-intent organic Google search rankings and Google Maps visibility improvements.
+- **Technology Stack**: Google Search Console, GA4, Schema.org JSON-LD.
+- **Engagement Model**: Retainers with transparent keyword tracking.
 - **Deliverables**:
-  - Complete Google Business Profile (GBP) audit and optimization.
+  - Google Business Profile (GBP) optimization.
   - Technical on-page remediation and Core Web Vitals maintenance.
-  - Contextual regional citation building and review acquisition workflows.
+  - Contextual regional citation building.
   - Generative Engine Optimization (GEO) ensuring inclusion in AI Search answers.
 
 ### 2.5 Custom Software & SaaS Development
 - **Focus**: Tailored operational dashboards, inventory management systems, and client member portals.
-- **Technology Stack**: Next.js, Node.js, PostgreSQL / MongoDB, REST / GraphQL APIs.
-- **Turnaround Time**: 30 to 60 Business Days based on scope.
+- **Technology Stack**: Next.js, Node.js, modern databases, REST / GraphQL APIs.
+- **Turnaround Time**: Sprinted delivery based on roadmap.
 
 ---
 
@@ -79,10 +78,10 @@ All baseline package tiers sourced from `src/content/packages.ts`:
 
 | Package Tier | Starting Price | Target Business | Key Deliverables |
 | :--- | :--- | :--- | :--- |
-| **Starter Website** | **₹15,000** | Early-stage clinics, cafes, local contractors | Up to 5 custom static pages, mobile-responsive layout, WhatsApp click-to-chat, basic on-page SEO, 1-year basic support |
-| **Standard Website** | **₹25,000** | Growing yoga schools, boutique hotels, institutes | Up to 10 custom pages, interactive forms, photo galleries, Google Maps & GBP schema, speed optimization |
-| **Comprehensive Web Platform** | **₹40,000** | High-growth firms, multi-location brands, exporters | Full multi-page architecture, dynamic blog engine, custom lead capture funnel, programmatic geo schema, Core Web Vitals guarantee |
-| **Custom Enterprise Solutions** | **Custom Quote** | SaaS platforms, automated booking portals | Bespoke engineering, database modeling, external API orchestrations, dedicated SLA |
+| **Starter Website** | **₹15,000** | Early-stage clinics, cafes, local contractors | 5 custom static pages, mobile-responsive layout, WhatsApp click-to-chat, basic on-page SEO |
+| **Standard Website (Most Popular)** | **₹25,000** | Growing yoga schools, boutique hotels, institutes | 8–10 custom pages, interactive forms, photo galleries, Google Maps & GBP schema, speed optimization |
+| **Premium Website** | **₹40,000** | High-growth firms, multi-location brands, exporters | 15–20 pages, dynamic blog engine, custom lead capture funnel, programmatic geo schema, performance optimization |
+| **Custom Enterprise Solutions** | **Custom Quote** | SaaS platforms, automated booking portals | Bespoke engineering, database modeling, external API orchestrations |
 
 ---
 

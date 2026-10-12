@@ -7,7 +7,7 @@ Devbhoomi Infotech Solutions (`https://www.devbhoomiinfotech.com`) is architecte
 - **Typographic System**: Custom local fonts (`ibrand` display, `Neue Plak` family) + Google Fonts (`Playfair Display`, `Plus Jakarta Sans`)
 - **Hosting Target**: Hostinger Shared / Apache Web Server (`public_html`)
 - **SEO & GEO**: Unified metadata builder, automated JSON-LD schemas (Organization, LocalBusiness, BreadcrumbList, FAQPage, Service), Google Consent Mode v2, and `llms.txt`.
-- **Programmatic GEO Engine**: High-velocity static generation of local service landing pages across Uttarakhand and Delhi NCR corridors.
+- **Programmatic GEO Engine**: Fast static generation of local service landing pages across Uttarakhand and Delhi NCR corridors.
 
 ---
 

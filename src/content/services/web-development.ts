@@ -23,7 +23,7 @@ export const webDevelopmentService: ServicePageData = {
   overview: {
     heading: "Engineered For Speed, Security & Scalability",
     content: [
-      "Devbhoomi Infotech builds modern web solutions using cutting-edge technologies like Next.js, React, Node.js, and cloud architectures.",
+      "Devbhoomi Infotech builds modern web solutions using proven modern technologies like Next.js, React, Node.js, and cloud architectures.",
       "From dynamic e-commerce platforms and booking systems to corporate web portals and interactive dashboards, we deliver robust solutions that power real business growth.",
     ],
   },
@@ -37,7 +37,7 @@ export const webDevelopmentService: ServicePageData = {
     {
       title: "Core Web Vitals Optimized",
       description:
-        "Sub-second load times, optimized server-side rendering, and 95+ Google PageSpeed performance scores.",
+        "Fast page loads, optimized server-side rendering, and clean Lighthouse performance targets.",
     },
     {
       title: "Airtight Security",

@@ -2,11 +2,11 @@
 
 ## 1. Executive Summary
 
-**Devbhoomi Infotech Solutions** (`https://www.devbhoomiinfotech.com`) is a premium technology engineering and digital growth agency headquartered in Rishikesh, Uttarakhand, with primary operational delivery corridors extending across **Dehradun**, **Delhi**, **Rishikesh**, **Noida**, and pan-India.
+**Devbhoomi Infotech Solutions** (`https://www.devbhoomiinfotech.com`) is a technology engineering and digital growth agency headquartered in Rishikesh, Uttarakhand, serving businesses in **Rishikesh**, **Dehradun**, **Haridwar**, and pan-India.
 
 The website is engineered as a high-performance, static-export-safe platform designed to:
 
-1. Deliver instantaneous sub-second page loads with **100/100 Core Web Vitals**.
+1. Deliver fast page loads meeting modern Core Web Vitals performance targets.
 2. Drive qualified organic client acquisition through programmatic hyper-local SEO (`[geoSlug]`).
 3. Power conversion through transparent pricing models, interactive WhatsApp integration, and automated lead capture.
 4. Adhere strictly to Google Search Essentials, Schema.org guidelines, and Generative Engine Optimization (AIO/GEO).

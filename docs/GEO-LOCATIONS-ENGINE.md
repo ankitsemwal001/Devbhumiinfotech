@@ -2,7 +2,7 @@
 
 ## 1. Overview & Business Objective
 
-The **Programmatic GEO Engine** powers high-velocity local organic search visibility for Devbhoomi Infotech Solutions across Northern India's prime commercial, technological, and tourism corridors.
+The **Programmatic GEO Engine** powers local organic search visibility for Devbhoomi Infotech Solutions across Northern India's prime commercial, technological, and tourism areas.
 
 Rather than relying on generic, nationwide landing pages, the engine statically compiles hyper-localized service pages under the URL scheme:
 ```
@@ -115,16 +115,15 @@ The entire geo architecture is driven by the single root dataset: `locations.jso
 
 ---
 
-## 3. The 4 Primary Operational Hubs
+## 3. Areas We Serve
 
-The homepage regional section (`<ExploreRegionsSection />`) highlights 4 top commercial hubs:
+The homepage regional section (`<ExploreRegionsSection />`) highlights 3 published hubs:
 
-| Hub | Region | Economic Focus | Localized Advantage |
+| Area | Region | Economic Focus | Delivery Approach |
 | :--- | :--- | :--- | :--- |
-| **Dehradun** | Doon Valley, UK | State administrative capital, IT Park, premier universities & healthcare institutions | Fast physical proximity, enterprise engineering at regional cost structure |
-| **Delhi** | Delhi NCR | National Capital Region startups, D2C e-commerce, consulting & corporate brands | High-velocity Next.js performance, agile delivery, dedicated 24/7 technical support |
-| **Rishikesh** | Ganga Valley, UK | Global capital for yoga teacher training (YTT), luxury wellness retreats, adventure travel | Headquarters proximity, zero communication lag, tailored direct-booking engines |
-| **Noida** | NCR Tech Corridor | Major IT parks, fintech apps, commercial developers & SaaS companies | Scalable software architectures, enterprise integrations & ROI-focused SEO |
+| **Dehradun** | Doon Valley, UK | State administrative capital, IT Park, universities & healthcare institutions | Physical proximity, enterprise engineering at regional cost structure |
+| **Haridwar** | Haridwar, UK | Industrial manufacturing, SIDCUL, healthcare & hospitality | Remote delivery and on-site alignment across Uttarakhand |
+| **Rishikesh** | Ganga Valley, UK | Global capital for yoga teacher training (YTT), luxury wellness retreats, adventure travel | Headquarters location, direct communication, tailored direct-booking engines |
 
 ---
 
