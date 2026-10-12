@@ -8,6 +8,7 @@
     "check:claims": "node scripts/check-claims.mjs",
     "check:content": "node scripts/check-content.mjs",
     "check:geo": "npx tsx scripts/check-geo.mjs",
+    "check:links": "node scripts/check-links.mjs",
     "dev": "next dev --webpack",
     "lint": "eslint .",
     "start": "next start"

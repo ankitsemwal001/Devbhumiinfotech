@@ -18,9 +18,9 @@ import { generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
-  title: "Devbhoomi Infotech — Web, Software & AI Automation in Rishikesh, Uttarakhand",
+  title: "Devbhoomi Infotech — AI, Software, Mobile & Web Development",
   description:
-    "Technology and digital growth partner rooted in Rishikesh, Uttarakhand. We engineer custom websites, business software, AI automations, and search visibility for clients across India.",
+    "Rishikesh-headquartered technology partner serving clients worldwide through remote delivery. We build custom websites, business software, mobile apps, and AI automations.",
   alternates: {
     canonical: `${siteConfig.url}/`,
   },

@@ -3,9 +3,13 @@ export const siteConfig = {
   shortName: "Devbhoomi Infotech",
   legalName: "Devbhoomi Infotech Solutions",
   description:
-    "Technology and digital growth partner based in Rishikesh, Uttarakhand. We build custom websites, business software, AI automation systems, and search visibility for clients across India.",
+    "Rishikesh-headquartered technology partner serving clients worldwide through remote delivery. We engineer custom websites, business software, mobile applications, and AI automations.",
   url: "https://www.devbhoomiinfotech.com",
   ogImage: "https://www.devbhoomiinfotech.com/logo/DBI-official-logo-devbhoomi-infotech-white.png",
+
+  // Config flags for crawler policy & CTAs
+  allowAiTraining: true, // Default allow (maximises discoverability); can be flipped to false to disallow training bots
+  freeConsultationConfirmed: true, // Confirmed owner CTA text ("Get a Free Consultation")
 
   contact: {
     phone: "+91 81260 06791",
@@ -16,9 +20,9 @@ export const siteConfig = {
       street: "Near Dhalwala",
       city: "Rishikesh",
       state: "Uttarakhand",
-      postalCode: "249201",
+      postalCode: "249137",
       country: "India",
-      display: "Near Dhalwala, Rishikesh, Uttarakhand, India (249201)",
+      display: "Near Dhalwala, Rishikesh, Uttarakhand, India (249137)",
     },
     geo: {
       latitude: "30.0869",

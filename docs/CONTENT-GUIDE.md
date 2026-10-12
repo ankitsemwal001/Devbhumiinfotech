@@ -7,7 +7,7 @@ This document details the business information, credentials, and verification po
 ## 1. Company Identity & Registration
 
 - [ ] **Legal / Registered Entity Name**: Confirm if the legal registration is _Devbhoomi Infotech_ or _Devbhoomi Infotech Solutions_.
-- [ ] **Registered Postcode Resolution**: Currently set to `249201`. Owner: confirm against your Google Business Profile address (the old live footer said 249137).
+- [ ] **Registered Postcode Resolution**: Currently set to `249137`. Owner: confirm against your Google Business Profile address (the old live footer said 249137).
 - [ ] **Founding Year**: Provide the formal inception year (e.g. 2021) to add a factual _"Founded in [Year]"_ line on `/about/`.
 
 ---

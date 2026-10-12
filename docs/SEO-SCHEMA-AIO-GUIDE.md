@@ -46,7 +46,7 @@ All schemas are dynamically rendered into the HTML `<head>` or body using `<Json
         "streetAddress": "Near Dhalwala",
         "addressLocality": "Rishikesh",
         "addressRegion": "Uttarakhand",
-        "postalCode": "249201",
+        "postalCode": "249137",
         "addressCountry": "IN"
       },
       "geo": {

@@ -15,7 +15,7 @@ let pendingCount = 0;
 
 // 1. Audit Postcodes across src/, docs/, public/
 console.log("--- 1. Auditing 6-Digit Postcodes ---");
-const POSTCODE_ALLOWED = "249201";
+const POSTCODE_ALLOWED = "249137";
 const postcodeDirs = ["src", "docs", "public"];
 const postcodeFiles = [];
 

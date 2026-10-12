@@ -109,7 +109,7 @@ export const pagesRegistry: Record<string, PageEntry> = {
   "services-digital-marketing": {
     key: "services-digital-marketing",
     path: "/services/digital-marketing/",
-    title: "Digital Marketing",
+    title: "Digital Growth & SEO",
     status: "live",
     inNav: true,
     inSitemap: true,
@@ -119,8 +119,8 @@ export const pagesRegistry: Record<string, PageEntry> = {
     path: "/services/digital-growth/",
     title: "Digital Growth & SEO",
     status: "live",
-    inNav: true,
-    inSitemap: true,
+    inNav: false,
+    inSitemap: false, // Canonical live URL is /services/digital-marketing/
   },
   projects: {
     key: "projects",

@@ -5,7 +5,7 @@
 ## About the Organization
 Devbhoomi Infotech Solutions is an IT and digital growth agency specializing in custom full-stack web development, bespoke software systems, AI-powered business automations, and search engine visibility. Rooted in Uttarakhand, the agency serves enterprises, startups, and institutions across India.
 
-- **Headquarters**: Near Dhalwala, Rishikesh, Uttarakhand, India (249201)
+- **Headquarters**: Near Dhalwala, Rishikesh, Uttarakhand, India (249137)
 - **Primary Website**: https://www.devbhoomiinfotech.com
 - **Phone**: +91 81260 06791
 - **Email**: infotechdevbhoomi@gmail.com

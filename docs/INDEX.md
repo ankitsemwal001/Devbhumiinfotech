@@ -25,7 +25,7 @@ This directory serves as the single source of truth for the codebase, business f
 ## ⚡ Quick Reference
 
 - **Primary Production URL**: `https://www.devbhoomiinfotech.com`
-- **Headquarters**: Near Dhalwala, Rishikesh, Uttarakhand (PIN: 249201)
+- **Headquarters**: Near Dhalwala, Rishikesh, Uttarakhand (PIN: 249137)
 - **Primary Operational Hubs**: Dehradun, Delhi, Rishikesh, Noida, Haridwar
 - **Framework**: Next.js 16 (`output: "export"`, React 19, Tailwind CSS v4)
 - **Local Dev Server**: `npm run dev`

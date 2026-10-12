@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { serviceGroups } from "@/content/services";
+import { navigationServiceGroups } from "@/config/service-groups";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -30,9 +30,8 @@ export function Footer() {
               />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Technology and digital growth partner rooted in Rishikesh, Uttarakhand.
-              We build custom websites, business software, AI automations, and search
-              visibility for clients across India.
+              Rishikesh-headquartered technology partner serving clients worldwide through remote delivery.
+              We engineer custom websites, business software, mobile applications, and AI automations.
             </p>
 
             {/* Social Icons rendered ONLY if confirmed in site.ts */}
@@ -54,22 +53,30 @@ export function Footer() {
             )}
           </div>
 
-          {/* Column 2: Core Services (4 groups) */}
+          {/* Column 2: Core Services (5 groups + Website Design) */}
           <div className="space-y-4">
             <h3 className="text-base font-bold text-white tracking-wide">
               Our Core Services
             </h3>
             <ul className="space-y-2.5 text-sm text-slate-400">
-              {serviceGroups.map((group) => (
+              {navigationServiceGroups.map((group) => (
                 <li key={group.id}>
                   <Link
-                    href={`/services/#${group.id}`}
+                    href={group.primaryHref}
                     className="hover:text-blue-400 transition-colors"
                   >
-                    {group.title}
+                    {group.name}
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/services/website-design/"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  Website Design (UI/UX)
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -80,33 +87,38 @@ export function Footer() {
             </h3>
             <ul className="space-y-2.5 text-sm text-slate-400">
               <li>
-                <Link href="/about/" className="hover:text-blue-400 transition-colors">
-                  About Us & Ethos
+                <Link href="/about/company-overview/" className="hover:text-blue-400 transition-colors">
+                  Company Overview
                 </Link>
               </li>
               <li>
-                <Link href="/about/#approach" className="hover:text-blue-400 transition-colors">
+                <Link href="/about/our-approach/" className="hover:text-blue-400 transition-colors">
                   Our Engineering Approach
                 </Link>
               </li>
               <li>
                 <Link href="/projects/" className="hover:text-blue-400 transition-colors">
-                  Projects & Concept Showcase
+                  Projects & Showcase
                 </Link>
               </li>
               <li>
-                <Link href="/#packages" className="hover:text-blue-400 transition-colors">
+                <Link href="/pricing/" className="hover:text-blue-400 transition-colors">
                   Pricing & Packages
                 </Link>
               </li>
               <li>
                 <Link href="/blogs/" className="hover:text-blue-400 transition-colors">
-                  Insights & Technical Articles
+                  Insights & Articles
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/" className="hover:text-blue-400 transition-colors">
+                  Locations Directory
                 </Link>
               </li>
               <li>
                 <Link href="/contact/" className="hover:text-blue-400 transition-colors">
-                  Contact & Project Inquiries
+                  Contact & Inquiries
                 </Link>
               </li>
             </ul>
@@ -141,12 +153,16 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
 
-            {/* Service Areas */}
-            <div className="pt-2 border-t border-slate-900">
-              <div className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
-                Areas We Serve:
-              </div>
+        {/* Areas We Serve Row */}
+        <div className="mt-12 pt-8 border-t border-slate-900">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span className="text-xs font-semibold text-slate-300 uppercase tracking-wider block mb-1">
+                Based in Rishikesh · Serving Clients Worldwide
+              </span>
               <div className="flex flex-wrap gap-x-2 gap-y-1 text-xs text-slate-400 leading-relaxed">
                 <Link href="/website-design-services-in-rishikesh-uttarakhand/" className="hover:text-blue-400 transition-colors">
                   Rishikesh (HQ)
@@ -160,7 +176,7 @@ export function Footer() {
                   Haridwar
                 </Link>
                 <span>·</span>
-                <span className="text-slate-500">Across Uttarakhand & Pan-India</span>
+                <span className="text-slate-500">Worldwide Remote Delivery</span>
               </div>
             </div>
           </div>
@@ -170,14 +186,11 @@ export function Footer() {
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>© {currentYear} {siteConfig.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy-policy/" className="hover:text-slate-300 transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms/" className="hover:text-slate-300 transition-colors">
-              Terms of Service
+            <Link href="/about/why-choose-us/" className="hover:text-slate-300 transition-colors">
+              Quality & Support
             </Link>
             <Link href="/contact/" className="hover:text-slate-300 transition-colors">
-              Consultation
+              Project Consultation
             </Link>
           </div>
         </div>

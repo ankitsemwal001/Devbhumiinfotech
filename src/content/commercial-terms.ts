@@ -62,7 +62,7 @@ export const commercialTerms: Record<string, CommercialTerm> = {
   // --- Confirmed Owner Data ---
   hqLocation: {
     key: "hqLocation",
-    value: "Near Dhalwala, Rishikesh, Uttarakhand (PIN: 249201)",
+    value: "Near Dhalwala, Rishikesh, Uttarakhand (PIN: 249137)",
     confirmed: true,
     source: "owner",
     description: "Verified headquarters physical location",

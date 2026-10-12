@@ -25,7 +25,7 @@ All code, footer templates, contact cards, and Schema.org graphs source verified
 | **Primary Contact Phone** | `+91 81260 06791`                            | E.164 tel link: `tel:+918126006791`     |
 | **WhatsApp Direct**       | `+91 81260 06791`                            | Pre-filled requirement message link     |
 | **Official Email**        | `infotechdevbhoomi@gmail.com`                | `mailto:infotechdevbhoomi@gmail.com`    |
-| **Headquarters Address**  | Near Dhalwala, Rishikesh, Uttarakhand, India | PIN: `249201`                           |
+| **Headquarters Address**  | Near Dhalwala, Rishikesh, Uttarakhand, India | PIN: `249137`                           |
 | **Geo Coordinates**       | `30.0869° N, 78.2676° E`                     | Rishikesh headquarters coordinates      |
 | **Operational Hours**     | Mon – Sat: 09:30 AM – 06:30 PM IST           | Guarded schema representation           |
 | **Primary Delivery Hubs** | Dehradun, Delhi, Rishikesh, Noida, Haridwar  | 42+ active published localities         |
