@@ -85,7 +85,23 @@ export const pagesRegistry: Record<string, PageEntry> = {
   "services-web-development": {
     key: "services-web-development",
     path: "/services/web-development/",
-    title: "Web Design & Development",
+    title: "Web Development",
+    status: "live",
+    inNav: true,
+    inSitemap: true,
+  },
+  "services-website-design": {
+    key: "services-website-design",
+    path: "/services/website-design/",
+    title: "Website Design",
+    status: "live",
+    inNav: true,
+    inSitemap: true,
+  },
+  "services-digital-marketing": {
+    key: "services-digital-marketing",
+    path: "/services/digital-marketing/",
+    title: "Digital Marketing",
     status: "live",
     inNav: true,
     inSitemap: true,
@@ -162,7 +178,7 @@ export const pagesRegistry: Record<string, PageEntry> = {
     title: "Digital Marketing & SEO",
     status: "live",
     inNav: false,
-    inSitemap: true,
+    inSitemap: false, // 301 canonical redirect to /services/digital-marketing/
   },
   "ai-automation": {
     key: "ai-automation",
@@ -170,7 +186,7 @@ export const pagesRegistry: Record<string, PageEntry> = {
     title: "AI & Business Automation",
     status: "live",
     inNav: false,
-    inSitemap: true,
+    inSitemap: false, // 301 canonical redirect to /services/ai-automation/
   },
 
   // Live "Built on Quality. Driven by Reliability" card detail pages

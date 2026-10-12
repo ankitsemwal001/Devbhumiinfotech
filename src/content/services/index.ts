@@ -1,5 +1,5 @@
 import { ServicePageData } from "@/types/service";
-import { websiteDesignService } from "./website-design";
+import { websiteDesignService, websiteDesignGeneralService } from "./website-design";
 import { webDevelopmentService, webDevelopmentShortService } from "./web-development";
 import { digitalMarketingService } from "./digital-marketing";
 import { digitalGrowthService } from "./digital-growth";
@@ -8,6 +8,7 @@ import { softwareDevelopmentService } from "./software-development";
 
 export const allServices: ServicePageData[] = [
   websiteDesignService,
+  websiteDesignGeneralService,
   webDevelopmentService,
   webDevelopmentShortService,
   digitalMarketingService,

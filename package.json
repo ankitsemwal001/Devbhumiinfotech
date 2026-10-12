@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build --webpack",
+    "check:canonical": "npx tsx scripts/check-canonical.mjs",
     "check:claims": "node scripts/check-claims.mjs",
     "check:content": "node scripts/check-content.mjs",
     "check:geo": "npx tsx scripts/check-geo.mjs",

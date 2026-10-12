@@ -153,9 +153,9 @@ export const webDevelopmentService: ServicePageData = {
         "We specialize in Next.js, React, TypeScript, Node.js, Tailwind CSS, PostgreSQL, MongoDB, and Python for custom development.",
     },
     {
-      question: "Will I have full ownership of the website code?",
+      question: "How do you handle website maintenance after deployment?",
       answer:
-        "Yes, 100%. Upon project completion and handover, you receive full ownership of the source code, repositories, and digital assets.",
+        "We offer structured maintenance agreements covering framework upgrades, cloud security patches, database backups, and ongoing uptime monitoring.",
     },
   ],
 };
@@ -163,5 +163,23 @@ export const webDevelopmentService: ServicePageData = {
 export const webDevelopmentShortService: ServicePageData = {
   ...webDevelopmentService,
   slug: "web-development",
+  title: "Custom Web Development Services",
+  metaTitle: "Custom Web Development Company | Next.js & TypeScript Engineering",
+  metaDescription:
+    "High-performance custom web application development using Next.js, React, and modern TypeScript architectures. Fast, secure, and scalable solutions.",
   canonicalUrl: "https://www.devbhoomiinfotech.com/services/web-development/",
+  heroBadge: "Full-Stack Engineering",
+  heroHeading: {
+    regular: "Full-Stack Web Development &",
+    highlight: "Modern Engineering",
+  },
+  heroDescription:
+    "Engineering high-performance, secure, and scalable web applications designed to support your operational and commercial growth.",
+  overview: {
+    heading: "Engineered For Speed, Security & Scalability",
+    content: [
+      "Devbhoomi Infotech builds modern web solutions using proven modern technologies like Next.js, React, Node.js, and cloud architectures.",
+      "From dynamic e-commerce platforms and booking systems to corporate web portals and interactive dashboards, we deliver robust solutions that power real business growth.",
+    ],
+  },
 };

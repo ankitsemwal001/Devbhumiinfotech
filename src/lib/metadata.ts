@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { defaultSEO } from "@/config/seo";
+import { getCanonicalPath } from "@/config/canonical-map";
 
 export interface PageMetadataProps {
   title: string;
@@ -15,7 +16,7 @@ export interface PageMetadataProps {
  * Enforces:
  * - Title <= 60 characters
  * - Meta description <= 155 characters
- * - Self-referencing canonical URL with trailingSlash
+ * - Self-referencing canonical URL with trailingSlash sourced from canonicalMap
  * - No spammy 'keywords' meta tag
  * - OpenGraph and Twitter cards
  */
@@ -26,8 +27,8 @@ export function buildMetadata({
   ogImage = defaultSEO.defaultOgImage,
   noIndex = false,
 }: PageMetadataProps): Metadata {
-  const cleanPath = path.startsWith("/") ? path : `/${path}`;
-  const canonicalUrl = `${siteConfig.url}${cleanPath}`;
+  const canonicalPath = getCanonicalPath(path);
+  const canonicalUrl = `${siteConfig.url}${canonicalPath}`;
 
   // Ensure title adheres to natural reading limits
   const formattedTitle = title.includes("Devbhoomi Infotech")

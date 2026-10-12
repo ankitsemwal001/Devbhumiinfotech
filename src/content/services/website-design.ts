@@ -155,7 +155,31 @@ export const websiteDesignService: ServicePageData = {
     {
       question: "Will my website be mobile-friendly and responsive?",
       answer:
-        "Yes, every design we produce is 100% mobile-first and responsive across all screens: smartphones, tablets, laptops, and 4K displays.",
+        "Yes, every design we produce is responsive on mobile, tablet and desktop across all modern display sizes.",
     },
   ],
+};
+
+export const websiteDesignGeneralService: ServicePageData = {
+  ...websiteDesignService,
+  slug: "website-design",
+  title: "Website Design & UI/UX Design Services",
+  metaTitle: "Website Design & UI/UX Design Company | Devbhoomi Infotech",
+  metaDescription:
+    "Professional website design and UI/UX engineering. Custom, responsive on mobile, tablet and desktop, high-converting digital interfaces built for modern businesses.",
+  canonicalUrl: "https://www.devbhoomiinfotech.com/services/website-design/",
+  heroBadge: "Website Design & UI/UX",
+  heroHeading: {
+    regular: "Website Design &",
+    highlight: "UI/UX Engineering",
+  },
+  heroDescription:
+    "We engineer custom, responsive, and conversion-focused websites designed to elevate your brand presence and capture customer trust across India and worldwide.",
+  overview: {
+    heading: "Crafting High-Converting Digital Experiences",
+    content: [
+      "At Devbhoomi Infotech, we understand that your website is your digital storefront. Our expert UI/UX design team creates sleek, intuitive layouts tailored specifically to your target audience.",
+      "Whether you operate a hospitality brand, an enterprise, or a growing startup, our design systems maximize user engagement, retention, and business conversions.",
+    ],
+  },
 };

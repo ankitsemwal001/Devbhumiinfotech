@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# Apache Configuration for Devbhoomi Infotech (Hostinger Shared / Apache Hosting)
+# Apache Configuration for Devbhoomi Infotech Solutions (Hostinger Shared / Apache)
 # ------------------------------------------------------------------------------
 
 # Enable Rewrite Engine
@@ -15,13 +15,20 @@
   RewriteCond %{HTTP_HOST} ^devbhoomiinfotech\.com$ [NC]
   RewriteRule ^(.*)$ https://www.devbhoomiinfotech.com/$1 [R=301,L]
 
-  # 3. Ensure trailing slash for directory routes (matches Next.js trailingSlash: true)
+  # 3. Canonical 301 Redirects for pages not in old live sitemap
+  RewriteRule ^ai-automation/?$ /services/ai-automation/ [R=301,L]
+  RewriteRule ^digital-marketing/?$ /services/digital-marketing/ [R=301,L]
+
+  # 4. Tag Next.js hashed static assets for immutable caching
+  RewriteRule ^_next/static/ - [E=IMMUTABLE:1]
+
+  # 5. Ensure trailing slash for directory routes (matches Next.js trailingSlash: true)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_URI} !(.[a-zA-Z0-9]{1,5})$
   RewriteCond %{REQUEST_URI} !/$
   RewriteRule ^(.*)$ https://www.devbhoomiinfotech.com/$1/ [R=301,L]
 
-  # 4. Serve index.html inside directory folders
+  # 6. Serve index.html inside directory folders
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteCond %{REQUEST_FILENAME}/index.html -f
   RewriteRule ^(.*)/$ $1/index.html [L]
@@ -33,8 +40,14 @@
 ErrorDocument 404 /404.html
 
 # ------------------------------------------------------------------------------
-# Gzip / Deflate Compression
+# Compression: mod_brotli and mod_deflate (html, css, js, json, svg, xml, txt)
 # ------------------------------------------------------------------------------
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/x-javascript application/json application/xml
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+</IfModule>
+
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/plain
   AddOutputFilterByType DEFLATE text/html
@@ -60,12 +73,10 @@ ErrorDocument 404 /404.html
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
 
-  # HTML documents: Short cache for immediate update propagation
-  ExpiresByType text/html "access plus 1 hour"
+  # HTML documents: no-cache so new deploys show up immediately
+  ExpiresByType text/html "access plus 0 seconds"
 
-  # Immutable assets: Long cache (1 year)
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
+  # Images and fonts: 1 year
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
@@ -76,11 +87,21 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # ------------------------------------------------------------------------------
-# Security Headers
+# Headers & Security Policies
 # ------------------------------------------------------------------------------
 <IfModule mod_headers.c>
+  # Hashed Next.js immutable assets caching
+  Header set Cache-Control "public, max-age=31536000, immutable" env=IMMUTABLE
+
+  # HTML Cache-Control: ensure deploys show up immediately
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
+
   # HTTP Strict Transport Security (HSTS)
-  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  # Owner: Keep at max-age=300 initially (no includeSubDomains, no preload).
+  # Raise to 31536000 only after verifying HTTPS everywhere across all assets for at least one week.
+  Header always set Strict-Transport-Security "max-age=300"
 
   # Prevent MIME type sniffing
   Header always set X-Content-Type-Options "nosniff"

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: digitalMarketingService.metaDescription,
   keywords: digitalMarketingService.keywords,
   alternates: {
-    canonical: digitalMarketingService.canonicalUrl,
+    canonical: "https://www.devbhoomiinfotech.com/services/digital-marketing/",
   },
 };
 

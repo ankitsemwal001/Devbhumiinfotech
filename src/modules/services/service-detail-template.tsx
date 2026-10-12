@@ -207,6 +207,73 @@ export function ServiceDetailTemplate({ data }: ServiceDetailTemplateProps) {
         </section>
       )}
 
+      {/* Local Versions Block for General Services */}
+      {(data.slug === "website-design" || data.slug === "web-development") && (
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">
+                Local Service Editions
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+                Looking for on-site consulting or regional services in Uttarakhand? Explore our local practice pages:
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                {
+                  city: "Rishikesh",
+                  href:
+                    data.slug === "website-design"
+                      ? "/website-design-services-in-rishikesh-uttarakhand/"
+                      : "/web-development-services-in-rishikesh-uttarakhand/",
+                  label:
+                    data.slug === "website-design"
+                      ? "Website Design in Rishikesh (HQ)"
+                      : "Web Development in Rishikesh (HQ)",
+                },
+                {
+                  city: "Dehradun",
+                  href:
+                    data.slug === "website-design"
+                      ? "/website-design-in-dehradun/"
+                      : "/web-development-in-dehradun/",
+                  label:
+                    data.slug === "website-design"
+                      ? "Website Design in Dehradun"
+                      : "Web Development in Dehradun",
+                },
+                {
+                  city: "Haridwar",
+                  href:
+                    data.slug === "website-design"
+                      ? "/website-design-in-haridwar/"
+                      : "/web-development-in-haridwar/",
+                  label:
+                    data.slug === "website-design"
+                      ? "Website Design in Haridwar"
+                      : "Web Development in Haridwar",
+                },
+              ].map((loc) => (
+                <Link
+                  key={loc.href}
+                  href={loc.href}
+                  className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all text-center group shadow-xs"
+                >
+                  <div className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 mb-1">
+                    {loc.label}
+                  </div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center justify-center gap-1">
+                    <span>View local page</span>
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Bottom CTA Banner */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600 text-white">
         <div className="max-w-5xl mx-auto text-center space-y-6">

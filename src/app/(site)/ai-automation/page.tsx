@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: aiAutomationService.metaDescription,
   keywords: aiAutomationService.keywords,
   alternates: {
-    canonical: aiAutomationService.canonicalUrl,
+    canonical: "https://www.devbhoomiinfotech.com/services/ai-automation/",
   },
 };
 
