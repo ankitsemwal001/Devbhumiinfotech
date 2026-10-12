@@ -5,9 +5,7 @@ import { ArrowRight, MessageSquare, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import {
-  generateBreadcrumbSchema,
-  generateFAQSchema,
-  generateServiceSchema,
+  buildLinkedSchemaGraph,
 } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/json-ld";
 
@@ -23,21 +21,25 @@ export function ServiceDetailTemplate({ data }: ServiceDetailTemplateProps) {
     { name: data.title, url: serviceUrl },
   ];
 
-  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
-  const faqSchema = generateFAQSchema(
-    data.faqs.map((f, i) => ({ id: i + 1, question: f.question, answer: f.answer }))
-  );
-  const serviceSchema = generateServiceSchema({
-    title: data.title,
-    description: data.metaDescription,
-    slug: data.slug,
+  const linkedGraph = buildLinkedSchemaGraph({
+    pageUrl: serviceUrl,
+    pageTitle: data.title,
+    pageDescription: data.metaDescription,
+    breadcrumbs,
+    service: {
+      name: data.title,
+      description: data.metaDescription,
+      url: serviceUrl,
+    },
+    faqs: data.faqs?.map((f) => ({
+      question: f.question,
+      answer: f.answer,
+    })),
   });
 
   return (
     <div className="w-full">
-      <JsonLd data={breadcrumbSchema} />
-      <JsonLd data={serviceSchema} />
-      {faqSchema && <JsonLd data={faqSchema} />}
+      <JsonLd data={linkedGraph} />
 
       {/* Hero Section */}
       <section className="relative w-full py-20 lg:py-28 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">

@@ -6,11 +6,7 @@ import { GeoPageData } from "@/content/locations/geo-page-data";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/seo/json-ld";
-import {
-  generateBreadcrumbSchema,
-  generateFAQSchema,
-  generateServiceSchema,
-} from "@/lib/schema";
+import { buildLinkedSchemaGraph } from "@/lib/schema";
 import {
   MapPin,
   CheckCircle2,
@@ -34,78 +30,31 @@ interface GeoServiceTemplateProps {
 export function GeoServiceTemplate({ data }: GeoServiceTemplateProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
-  // Generate Schemas for SEO / GEO / AIO
-  const breadcrumbItems = [
-    { name: "Home", url: `${siteConfig.url}/` },
-    { name: "Services", url: `${siteConfig.url}/services/` },
-    { name: `${data.service.name} in ${data.location.name}`, url: data.canonicalUrl },
-  ];
-  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
-
-  const faqSchema = generateFAQSchema(
-    data.faqs.map((f, i) => ({
-      id: i + 1,
+  // Generate Unified Linked Schema Graph for SEO / GEO / AIO
+  const linkedGraph = buildLinkedSchemaGraph({
+    pageUrl: data.canonicalUrl,
+    pageTitle: data.h1,
+    pageDescription: data.metaDescription,
+    breadcrumbs: [
+      { name: "Home", url: `${siteConfig.url}/` },
+      { name: "Services", url: `${siteConfig.url}/services/` },
+      { name: `${data.service.name} in ${data.location.name}`, url: data.canonicalUrl },
+    ],
+    service: {
+      name: data.h1,
+      description: data.metaDescription,
+      url: data.canonicalUrl,
+    },
+    faqs: data.faqs.map((f) => ({
       question: f.question,
       answer: f.answer,
-    }))
-  );
-
-  const serviceSchema = generateServiceSchema({
-    title: data.h1,
-    description: data.metaDescription,
-    slug: data.slug,
+    })),
   });
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": ["ProfessionalService", "LocalBusiness"],
-    "@id": `${siteConfig.url}/#localbusiness`,
-    name: siteConfig.name,
-    image: `${siteConfig.url}/logo/DBI-official-logo-devbhoomi-infotech-white.png`,
-    telephone: siteConfig.contact.phone,
-    email: siteConfig.contact.email,
-    url: data.canonicalUrl,
-    priceRange: "₹₹",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.contact.address.street,
-      addressLocality: siteConfig.contact.address.city,
-      addressRegion: siteConfig.contact.address.state,
-      postalCode: siteConfig.contact.address.postalCode,
-      addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: siteConfig.contact.geo.latitude,
-      longitude: siteConfig.contact.geo.longitude,
-    },
-    areaServed: [
-      {
-        "@type": "AdministrativeArea",
-        name: data.location.name,
-      },
-      {
-        "@type": "AdministrativeArea",
-        name: data.location.district,
-      },
-      {
-        "@type": "AdministrativeArea",
-        name: "Uttarakhand",
-      },
-      {
-        "@type": "Country",
-        name: "India",
-      },
-    ],
-  };
 
   return (
     <article className="w-full bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 selection:bg-blue-500 selection:text-white">
-      {/* Structured Data Injectors */}
-      <JsonLd data={breadcrumbSchema} />
-      <JsonLd data={serviceSchema} />
-      <JsonLd data={localBusinessSchema} />
-      {faqSchema && <JsonLd data={faqSchema} />}
+      {/* Structured Data Injector */}
+      <JsonLd data={linkedGraph} />
 
       {/* Hero Section */}
       <section className="relative w-full pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white border-b border-slate-800/80">
