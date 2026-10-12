@@ -47,7 +47,7 @@ export function BlogCard({ post }: BlogCardProps) {
 
       <div className="p-6 pt-0">
         <Link
-          href={`/blogs/${post.slug}`}
+          href={`/blogs/${post.slug}/`}
           className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 group-hover:text-blue-700 transition-colors"
         >
           Read Full Article

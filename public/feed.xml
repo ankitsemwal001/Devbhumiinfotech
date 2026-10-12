@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devbhoomi Infotech Insights</title>
+    <link>https://www.devbhoomiinfotech.com/blogs/</link>
+    <description>Engineering, AI automation, custom software, and digital growth insights from Devbhoomi Infotech.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 12 Oct 2026 06:28:41 GMT</lastBuildDate>
+    <atom:link href="https://www.devbhoomiinfotech.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[What is AI Workflow Automation? (And When a Small Business Needs It)]]></title>
+      <link>https://www.devbhoomiinfotech.com/blogs/what-is-ai-workflow-automation/</link>
+      <guid isPermaLink="true">https://www.devbhoomiinfotech.com/blogs/what-is-ai-workflow-automation/</guid>
+      <pubDate>Tue, 10 Feb 2026 03:30:00 GMT</pubDate>
+      <category><![CDATA[AI & Automation]]></category>
+      <description><![CDATA[A plain-English guide to understanding how AI workflow automation connects business tools, eliminates repetitive data entry, and reduces operational costs.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[AI Chatbot vs Rule-Based Chatbot: How to Choose for Your Business]]></title>
+      <link>https://www.devbhoomiinfotech.com/blogs/ai-chatbot-vs-rule-based-chatbot/</link>
+      <guid isPermaLink="true">https://www.devbhoomiinfotech.com/blogs/ai-chatbot-vs-rule-based-chatbot/</guid>
+      <pubDate>Wed, 18 Feb 2026 03:30:00 GMT</pubDate>
+      <category><![CDATA[AI & Automation]]></category>
+      <description><![CDATA[A technical and commercial comparison between retrieval-augmented AI chatbots and traditional decision-tree chatbots for customer support and sales qualification.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Native vs Cross-Platform Mobile Apps: A Practical Decision Guide]]></title>
+      <link>https://www.devbhoomiinfotech.com/blogs/native-vs-cross-platform-mobile-apps/</link>
+      <guid isPermaLink="true">https://www.devbhoomiinfotech.com/blogs/native-vs-cross-platform-mobile-apps/</guid>
+      <pubDate>Mon, 02 Mar 2026 03:30:00 GMT</pubDate>
+      <category><![CDATA[Mobile Apps]]></category>
+      <description><![CDATA[An architectural evaluation of native development (Swift & Kotlin) versus cross-platform frameworks (React Native & Flutter) for business applications.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Custom Software vs Off-the-Shelf: A Cost and Risk Checklist]]></title>
+      <link>https://www.devbhoomiinfotech.com/blogs/custom-software-vs-off-the-shelf/</link>
+      <guid isPermaLink="true">https://www.devbhoomiinfotech.com/blogs/custom-software-vs-off-the-shelf/</guid>
+      <pubDate>Sun, 15 Mar 2026 03:30:00 GMT</pubDate>
+      <category><![CDATA[Software Development]]></category>
+      <description><![CDATA[How to evaluate whether your business should buy an existing SaaS subscription or invest in bespoke custom software development with full IP ownership.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[SEO vs GEO: How to Get Found in Search Engines and in AI Answers]]></title>
+      <link>https://www.devbhoomiinfotech.com/blogs/seo-vs-geo-search-visibility/</link>
+      <guid isPermaLink="true">https://www.devbhoomiinfotech.com/blogs/seo-vs-geo-search-visibility/</guid>
+      <pubDate>Sun, 22 Mar 2026 03:30:00 GMT</pubDate>
+      <category><![CDATA[Digital Growth]]></category>
+      <description><![CDATA[Understand the shift from traditional Search Engine Optimization (SEO) to Generative Engine Optimization (GEO) and learn how to optimize for both.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[How a Remote Software Project Works: A Step-by-Step Guide for International Clients]]></title>
+      <link>https://www.devbhoomiinfotech.com/blogs/working-with-remote-software-team/</link>
+      <guid isPermaLink="true">https://www.devbhoomiinfotech.com/blogs/working-with-remote-software-team/</guid>
+      <pubDate>Sat, 28 Mar 2026 03:30:00 GMT</pubDate>
+      <category><![CDATA[Software Development]]></category>
+      <description><![CDATA[A transparent breakdown of how international clients collaborate remotely with Devbhoomi Infotech on software, mobile, and web development projects.]]></description>
+    </item>
+  </channel>
+</rss>

@@ -474,7 +474,7 @@ function getServiceBlueprint(service: GeoServiceItem, location: GeoLocationItem)
       return {
         heroBadge: `AI & Workflow Automation in Dehradun`,
         heroDescription: `Streamline admissions inquiries, administrative data pipelines, and internal business tasks for organizations across Dehradun.`,
-        overviewAnswer: `${presenceIntro} We develop automated data workflows for educational institutes, healthcare clinics, and commercial offices in Dehradun. By connecting CRM systems, communication channels, and databases, we eliminate clerical bottlenecks and accelerate response cycles.`,
+        overviewAnswer: `${presenceIntro} We develop automated data workflows for educational institutes, healthcare clinics, and commercial enterprises across Dehradun. By connecting CRM systems, communication channels, and databases, we eliminate clerical bottlenecks and accelerate response cycles.`,
         turnaround: "Available upon project scoping",
         techStack: "Python, Make, Webhooks, REST APIs",
         pricingModel: "Custom project quotation based on workflow complexity",

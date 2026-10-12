@@ -2,25 +2,124 @@ import { ServicePageData } from "@/types/service";
 
 export const softwareDevelopmentService: ServicePageData = {
   slug: "software-development",
-  title: "Custom Software & SaaS Development in Rishikesh, Uttarakhand",
-  metaTitle: "Custom Software & SaaS Development Company | Devbhoomi Infotech",
+  title: "Software Development Services | Devbhoomi Infotech",
+  metaTitle: "Software Development Company | Devbhoomi Infotech",
   metaDescription:
-    "Engineering scalable web applications, bespoke business management software, cloud dashboards, and SaaS architectures from Rishikesh, Uttarakhand.",
+    "Engineering scalable web applications, bespoke business management software, cloud dashboards, and SaaS architectures with remote delivery worldwide.",
   canonicalUrl: "https://www.devbhoomiinfotech.com/services/software-development/",
   keywords: [
-    "custom software development rishikesh",
-    "saas development company uttarakhand",
-    "web application development rishikesh",
-    "cloud dashboard development india",
-    "business software developers",
+    "custom software development",
+    "saas development company",
+    "web application development",
+    "business management software",
+    "api integration services",
   ],
-  heroBadge: "Enterprise Software & SaaS",
+  heroBadge: "Custom Software & SaaS",
   heroHeading: {
-    regular: "Custom Software & SaaS Engineering in",
-    highlight: "Rishikesh",
+    regular: "Custom Software Engineering for",
+    highlight: "Growing Businesses",
   },
   heroDescription:
-    "We architect robust web applications, internal operational software, cloud dashboards, and scalable SaaS platforms built with Next.js, Node.js, and TypeScript.",
+    "We architect robust web applications, internal operational software, cloud dashboards, and scalable SaaS platforms with 100% intellectual property transfer.",
+  answerCapsule:
+    "Custom software development is the engineering of tailored web applications, internal portals, and SaaS platforms built around specific business workflows. It is intended for growing businesses that need proprietary functionality, automated operational processes, or direct IP ownership without recurring third-party licensing fees.",
+  atAGlance: {
+    whatItIs: "Architecture, engineering, and maintenance of custom web applications, SaaS platforms, and internal business management portals.",
+    typicalUseCases: [
+      "Proprietary SaaS product engineering for startups and enterprises",
+      "Internal operational portals, workflow managers, and custom ERPs",
+      "High-throughput REST and GraphQL API development and integration",
+      "Legacy software refactoring, performance optimization, and modernization",
+    ],
+    deliverables: [
+      "Production-ready frontend and backend code repositories",
+      "Normalized relational database schemas and API specifications",
+      "Staging preview environments and production deployment setups",
+      "Complete source code ownership and technical architecture documentation",
+    ],
+    typicalProcessLength: "6 to 16 weeks depending on system complexity and milestone scope.",
+    engagementModel: "Milestone-based project quotes or dedicated engineering retainers.",
+  },
+  whoItsFor: {
+    idealFor: [
+      "Businesses with specialized workflows that standard off-the-shelf software cannot accommodate",
+      "Entrepreneurs building multi-tenant SaaS products requiring dedicated data isolation",
+      "Companies spending excessive sums on per-seat monthly subscriptions for generic platforms",
+    ],
+    notNeededWhen: [
+      "An off-the-shelf SaaS tool solves over 90% of your requirements out of the box",
+      "Your business process is not yet formalized or is undergoing weekly structural changes",
+      "You require an instant deployment within 48 hours without development lead time",
+    ],
+  },
+  subServicesDetailed: [
+    {
+      id: "custom-software",
+      title: "Custom Software",
+      definition:
+        "Bespoke digital architecture engineered to solve distinct commercial bottlenecks with modular code, secure data isolation, and scalable database schemas.",
+      deliverables: [
+        "Full-stack web application code",
+        "Role-based permission matrices",
+        "Relational database architecture",
+      ],
+    },
+    {
+      id: "saas-product-development",
+      title: "SaaS Product Development",
+      definition:
+        "Multi-tenant cloud platforms designed for commercial subscription distribution, equipped with recurring billing integration and administrative controls.",
+      deliverables: [
+        "Multi-tenant tenant isolation",
+        "Payment gateway billing webhooks",
+        "Super-admin system dashboards",
+      ],
+    },
+    {
+      id: "web-applications",
+      title: "Web Applications",
+      definition:
+        "Responsive browser-based systems built with modern frameworks that provide desktop-grade speed, offline resilience, and interactive client workflows.",
+      deliverables: [
+        "Component-driven responsive interface",
+        "State management and client caching",
+        "Automated regression test coverage",
+      ],
+    },
+    {
+      id: "business-management-systems",
+      title: "Business Management Systems",
+      definition:
+        "Internal ERPs, inventory monitors, and workflow trackers designed to unify distributed commercial teams and minimize manual human handoffs.",
+      deliverables: [
+        "Inventory and order tracking logs",
+        "Automated PDF document generators",
+        "Operational reporting dashboards",
+      ],
+    },
+    {
+      id: "api-development-integration",
+      title: "API Development & Integration",
+      definition:
+        "Documented, secure REST and GraphQL endpoints linking internal applications with external payment providers, messaging APIs, and enterprise systems.",
+      deliverables: [
+        "OpenAPI / Swagger specifications",
+        "Token-based authentication & rate limiting",
+        "Webhook ingestion pipelines",
+      ],
+    },
+    {
+      id: "maintenance-modernisation",
+      title: "Maintenance & Modernisation",
+      definition:
+        "Refactoring legacy monoliths, upgrading outdated dependencies, indexing database tables, and hardening cloud security configurations.",
+      deliverables: [
+        "Security and dependency audit reports",
+        "Database query optimization plans",
+        "Zero-downtime production cutovers",
+      ],
+    },
+  ],
   overview: {
     heading: "Bespoke Business Software That Eliminates Operational Bottlenecks",
     content: [
@@ -131,4 +230,6 @@ export const softwareDevelopmentService: ServicePageData = {
         "Yes. We specialize in building secure API connectors with existing tools like Tally, Zoho, Salesforce, WhatsApp Cloud API, payment gateways, and custom database servers.",
     },
   ],
+  lastUpdated: "2026-10-12",
+  reviewedBy: "Devbhoomi Infotech",
 };

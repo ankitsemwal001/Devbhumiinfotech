@@ -228,7 +228,7 @@ export function PackagesPreviewSection() {
                   {isFeatured && (
                     <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold uppercase tracking-wider shadow-md shadow-blue-500/25 flex items-center gap-1.5 whitespace-nowrap">
                       <Sparkles className="w-3.5 h-3.5" />
-                      <span>Most Popular Choice</span>
+                      <span>Featured Package</span>
                     </div>
                   )}
 

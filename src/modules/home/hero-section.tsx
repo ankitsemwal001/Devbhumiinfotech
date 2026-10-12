@@ -46,7 +46,7 @@ export function HeroSection() {
           {/* Eyebrow Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-xs sm:text-sm font-medium mb-5 sm:mb-6 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Technology & digital growth partner · Rishikesh, Uttarakhand</span>
+            <span>Headquartered in Rishikesh, Uttarakhand · Serving clients worldwide</span>
           </div>
 
           {/* H1 Heading (using ibrand display font) */}
@@ -59,7 +59,7 @@ export function HeroSection() {
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg text-slate-300 max-w-xl xl:max-w-2xl mb-8 sm:mb-10 leading-relaxed font-normal">
-            From Uttarakhand to clients across India, we build the digital systems — websites, custom software, automation, and search visibility — that turn visitors into enquiries.
+            Headquartered in Rishikesh, Uttarakhand — serving clients worldwide, remotely. We engineer websites, custom software, mobile apps, automation, and search visibility built around your business goals.
           </p>
 
           {/* Action CTAs */}

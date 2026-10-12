@@ -237,7 +237,7 @@ export function Header() {
         },
       ],
       exploreHref: "/services/ai-automation/",
-      exploreText: "Explore all AI & Automation services →",
+      exploreText: "Explore all AI & Automation services",
       ctaHeadline: "Let AI work for you",
       ctaSubtext:
         "From chatbots to full business automation, we build AI solutions built around your business goals.",
@@ -278,7 +278,7 @@ export function Header() {
         },
       ],
       exploreHref: "/services/software-development/",
-      exploreText: "Explore all Software Development services →",
+      exploreText: "Explore all Software Development services ",
       ctaHeadline: "Let's discuss your project",
       ctaSubtext:
         "Custom software, SaaS platforms, and internal tools engineered for your business needs.",
@@ -298,7 +298,7 @@ export function Header() {
         },
       ],
       exploreHref: "/services/mobile-app-development/",
-      exploreText: "Explore all Mobile App services →",
+      exploreText: "Explore all Mobile App services ",
       ctaHeadline: "Let's discuss your project",
       ctaSubtext:
         "Native and cross-platform mobile apps for iOS and Android tailored to your users.",
@@ -339,7 +339,7 @@ export function Header() {
         },
       ],
       exploreHref: "/services/web-development/",
-      exploreText: "Explore all Web Development services →",
+      exploreText: "Explore all Web Development services ",
       ctaHeadline: "Let's discuss your project",
       ctaSubtext:
         "High-performance websites and bespoke web designs engineered to convert visitors.",
@@ -380,7 +380,7 @@ export function Header() {
         },
       ],
       exploreHref: "/services/digital-marketing/",
-      exploreText: "Explore all Digital Growth services →",
+      exploreText: "Explore all Digital Growth services ",
       ctaHeadline: "Let's discuss your project",
       ctaSubtext:
         "Search engine optimisation, GEO, and local visibility strategies to grow your reach.",

@@ -121,7 +121,7 @@ export default function PricingPage() {
                   {pkg.popular && (
                     <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5" />
-                      <span>Most Popular</span>
+                      <span>Featured</span>
                     </div>
                   )}
 

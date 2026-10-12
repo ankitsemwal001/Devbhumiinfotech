@@ -1,26 +1,49 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import { Send, CheckCircle2, Loader2, MessageSquare, AlertCircle } from "lucide-react";
+import { Send, CheckCircle2, Loader2, MessageSquare, AlertCircle, Globe2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 const contactSchema = z.object({
   fullName: z.string().min(2, "Please enter your name (at least 2 characters)"),
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().min(10, "Please enter a valid phone number (at least 10 digits)"),
+  country: z.string().optional(),
+  timezone: z.string().optional(),
   service: z.string().min(1, "Please select a service"),
   message: z.string().min(10, "Please describe your project (at least 10 characters)"),
   honeypot: z.string().max(0, "Bot detected"),
 });
+
+const serviceOptions = [
+  { value: "AI & Automation", label: "AI & Automation (Chatbots, Workflows, Data)" },
+  { value: "Software Development", label: "Custom Software & SaaS Development" },
+  { value: "Mobile Apps", label: "Mobile Apps (iOS & Android Development)" },
+  { value: "Web Development", label: "Web Development & Website Design" },
+  { value: "Digital Growth", label: "Digital Growth (SEO, GEO & Visibility)" },
+  { value: "General Consultation", label: "General Project Consultation / Other" },
+];
+
+const slugToServiceMap: Record<string, string> = {
+  "ai-automation": "AI & Automation",
+  "software-development": "Software Development",
+  "mobile-app-development": "Mobile Apps",
+  "web-development": "Web Development",
+  "website-design": "Web Development",
+  "digital-marketing": "Digital Growth",
+  "digital-growth": "Digital Growth",
+};
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-    service: "Website Design & Development",
+    country: "",
+    timezone: "",
+    service: "Web Development",
     message: "",
     honeypot: "",
   });
@@ -29,6 +52,20 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formStarted, setFormStarted] = useState(false);
+
+  // Pre-select service from URL parameter (e.g., /contact/?service=ai-automation)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const serviceParam = params.get("service");
+      if (serviceParam && slugToServiceMap[serviceParam]) {
+        setFormData((prev) => ({
+          ...prev,
+          service: slugToServiceMap[serviceParam],
+        }));
+      }
+    }
+  }, []);
 
   const handleFocus = () => {
     if (!formStarted) {
@@ -81,7 +118,6 @@ export function ContactForm() {
 
     try {
       // Static-safe submission:
-      // If a webhook endpoint is provided (e.g. n8n or Hostinger PHP mailer), POST to it
       const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT;
       if (endpoint) {
         await fetch(endpoint, {
@@ -96,11 +132,12 @@ export function ContactForm() {
         });
       }
 
-      // Track analytics conversion event
+      // Track analytics conversion event (no PII sent)
       if (typeof window !== "undefined" && (window as any).dataLayer) {
         (window as any).dataLayer.push({
           event: "form_submit",
           service: formData.service,
+          country: formData.country || "Not specified",
         });
       }
 
@@ -113,7 +150,9 @@ export function ContactForm() {
   const getWhatsAppPrefillUrl = () => {
     const text = `Hello Devbhoomi Infotech,%0A%0AMy name is ${encodeURIComponent(
       formData.fullName
-    )}.%0AEmail: ${encodeURIComponent(formData.email)}%0APhone: ${encodeURIComponent(
+    )}.%0ACountry: ${encodeURIComponent(formData.country || "Not specified")}%0AEmail: ${encodeURIComponent(
+      formData.email
+    )}%0APhone: ${encodeURIComponent(
       formData.phone
     )}%0AService Needed: ${encodeURIComponent(
       formData.service
@@ -123,6 +162,12 @@ export function ContactForm() {
 
   return (
     <div className="bg-white dark:bg-slate-900 p-8 sm:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
+      {/* Worldwide welcome badge */}
+      <div className="mb-6 flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-semibold w-fit">
+        <Globe2 className="w-3.5 h-3.5" />
+        <span>Clients worldwide are welcome · Remote project delivery</span>
+      </div>
+
       {submitted ? (
         <div
           role="status"
@@ -136,7 +181,7 @@ export function ContactForm() {
             Thank You for Reaching Out
           </h3>
           <p className="text-slate-600 dark:text-slate-300 max-w-md mx-auto text-sm leading-relaxed">
-            Your project inquiry has been received. Our team will review your requirements and follow up promptly during business hours.
+            Your project brief has been received. Our engineering team in Rishikesh will review your requirements and follow up promptly.
           </p>
           <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
@@ -181,7 +226,7 @@ export function ContactForm() {
               value={formData.fullName}
               onFocus={handleFocus}
               onChange={handleChange}
-              placeholder="e.g. Ankit Semwal"
+              placeholder="e.g. Sarah Jenkins or Rahul Verma"
               className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm transition-all"
             />
             {errors.fullName && (
@@ -224,7 +269,7 @@ export function ContactForm() {
                 htmlFor="phone"
                 className="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5"
               >
-                Phone / WhatsApp <span className="text-rose-500">*</span>
+                Phone / WhatsApp (E.164) <span className="text-rose-500">*</span>
               </label>
               <input
                 type="tel"
@@ -234,7 +279,7 @@ export function ContactForm() {
                 value={formData.phone}
                 onFocus={handleFocus}
                 onChange={handleChange}
-                placeholder="+91 98765 43210"
+                placeholder="+1 555 123 4567 or +91 98765 43210"
                 className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm transition-all"
               />
               {errors.phone && (
@@ -243,6 +288,46 @@ export function ContactForm() {
                   <span>{errors.phone}</span>
                 </p>
               )}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label
+                htmlFor="country"
+                className="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5"
+              >
+                Country / Location
+              </label>
+              <input
+                type="text"
+                id="country"
+                name="country"
+                value={formData.country}
+                onFocus={handleFocus}
+                onChange={handleChange}
+                placeholder="e.g. India, United States, UK, UAE"
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm transition-all"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="timezone"
+                className="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5"
+              >
+                Timezone / Preferred Call Time (optional)
+              </label>
+              <input
+                type="text"
+                id="timezone"
+                name="timezone"
+                value={formData.timezone}
+                onFocus={handleFocus}
+                onChange={handleChange}
+                placeholder="e.g. EST / Mornings, IST afternoons"
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm transition-all"
+              />
             </div>
           </div>
 
@@ -260,11 +345,11 @@ export function ContactForm() {
               onChange={handleChange}
               className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm transition-all"
             >
-              <option value="AI & Business Automation">AI & Business Automation</option>
-              <option value="Custom Software & SaaS">Custom Software & SaaS Development</option>
-              <option value="Website Design & Development">Website Design & Web Development</option>
-              <option value="Digital Growth & SEO">Digital Growth, SEO & GEO</option>
-              <option value="General Consultation">General Discussion / Other</option>
+              {serviceOptions.map((opt) => (
+                <option key={opt.value} value={opt.value}>
+                  {opt.label}
+                </option>
+              ))}
             </select>
           </div>
 

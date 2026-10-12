@@ -79,7 +79,7 @@ All baseline package tiers sourced from `src/content/packages.ts`:
 | Package Tier | Starting Price | Target Business | Key Deliverables |
 | :--- | :--- | :--- | :--- |
 | **Starter Website** | **₹15,000** | Early-stage clinics, cafes, local contractors | 5 custom static pages, mobile-responsive layout, WhatsApp click-to-chat, basic on-page SEO |
-| **Standard Website (Most Popular)** | **₹25,000** | Growing yoga schools, boutique hotels, institutes | 8–10 custom pages, interactive forms, photo galleries, Google Maps & GBP schema, speed optimization |
+| **Standard Website (Featured)** | **₹25,000** | Growing yoga schools, boutique hotels, institutes | 8–10 custom pages, interactive forms, photo galleries, Google Maps & GBP schema, speed optimization |
 | **Premium Website** | **₹40,000** | High-growth firms, multi-location brands, exporters | 15–20 pages, dynamic blog engine, custom lead capture funnel, programmatic geo schema, performance optimization |
 | **Custom Enterprise Solutions** | **Custom Quote** | SaaS platforms, automated booking portals | Bespoke engineering, database modeling, external API orchestrations |
 

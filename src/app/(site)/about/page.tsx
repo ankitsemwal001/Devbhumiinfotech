@@ -10,9 +10,9 @@ import { ShieldCheck, Cpu, HeartHandshake, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "About Us | Devbhoomi Infotech Solutions",
+  title: "About Us | Devbhoomi Infotech",
   description:
-    "Learn about Devbhoomi Infotech Solutions, a technology and digital growth partner based in Rishikesh, Uttarakhand, serving businesses across India.",
+    "Headquartered in Rishikesh, Uttarakhand — serving clients worldwide, remotely. Learn about Devbhoomi Infotech, our technology focus, and engineering standards.",
   alternates: {
     canonical: `${siteConfig.url}/about/`,
   },
@@ -36,13 +36,13 @@ export default function AboutPage() {
             About Devbhoomi Infotech
           </span>
           <h1 className="text-4xl sm:text-6xl font-extrabold">
-            Rooted in Uttarakhand,{" "}
+            Headquartered in Rishikesh,{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              Building for India
+              Serving Clients Worldwide
             </span>
           </h1>
           <p className="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            We are a technology and digital growth agency headquartered in Rishikesh, crafting custom web systems, business software, and intelligent AI automations.
+            Headquartered in Rishikesh, Uttarakhand — serving clients worldwide, remotely. We build websites, custom software, mobile apps, automation, and search visibility designed around your business goals.
           </p>
         </div>
       </section>
@@ -271,6 +271,98 @@ export default function AboutPage() {
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 Headquartered along Dhalwala in Rishikesh, Uttarakhand, bringing top-tier software craftsmanship to regional and nationwide clients.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Entity Quick Facts Block (matches schema & llms.txt) */}
+      <section
+        id="quick-facts"
+        className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950 border-t border-slate-200/80 dark:border-slate-800"
+      >
+        <div className="max-w-5xl mx-auto space-y-8">
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <span className="inline-block text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 px-3 py-1 rounded-full border border-blue-200 dark:border-blue-900">
+              Verified Entity Overview
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+              Quick Facts: Devbhoomi Infotech
+            </h2>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
+              Core facts about our organisation, geographic base, and remote service model.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-50/50 dark:bg-slate-900/60 shadow-sm">
+            <div className="divide-y divide-slate-200 dark:divide-slate-800">
+              <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-start">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  Legal Entity / Brand
+                </div>
+                <div className="md:col-span-2 text-sm text-slate-900 dark:text-slate-200 font-semibold">
+                  Devbhoomi Infotech (Rishikesh, Uttarakhand)
+                </div>
+              </div>
+
+              <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-start">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  Headquarters & Base
+                </div>
+                <div className="md:col-span-2 text-sm text-slate-900 dark:text-slate-200">
+                  Rishikesh, Uttarakhand, India — Postal Code: 249137.
+                </div>
+              </div>
+
+              <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-start">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  Geographic Reach
+                </div>
+                <div className="md:col-span-2 text-sm text-slate-900 dark:text-slate-200">
+                  Headquartered in Rishikesh, Uttarakhand — serving regional clients in person and international clients worldwide via disciplined remote delivery.
+                </div>
+              </div>
+
+              <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-start">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  Core Practice Areas
+                </div>
+                <div className="md:col-span-2 text-sm text-slate-900 dark:text-slate-200 space-y-1">
+                  <div>1. AI & Automation (Chatbots, Workflow Automation, Data Processing)</div>
+                  <div>2. Custom Software Development (SaaS, Web Apps, Business Management, APIs)</div>
+                  <div>3. Mobile Apps (Native & Cross-Platform iOS & Android Development)</div>
+                  <div>4. Web Development (Corporate Portals, High-Performance Websites, UI/UX Design)</div>
+                  <div>5. Digital Growth (Search Engine Optimization, GEO, Local SEO)</div>
+                </div>
+              </div>
+
+              <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-start">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  Delivery Standards
+                </div>
+                <div className="md:col-span-2 text-sm text-slate-900 dark:text-slate-200">
+                  Structured milestone sprints, private staging demos, direct engineer communication, and 100% intellectual property & source code transfer upon completion.
+                </div>
+              </div>
+
+              <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-start">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  Verified Track Record
+                </div>
+                <div className="md:col-span-2 text-sm text-slate-900 dark:text-slate-200">
+                  20+ completed digital projects · 50+ business clients served · Separate teams organized by specialty.
+                </div>
+              </div>
+
+              <div className="p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-start">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  Direct Contact
+                </div>
+                <div className="md:col-span-2 text-sm text-slate-900 dark:text-slate-200 space-y-1">
+                  <div>Phone / WhatsApp: <a href="tel:+918126006791" className="text-blue-600 dark:text-blue-400 hover:underline">+91 81260 06791</a></div>
+                  <div>Email: <a href="mailto:infotechdevbhoomi@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">infotechdevbhoomi@gmail.com</a></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

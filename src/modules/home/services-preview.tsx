@@ -43,7 +43,7 @@ const cardThemes: Record<
     gradient: "from-emerald-500/15 via-emerald-500/5 to-transparent",
     tagline: "Autonomous Agents & Flows",
     tools: ["n8n", "OpenAI", "Claude", "WhatsApp API", "Python"],
-    impact: "70% Faster Workflows • 24/7 Autopilot",
+    impact: "Structured Workflows • Automated Operations",
     activeIconBg: "bg-emerald-600 shadow-emerald-500/40",
   },
   "software-development": {

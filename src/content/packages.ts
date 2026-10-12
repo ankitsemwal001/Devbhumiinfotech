@@ -42,7 +42,7 @@ export const pricingPackages: PricingPackage[] = [
   },
   {
     id: 2,
-    name: "Standard Website (Most Popular)",
+    name: "Standard Website (Featured)",
     price: "₹25,000",
     priceType: "starting-from",
     category: "website",

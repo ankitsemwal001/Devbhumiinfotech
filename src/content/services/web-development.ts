@@ -58,44 +58,44 @@ export const webDevelopmentService: ServicePageData = {
       title: "Requirement Gathering",
       subtitle: "Specification & Tech Audit",
       description:
-        "Deep-dive technical assessment of system requirements, user roles, API specifications, and architectural constraints.",
+        "Deep-dive discovery session to define technical requirements, user personas, performance targets, and milestone schedules.",
       points: [
-        "Business analysis for website development in Rishikesh",
-        "Technical specification and architecture blueprint",
-        "Database modeling and API planning",
-        "Milestone alignment with business goals",
+        "Business requirements document (BRD)",
+        "System architecture and database design",
+        "Third-party API integration mapping",
+        "Project timeline and milestone definition",
       ],
     },
     {
       id: "2",
-      title: "Architecture Planning",
-      subtitle: "System Design",
+      title: "Wireframing & UI/UX Design",
+      subtitle: "High-Fidelity Prototypes",
       description:
-        "Setting up code repositories, CI/CD pipelines, database schemas, and microservice or monolithic architecture.",
+        "Translating brand goals into responsive Figma wireframes with high-contrast color schemes, intuitive hierarchy, and smooth typography.",
       points: [
-        "Repository setup and branch protection rules",
-        "Database schema design and optimization",
-        "API contract design and documentation",
-        "Security compliance and environment configs",
+        "Figma clickable prototypes",
+        "Design system and component token library",
+        "Mobile-first responsive adaptations",
+        "Stakeholder design sign-off",
       ],
     },
     {
       id: "3",
       title: "Frontend Engineering",
-      subtitle: "UI & State Management",
+      subtitle: "Component Architecture",
       description:
-        "Translating design specs into modular, accessible, and responsive components with zero performance bloat.",
+        "Writing modular, component-based Next.js and TypeScript frontend code with clean styling and smooth micro-interactions.",
       points: [
-        "Component-driven development",
-        "Type-safe data fetching with Next.js",
-        "Interactive animations and feedback states",
-        "Cross-browser and screen compatibility",
+        "Next.js App Router and static export structure",
+        "TypeScript for type safety and code quality",
+        "Tailwind CSS / Vanilla CSS tokens",
+        "Lighthouse performance and accessibility optimization",
       ],
     },
     {
       id: "4",
-      title: "Backend & API Integration",
-      subtitle: "Business Logic & Storage",
+      title: "Backend & Database Integration",
+      subtitle: "Secure API Plumbing",
       description:
         "Developing server-side endpoints, authentication systems, database queries, and third-party integrations.",
       points: [
@@ -131,26 +131,13 @@ export const webDevelopmentService: ServicePageData = {
         "Error logging and real-time monitoring",
       ],
     },
-    {
-      id: "7",
-      title: "Maintenance & DevOps",
-      subtitle: "Continuous Reliability",
-      description:
-        "Continuous monitoring, framework upgrades, automated database backups, and emergency technical support.",
-      points: [
-        "Automated cloud backups and disaster recovery",
-        "Framework and security package updates",
-        "Uptime monitoring and incident response",
-        "Priority developer support for enhancements",
-      ],
-    },
   ],
   faqsHeading: "Frequently Asked Questions",
   faqs: [
     {
       question: "Which programming languages and frameworks do you use?",
       answer:
-        "We specialize in Next.js, React, TypeScript, Node.js, Tailwind CSS, PostgreSQL, MongoDB, and Python for custom development.",
+        "We specialize in Next.js, React, TypeScript, Node.js, PostgreSQL, MongoDB, and Python for custom development.",
     },
     {
       question: "How do you handle website maintenance after deployment?",
@@ -161,20 +148,114 @@ export const webDevelopmentService: ServicePageData = {
 };
 
 export const webDevelopmentShortService: ServicePageData = {
-  ...webDevelopmentService,
   slug: "web-development",
-  title: "Custom Web Development Services",
-  metaTitle: "Custom Web Development Company | Next.js & TypeScript Engineering",
+  title: "Web Development Services | Devbhoomi Infotech",
+  metaTitle: "Web Development Company | Devbhoomi Infotech",
   metaDescription:
-    "High-performance custom web application development using Next.js, React, and modern TypeScript architectures. Fast, secure, and scalable solutions.",
+    "Engineering high-performance corporate websites, UI/UX designs, e-commerce stores, and landing pages with remote delivery worldwide.",
   canonicalUrl: "https://www.devbhoomiinfotech.com/services/web-development/",
-  heroBadge: "Full-Stack Engineering",
+  keywords: [
+    "web development services",
+    "website design company",
+    "corporate website development",
+    "ecommerce website development",
+    "nextjs web development",
+  ],
+  heroBadge: "High-Performance Web Engineering",
   heroHeading: {
-    regular: "Full-Stack Web Development &",
-    highlight: "Modern Engineering",
+    regular: "High-Performance Web Development &",
+    highlight: "Website Design",
   },
   heroDescription:
-    "Engineering high-performance, secure, and scalable web applications designed to support your operational and commercial growth.",
+    "We engineer clean, responsive, and fast corporate websites, e-commerce platforms, and user interfaces designed around your business goals.",
+  answerCapsule:
+    "Web development is the engineering, programming, and optimization of internet applications and websites. It is designed for businesses requiring fast-loading digital portals, customer-facing interfaces, or conversion-focused platforms that represent their brand credibly and turn visitors into sales leads.",
+  atAGlance: {
+    whatItIs: "Full-stack development of corporate websites, e-commerce stores, custom landing pages, and web portals using Next.js, React, and TypeScript.",
+    typicalUseCases: [
+      "Corporate business websites and institutional portals",
+      "UI/UX design systems and responsive multi-device layouts",
+      "E-commerce stores and catalogue platforms",
+      "Conversion-focused landing pages and website redesigns",
+    ],
+    deliverables: [
+      "Static-exported or serverless Next.js web application code",
+      "Mobile-first responsive design tokens and component systems",
+      "Structured JSON-LD schema markup and SEO meta tags",
+      "100% intellectual property ownership transfer upon completion",
+    ],
+    typicalProcessLength: "3 to 8 weeks depending on page count and custom integration complexity.",
+    engagementModel: "Fixed-scope milestone contracts or custom project quotes.",
+  },
+  whoItsFor: {
+    idealFor: [
+      "Companies requiring exceptional page speed and Core Web Vitals to rank effectively in search",
+      "Brands upgrading from slow, generic WordPress themes to custom modern codebases",
+      "Organisations needing reliable lead generation forms, WhatsApp integrations, and structured analytics",
+    ],
+    notNeededWhen: [
+      "You only need a single temporary link-in-bio page with zero custom branding requirements",
+      "You do not plan to maintain or update your digital presence over time",
+      "Your requirements can be solved by a generic free social media page",
+    ],
+  },
+  subServicesDetailed: [
+    {
+      id: "business-corporate-websites",
+      title: "Business & Corporate Websites",
+      definition:
+        "Professional digital platforms engineered for credibility, technical performance, and inbound inquiry generation.",
+      deliverables: [
+        "Accessible semantic HTML5 structure",
+        "Responsive layouts tested across mobile, tablet, and desktop",
+        "Secure contact forms and lead notification triggers",
+      ],
+    },
+    {
+      id: "website-design",
+      title: "Website Design (UI/UX)",
+      definition:
+        "Human-centered user experience and user interface design focused on clear visual hierarchy and effortless customer journeys.",
+      deliverables: [
+        "Figma prototypes and interactive layout mockups",
+        "Typography, color token, and component design systems",
+        "Conversion rate optimization wireframes",
+      ],
+    },
+    {
+      id: "e-commerce",
+      title: "E-Commerce",
+      definition:
+        "Secure, high-speed digital commerce platforms with catalogue navigation, checkout funnels, and payment gateway integration.",
+      deliverables: [
+        "Product catalogue and filtering mechanisms",
+        "Cart and checkout payment integration",
+        "Inventory synchronization and customer notification webhooks",
+      ],
+    },
+    {
+      id: "landing-pages",
+      title: "Landing Pages",
+      definition:
+        "Focused single-page campaigns built for paid marketing campaigns, product launches, and high-converting lead capture.",
+      deliverables: [
+        "A/B testable modular layouts",
+        "Rapid load times under 1 second",
+        "Direct CRM and analytics event attribution",
+      ],
+    },
+    {
+      id: "redesign-optimisation",
+      title: "Redesign & Optimisation",
+      definition:
+        "Modernizing outdated websites to improve Core Web Vitals, fix broken user experiences, and elevate search visibility.",
+      deliverables: [
+        "Comprehensive UX and speed audits",
+        "Codebase migration to modern frameworks",
+        "SEO-preserving 301 URL redirect mappings",
+      ],
+    },
+  ],
   overview: {
     heading: "Engineered For Speed, Security & Scalability",
     content: [
@@ -182,4 +263,108 @@ export const webDevelopmentShortService: ServicePageData = {
       "From dynamic e-commerce platforms and booking systems to corporate web portals and interactive dashboards, we deliver robust solutions that power real business growth.",
     ],
   },
+  featuresHeading: "Full-Stack Development Capabilities",
+  features: [
+    {
+      title: "Modern Tech Stack",
+      description:
+        "Built with Next.js, React, TypeScript, and modern API architectures for maximum reliability and speed.",
+    },
+    {
+      title: "Core Web Vitals Optimized",
+      description:
+        "Fast page loads, optimized server-side rendering, and clean Lighthouse performance targets.",
+    },
+    {
+      title: "Airtight Security",
+      description:
+        "SSL encryption, input sanitation, CSRF protection, and rigorous security hardening standard on all projects.",
+    },
+    {
+      title: "Custom Integrations",
+      description:
+        "Seamless integration with payment gateways, CRM systems, WhatsApp APIs, and email servers.",
+    },
+  ],
+  processHeading: "Our Development Lifecycle",
+  processSubheading: "Agile, transparent, and quality-driven execution",
+  processSteps: [
+    {
+      id: "1",
+      title: "Requirement Gathering",
+      subtitle: "Specification & Tech Audit",
+      description:
+        "Deep-dive discovery session to define technical requirements, user personas, performance targets, and milestone schedules.",
+      points: [
+        "Business requirements document (BRD)",
+        "System architecture and database design",
+        "Third-party API integration mapping",
+        "Project timeline and milestone definition",
+      ],
+    },
+    {
+      id: "2",
+      title: "Wireframing & UI/UX Design",
+      subtitle: "High-Fidelity Prototypes",
+      description:
+        "Translating brand goals into responsive Figma wireframes with high-contrast color schemes, intuitive hierarchy, and smooth typography.",
+      points: [
+        "Figma clickable prototypes",
+        "Design system and component token library",
+        "Mobile-first responsive adaptations",
+        "Stakeholder design sign-off",
+      ],
+    },
+    {
+      id: "3",
+      title: "Frontend Engineering",
+      subtitle: "Component Architecture",
+      description:
+        "Writing modular, component-based Next.js and TypeScript frontend code with clean styling and smooth micro-interactions.",
+      points: [
+        "Next.js App Router and static export structure",
+        "TypeScript for type safety and code quality",
+        "Tailwind CSS / Vanilla CSS tokens",
+        "Lighthouse performance and accessibility optimization",
+      ],
+    },
+    {
+      id: "4",
+      title: "Backend & Database Integration",
+      subtitle: "Secure API Plumbing",
+      description:
+        "Developing server-side endpoints, authentication systems, database queries, and third-party integrations.",
+      points: [
+        "Secure REST / GraphQL APIs",
+        "Authentication and role-based access control",
+        "Payment gateways and messaging integrations",
+        "Optimized query caching and performance",
+      ],
+    },
+  ],
+  faqsHeading: "Frequently Asked Questions",
+  faqs: [
+    {
+      question: "Which programming languages and frameworks do you use?",
+      answer:
+        "We specialize in Next.js, React, TypeScript, Node.js, PostgreSQL, MongoDB, and Python for custom development.",
+    },
+    {
+      question: "How do you ensure fast page load speeds?",
+      answer:
+        "We leverage static generation, image optimization, responsive asset sizes, and clean code without bloated third-party page builders to achieve top Core Web Vitals.",
+    },
+    {
+      question: "Do we own the website code after it is launched?",
+      answer:
+        "Yes, 100%. Upon project completion, all source code, design assets, and deployment configurations belong entirely to your company.",
+    },
+    {
+      question: "Can we manage website content ourselves?",
+      answer:
+        "Yes. We can integrate lightweight headless content management systems or structured markdown content files so your team can easily publish updates.",
+    },
+  ],
+  lastUpdated: "2026-10-12",
+  reviewedBy: "Devbhoomi Infotech",
 };
