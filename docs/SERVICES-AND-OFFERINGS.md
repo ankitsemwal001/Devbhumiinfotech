@@ -1,78 +1,77 @@
-# Services & Offerings — Devbhoomi Infotech Solutions
+# Services & Offerings Architecture — Devbhoomi Infotech
 
-## 1. Core Service Disciplines Overview
+## 1. Five Core Service Groups
 
-Devbhoomi Infotech Solutions delivers 5 primary technology engineering and digital growth disciplines:
+Devbhoomi Infotech structures all client offerings, navigation menus, sitemaps, and technical schemas into 5 distinct disciplines:
 
 ```
-                            Devbhoomi Infotech Services
-                                         │
-        ┌───────────────────┬────────────┴───────┬───────────────────┐
-        ▼                   ▼                    ▼                   ▼
-1. Website Design   2. Web Development   3. AI Automation   4. Digital Growth & SEO
-   - Bespoke UI/UX     - Next.js 16         - AI Chatbots      - Local GBP Improvement
-   - Mobile-First      - Headless CMS       - WhatsApp Bots    - Technical SEO Audits
-   - Wireframes        - Modern Architecture - CRM Automation   - Schema & GEO
-        │
-        └────────────────────────────────────────┬───────────────────┘
-                                                 ▼
-                                     5. Custom Software & SaaS
-                                        - Business Portals
-                                        - Workflow Automations
-                                        - Client Dashboards
+                            Devbhoomi Infotech
+                                     │
+    ┌────────────────┬───────────────┼───────────────┬────────────────┐
+    ▼                ▼               ▼               ▼                ▼
+1. AI &          2. Software      3. Mobile Apps  4. Web           5. Digital
+   Automation       Development      (iOS & Android) Development      Growth
+   - AI Chatbots    - Custom Software - Mobile Apps   - Corporate Web  - SEO
+   - Workflows      - SaaS Products  - iOS & Android - UI/UX Design   - GEO
+   - Data Processing- Web Apps                       - E-Commerce     - Local SEO
+   - Custom AI      - Management                     - Landing Pages  - Social Media
+                    - APIs & DevOps                  - Redesigns      - Content / CRO
 ```
 
 ---
 
-## 2. Detailed Service Specifications
+## 2. Service Specifications
 
-### 2.1 Modern Website Design
-- **Focus**: Bespoke visual brand identity, modern typography, mobile-first responsive layout, and conversion-engineered user funnels.
-- **Technology Stack**: Figma, Tailwind CSS v4, Lucide Icons, Framer Motion.
-- **Turnaround Time**: Standard project timelines based on scope.
-- **Deliverables**:
-  - Interactive wireframes and design tokens.
-  - Responsive fluid grid layouts on mobile, tablet and desktop.
-  - High-conversion CTA placement and micro-interactions.
-  - Fast layout architecture.
+### 2.1 AI & Automation (`/services/ai-automation/`)
+- **Tagline**: *Smarter workflows, higher productivity*
+- **Summary**: Transform business operations with intelligent automation, custom chatbots, and automated data pipelines that eliminate clerical overhead.
+- **Sub-Services**:
+  - `ai-chatbots`: Custom AI assistants for business, support & sales.
+  - `workflow-automation`: Automate repetitive tasks and streamline operations across software tools.
+  - `data-processing`: Extract, process, and analyze documents and invoices with AI.
+  - `custom-ai-solutions`: Tailored AI solutions built for business-specific operational needs.
 
-### 2.2 High-Performance Web Development
-- **Focus**: Custom web applications built on modern JavaScript/TypeScript architectures that eliminate slow CMS overhead.
-- **Technology Stack**: Next.js 16 (App Router), React 19, TypeScript, Radix UI.
-- **Turnaround Time**: Timelines aligned with project milestones.
-- **Deliverables**:
-  - Clean static HTML generation (`output: "export"`).
-  - Core Web Vitals performance targets.
-  - Seamless integration with payment gateways, booking systems, and headless APIs.
+### 2.2 Software Development (`/services/software-development/`)
+- **Tagline**: *Custom software for your business*
+- **Summary**: We architect scalable web applications, bespoke business management software, cloud dashboards, and SaaS platforms with 100% IP ownership.
+- **Sub-Services**:
+  - `custom-software`: Bespoke digital systems engineered around proprietary operational workflows.
+  - `saas-product-development`: Multi-tenant cloud architectures equipped with subscription billing and admin consoles.
+  - `web-applications`: Browser-based enterprise applications delivering desktop-grade performance.
+  - `business-management-systems`: Internal ERPs, inventory monitors, and tracking portals.
+  - `api-development-integration`: Documented, secure REST and GraphQL API gateways.
+  - `maintenance-modernisation`: Code refactoring, dependency updates, and zero-downtime database optimization.
 
-### 2.3 AI & Process Automation
-- **Focus**: Eliminating manual data entry, assisting customer inquiries, and streamlining lead qualification.
-- **Technology Stack**: AI integrations, WhatsApp Cloud API, Webhooks, Python, Node.js.
-- **Turnaround Time**: Phased rollout by workflow.
-- **Deliverables**:
-  - WhatsApp conversational bots that can respond outside office hours.
-  - Automatic lead capture and CRM / Google Sheets routing.
-  - Notification triggers and booking assistance.
-  - Human handoff options.
+### 2.3 Mobile Apps (`/services/mobile-app-development/`)
+- **Tagline**: *iOS & Android applications*
+- **Summary**: Engineering native and cross-platform mobile applications with structured discovery, intuitive interface design, and store deployment.
+- **Sub-Services**:
+  - `ios-android-app-development`: End-to-end mobile engineering delivering consistent mobile experiences across iOS and Android.
 
-### 2.4 Digital Marketing & Local SEO
-- **Focus**: High-commercial-intent organic Google search rankings and Google Maps visibility improvements.
-- **Technology Stack**: Google Search Console, GA4, Schema.org JSON-LD.
-- **Engagement Model**: Retainers with transparent keyword tracking.
-- **Deliverables**:
-  - Google Business Profile (GBP) optimization.
-  - Technical on-page remediation and Core Web Vitals maintenance.
-  - Contextual regional citation building.
-  - Generative Engine Optimization (GEO) ensuring inclusion in AI Search answers.
+### 2.4 Web Development (`/services/web-development/`)
+- **Tagline**: *High-performance websites*
+- **Summary**: High-performance corporate websites, UI/UX design systems, and digital portals engineered with Next.js, React, and TypeScript.
+- **Sub-Services**:
+  - `business-corporate-websites`: Accessible, high-credibility digital portals designed to generate sales inquiries.
+  - `website-design`: Human-centered UI/UX design with interactive Figma prototypes and design tokens (also accessible at `/services/website-design/`).
+  - `e-commerce`: Fast, conversion-focused online stores with payment gateway integrations.
+  - `landing-pages`: Single-page campaign destinations built for high conversion rates.
+  - `redesign-optimisation`: Modernizing legacy web platforms to achieve top Core Web Vitals.
 
-### 2.5 Custom Software & SaaS Development
-- **Focus**: Tailored operational dashboards, inventory management systems, and client member portals.
-- **Technology Stack**: Next.js, Node.js, modern databases, REST / GraphQL APIs.
-- **Turnaround Time**: Sprinted delivery based on roadmap.
+### 2.5 Digital Growth (`/services/digital-marketing/`)
+- **Tagline**: *SEO, content & online visibility*
+- **Summary**: Data-driven Search Engine Optimization (SEO), Generative Engine Optimization (GEO), Local SEO, and conversion optimization built around your business goals.
+- **Sub-Services**:
+  - `seo`: Comprehensive technical, on-page, and architectural optimization for commercial search rankings.
+  - `geo`: Semantic schema graphs and answer capsules enabling accurate citation by AI search assistants.
+  - `local-seo`: Google Business Profile and local map rankings across Rishikesh, Dehradun, and Haridwar.
+  - `social-media-marketing`: Consistent brand communication across relevant business channels.
+  - `content-strategy`: High-authority educational guides (900-1500 words) answering buyer questions.
+  - `lead-generation-conversion`: UX funnel and form optimization to turn visitors into inquiries.
 
 ---
 
-## 3. Website Package Tiers & Starting Prices
+## 3. Package Tiers (Confirmed Starting Prices)
 
 All baseline package tiers sourced from `src/content/packages.ts`:
 
@@ -88,9 +87,5 @@ All baseline package tiers sourced from `src/content/packages.ts`:
 ## 4. Scope, Inclusions & Billing Rules
 
 1. **Intellectual Property**: Clients retain **100% full legal ownership** of all source code, databases, design assets, and domains upon final project settlement.
-2. **Third-Party Exclusions**:
-   - Domain registration fees (Namecheap, GoDaddy) are paid directly by the client.
-   - External hosting and server infrastructure (Hostinger, AWS, Vercel) are billed directly to the client's account.
-   - Paid third-party API usage (e.g., OpenAI token consumption, WhatsApp Meta Cloud API conversation fees) are billed directly by respective providers.
-3. **Government Taxes**: Project prices are exclusive of statutory GST where applicable.
-4. **Maintenance & Support**: All web packages include complimentary post-launch bug fixing for the first 30 to 90 days.
+2. **Transparent Milestones**: International projects proceed in clear stages: discovery, wireframe sign-off, private staging demos, and production launch.
+3. **Zero Proprietary Lock-in**: All applications are built using community-standard open-source frameworks (Next.js, React, Node.js, TypeScript, PostgreSQL) and can be hosted on any standard cloud infrastructure.

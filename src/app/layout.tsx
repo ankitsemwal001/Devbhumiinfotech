@@ -2,6 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import Script from "next/script";
 import WhatsAppButton from "@/components/common/whatsapp-button";
+import { ChatWidget } from "@/components/common/chat-widget";
 import { ConsentBanner } from "@/components/common/consent-banner";
 import { siteConfig } from "@/config/site";
 import { defaultSEO } from "@/config/seo";
@@ -147,6 +148,7 @@ export default function RootLayout({
         <div id="main-content">{children}</div>
 
         <WhatsAppButton />
+        <ChatWidget />
         <ConsentBanner />
       </body>
     </html>

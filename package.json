@@ -3,16 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build --webpack",
+    "build": "node scripts/generate-feed.mjs && node scripts/generate-llms-full.mjs && next build --webpack",
     "check:canonical": "npx tsx scripts/check-canonical.mjs",
     "check:claims": "node scripts/check-claims.mjs",
     "check:content": "node scripts/check-content.mjs",
     "check:geo": "npx tsx scripts/check-geo.mjs",
     "check:links": "node scripts/check-links.mjs",
+    "check:llms": "node scripts/check-llms.mjs",
     "check:schema": "node scripts/check-schema.mjs",
     "dev": "next dev --webpack",
+    "generate:feed": "node scripts/generate-feed.mjs",
+    "generate:llms": "node scripts/generate-llms-full.mjs",
+    "indexnow": "node scripts/indexnow.mjs",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "verify": "npm run check:claims && npm run check:geo && npm run check:canonical && npm run check:content && npm run check:schema && npm run check:links && npm run check:llms"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",

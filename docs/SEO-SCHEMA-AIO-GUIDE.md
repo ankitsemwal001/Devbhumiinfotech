@@ -1,20 +1,18 @@
-# SEO, Schemas & AIO Guide — Devbhoomi Infotech Solutions
+# SEO, Schemas & AIO Guide — Devbhoomi Infotech
 
 ## 1. Overview & Strategy
 
-The website is engineered according to modern search standards spanning three complementary disciplines:
+The website is engineered according to search and generative AI discovery standards spanning three complementary disciplines:
 
-1. **Traditional Technical SEO**: Fast crawlability, canonical integrity, semantic HTML5, XML sitemaps, and Core Web Vitals.
-2. **Local & Programmatic GEO**: Geo-targeted entity associations, Google Business Profile (GBP) alignment, and city/locality pages.
-3. **Generative Engine Optimization (GEO / AIO)**: Preparing content for direct ingestion and citation by AI-powered search engines (Google AI Overviews, Perplexity, ChatGPT, Claude) through factual answers and `llms.txt`.
+1. **Traditional Technical SEO**: Fast crawlability, canonical self-referencing, semantic HTML5, XML sitemaps, Atom/RSS feeds, and strong Core Web Vitals.
+2. **Local & Regional SEO**: Google Business Profile (GBP) alignment for the Rishikesh HQ and approved local service pages in Dehradun and Haridwar.
+3. **Generative Engine Optimization (GEO / AIO)**: Preparing structured content for direct ingestion and accurate citation by AI-powered search engines (Google AI Overviews, Perplexity, ChatGPT Search, Claude, Copilot) through self-contained answer capsules, `llms.txt`, and linked schema graphs.
 
 ---
 
-## 2. Schema.org Structured Data Implementation
+## 2. Schema.org Unified Linked `@graph` Implementation
 
-All schemas are dynamically rendered into the HTML `<head>` or body using `<JsonLd data={schema} />`.
-
-### 2.1 Organization & LocalBusiness Graph (`src/app/layout.tsx`)
+All pages emit a single, valid Schema.org `@graph` constructed via `buildLinkedSchemaGraph()` in `src/lib/schema.ts`. Stable `@id` references link all entities across the site:
 
 ```json
 {
@@ -23,24 +21,28 @@ All schemas are dynamically rendered into the HTML `<head>` or body using `<Json
     {
       "@type": "Organization",
       "@id": "https://www.devbhoomiinfotech.com/#organization",
-      "name": "Devbhoomi Infotech Solutions",
-      "url": "https://www.devbhoomiinfotech.com",
+      "name": "Devbhoomi Infotech",
+      "url": "https://www.devbhoomiinfotech.com/",
       "logo": "https://www.devbhoomiinfotech.com/logo/DBI-official-logo-devbhoomi-infotech-white.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91 81260 06791",
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": ["English", "Hindi"]
-      }
+      "email": "infotechdevbhoomi@gmail.com",
+      "telephone": "+91 81260 06791",
+      "knowsAbout": [
+        "AI automation",
+        "AI chatbots",
+        "Custom software development",
+        "Mobile app development",
+        "Web development",
+        "SEO",
+        "Generative engine optimization"
+      ]
     },
     {
       "@type": ["ProfessionalService", "LocalBusiness"],
       "@id": "https://www.devbhoomiinfotech.com/#localbusiness",
-      "name": "Devbhoomi Infotech Solutions",
-      "url": "https://www.devbhoomiinfotech.com",
-      "telephone": "+91 81260 06791",
-      "email": "infotechdevbhoomi@gmail.com",
+      "parentOrganization": {
+        "@id": "https://www.devbhoomiinfotech.com/#organization"
+      },
+      "name": "Devbhoomi Infotech",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Near Dhalwala",
@@ -51,99 +53,53 @@ All schemas are dynamically rendered into the HTML `<head>` or body using `<Json
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "30.0869",
-        "longitude": "78.2676"
+        "latitude": 30.0869,
+        "longitude": 78.2676
       },
       "areaServed": [
-        { "@type": "City", "name": "Rishikesh" },
-        { "@type": "City", "name": "Dehradun" },
-        { "@type": "City", "name": "Delhi" },
-        { "@type": "City", "name": "Noida" },
-        { "@type": "City", "name": "Haridwar" },
-        { "@type": "State", "name": "Uttarakhand" },
-        { "@type": "Country", "name": "India" }
-      ]
-    }
-  ]
-}
-```
-
-### 2.2 BreadcrumbList Schema (`src/lib/schema.ts`)
-
-Generates standardized breadcrumbs on all detail, service, blog, and geo landing pages:
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.devbhoomiinfotech.com/"
+        { "@type": "Country", "name": "India" },
+        { "@type": "AdministrativeArea", "name": "Worldwide (remote delivery)" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          { "@type": "Service", "name": "AI & Automation" },
+          { "@type": "Service", "name": "Custom Software Development" },
+          { "@type": "Service", "name": "Mobile App Development" },
+          { "@type": "Service", "name": "Web Development" },
+          { "@type": "Service", "name": "Digital Growth" }
+        ]
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Locations",
-      "item": "https://www.devbhoomiinfotech.com/locations/"
+      "@type": "WebSite",
+      "@id": "https://www.devbhoomiinfotech.com/#website",
+      "url": "https://www.devbhoomiinfotech.com/",
+      "name": "Devbhoomi Infotech",
+      "publisher": { "@id": "https://www.devbhoomiinfotech.com/#organization" },
+      "inLanguage": "en"
     }
   ]
 }
 ```
 
-### 2.3 Service & FAQPage Schema
-
-Geo landing pages (`[geoSlug]`) and core service pages automatically inject:
-
-- `Service` schema linking provider to `#localbusiness`.
-- `FAQPage` schema pairing every question with direct, answer-first solutions.
-
-> [!NOTE]
-> Google now shows FAQ rich results only for a narrow set of authoritative government and health sites. We keep `FAQPage` markup for machine readability and semantic clarity, but do not promise or claim visual rich results.
-
----
-
-## 3. Generative Engine Optimization (GEO / AIO)
-
-### 3.1 The `llms.txt` Standard (`public/llms.txt`)
-
-An entity-level markdown summary placed at `https://www.devbhoomiinfotech.com/llms.txt`.
-AI search crawlers (GPTBot, ClaudeBot, PerplexityBot) read this file directly to understand:
-
-- Legal entity name, verified contact information, and coordinates.
-- Core service offerings and price ranges.
-- Primary hubs (Dehradun, Delhi, Rishikesh, Noida, Haridwar).
-- Intellectual property ownership guarantees.
-
-### 3.2 Answer-First Copywriting Rule
-
-Every FAQ, service section, and localized overview starts with a concise 1-to-2 sentence direct factual answer before expanding into technical specifics. This ensures maximum extractability by AI search summarizers.
+### Strict Schema Truthfulness Rules
+1. **Zero Unconfirmed Ratings / Reviews**: No `AggregateRating` or `Review` objects appear until authentic, verifiable testimonials are provided by the owner.
+2. **Zero Fake Opening Hours**: Operating hours schema nodes are omitted until formal business operating hours are confirmed.
+3. **Suppressed Empty Profiles**: The `sameAs` array is completely omitted when social links are unpopulated (never emits empty strings `""`).
+4. **Per-Page Node Enhancements**:
+   - Every Page: Emits `WebPage` with `isPartOf -> #website`, `about -> #organization`, and `breadcrumb -> BreadcrumbList`.
+   - Service Pages: Emits `Service` (areaServed: Worldwide remote delivery) + `FAQPage` (matching visible FAQs).
+   - Insight Pages: Emits `BlogPosting` with headline, dates, author, and mainEntityOfPage.
+   - Hub Pages: Emits `ItemList` linking to the 5 service groups.
 
 ---
 
-## 4. Privacy, Analytics & Google Consent Mode v2
+## 3. Crawler & AI Bot Access Policy (`src/app/robots.ts`)
 
-- **Consent Banner**: Implemented in `src/components/common/consent-banner.tsx`.
-- **Default State**:
-  ```javascript
-  gtag("consent", "default", {
-    analytics_storage: "denied",
-    ad_storage: "denied",
-    ad_user_data: "denied",
-    ad_personalization: "denied",
-  });
-  ```
-- **Opt-In State**: When the user clicks "Accept All", state flips to `granted` via `localStorage`, unlocking GA4 event recording while respecting global data privacy regulations.
-
----
-
-## 5. Core Web Vitals & Performance
-
-Performance targets are tracked in [PERFORMANCE-REPORT.md](./PERFORMANCE-REPORT.md). Rather than advertising unverified guarantees, we maintain disciplined engineering practices:
-
-- Static pre-rendering (`output: "export"`) with minimal runtime overhead.
-- Explicit image width and height attributes to prevent layout shifts.
-- Local font optimization and CSS purging.
-- For verified lab test data, see [docs/PERFORMANCE-REPORT.md](./PERFORMANCE-REPORT.md).
+- **Search & Retrieval Bots (Always Allowed)**:
+  - `Googlebot`, `Bingbot`, `OAI-SearchBot`, `ChatGPT-User`, `PerplexityBot`, `Perplexity-User`, `Claude-SearchBot`, `Claude-User`.
+- **Training Bots (Configurable)**:
+  - `GPTBot`, `ClaudeBot`, `Google-Extended`, `CCBot`, `Applebot-Extended`.
+  - Controlled by a single config flag: `siteConfig.allowAiTraining` (default: `true` to maximize AI visibility).

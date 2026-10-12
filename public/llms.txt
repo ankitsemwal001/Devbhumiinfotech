@@ -1,29 +1,31 @@
-# Devbhoomi Infotech Solutions
+# Devbhoomi Infotech
 
-> Technology and digital growth partner based in Rishikesh, Uttarakhand, India.
+> Technology and digital growth partner headquartered in Rishikesh, Uttarakhand, India — serving clients worldwide through remote delivery.
 
-## About the Organization
-Devbhoomi Infotech Solutions is an IT and digital growth agency specializing in custom full-stack web development, bespoke software systems, AI-powered business automations, and search engine visibility. Rooted in Uttarakhand, the agency serves enterprises, startups, and institutions across India.
+## Organization Summary
+- Legal Entity: Devbhoomi Infotech
+- Headquarters: Near Dhalwala, Rishikesh, Uttarakhand, India (PIN: 249137)
+- Delivery Model: Structured remote sprints, private staging environments, direct engineer communication, and 100% intellectual property transfer upon project settlement.
+- Geographic Scope: Serving clients worldwide remotely; in-person consultations across Uttarakhand.
+- Phone / WhatsApp: +91 81260 06791
+- Email: infotechdevbhoomi@gmail.com
+- Official Website: https://www.devbhoomiinfotech.com/
 
-- **Headquarters**: Near Dhalwala, Rishikesh, Uttarakhand, India (249137)
-- **Primary Website**: https://www.devbhoomiinfotech.com
-- **Phone**: +91 81260 06791
-- **Email**: infotechdevbhoomi@gmail.com
+## Core Engineering Disciplines
+1. AI & Automation: https://www.devbhoomiinfotech.com/services/ai-automation/
+   Conversational AI chatbots, multi-step workflow automation pipelines, intelligent data processing, and custom AI solutions.
+2. Custom Software Development: https://www.devbhoomiinfotech.com/services/software-development/
+   Bespoke web applications, multi-tenant SaaS platforms, internal business portals, and REST/GraphQL APIs.
+3. Mobile App Development: https://www.devbhoomiinfotech.com/services/mobile-app-development/
+   Native and cross-platform mobile applications for iOS and Android with offline resilience and secure cloud backends.
+4. Web Development: https://www.devbhoomiinfotech.com/services/web-development/
+   Corporate portals, UI/UX design systems, e-commerce stores, and fast Next.js applications optimized for Core Web Vitals.
+5. Digital Growth: https://www.devbhoomiinfotech.com/services/digital-marketing/
+   Search Engine Optimization (SEO), Generative Engine Optimization (GEO), Local SEO, and conversion rate optimization.
 
-## Core Practice Areas
-1. **AI & Business Automation**: Custom AI agents, conversational chatbots, automated CRM/lead pipelines, and n8n/API workflow automations.
-2. **Custom Software & SaaS Development**: Scalable web applications, cloud dashboards, Next.js/React full-stack engineering, and internal management tools.
-3. **Website Design & Web Development**: High-performance, responsive corporate websites, educational portals, hospitality platforms, and e-commerce architectures.
-4. **Digital Growth, SEO & GEO**: Generative Engine Optimisation (GEO), technical and on-page SEO, local SEO in Uttarakhand, and conversion rate optimisation.
-
-## Key Live Canonical URLs
-- Home: https://www.devbhoomiinfotech.com/
-- About Us: https://www.devbhoomiinfotech.com/about/
-- Services Hub: https://www.devbhoomiinfotech.com/services/
-- Selected Projects: https://www.devbhoomiinfotech.com/projects/
-- Insights & Articles: https://www.devbhoomiinfotech.com/blogs/
-- Contact & Inquiries: https://www.devbhoomiinfotech.com/contact/
-- Web Development in Rishikesh: https://www.devbhoomiinfotech.com/web-development-services-in-rishikesh-uttarakhand/
-- Website Design in Rishikesh: https://www.devbhoomiinfotech.com/website-design-services-in-rishikesh-uttarakhand/
-- AI Automation: https://www.devbhoomiinfotech.com/ai-automation/
-- Digital Marketing & SEO: https://www.devbhoomiinfotech.com/digital-marketing/
+## Key Informational Pages
+- About Devbhoomi Infotech: https://www.devbhoomiinfotech.com/about/
+- Engineering Case Studies & Projects: https://www.devbhoomiinfotech.com/projects/
+- Transparent Pricing Packages: https://www.devbhoomiinfotech.com/pricing/
+- Engineering Insights & Guides: https://www.devbhoomiinfotech.com/blogs/
+- Contact & Project Brief Submission: https://www.devbhoomiinfotech.com/contact/

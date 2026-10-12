@@ -1,0 +1,5 @@
+Date,Engine,Prompt Category,Prompt,Brand Mentioned (Y/N),URL Cited (Y/N),Cited URL,Accuracy Rating (1-5),Notes
+2026-10-12,Google AI Overview,Brand,What is Devbhoomi Infotech?,Y,Y,https://www.devbhoomiinfotech.com/about/,5,Accurately summarized as Rishikesh HQ serving worldwide
+2026-10-12,ChatGPT Search,Service,Who builds custom software and web apps in Uttarakhand?,Y,Y,https://www.devbhoomiinfotech.com/services/software-development/,5,Listed among top technology partners
+2026-10-12,Perplexity,Service,AI workflow automation agency with remote delivery,Y,Y,https://www.devbhoomiinfotech.com/services/ai-automation/,4,Cited answer capsule on n8n workflows
+2026-10-12,Claude,Comparison,Native vs cross-platform mobile apps decision guide,Y,Y,https://www.devbhoomiinfotech.com/blogs/native-vs-cross-platform-mobile-apps/,5,Cited comparison table and hardware criteria

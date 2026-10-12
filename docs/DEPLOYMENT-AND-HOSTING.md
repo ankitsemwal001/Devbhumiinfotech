@@ -95,10 +95,14 @@ devbhoomi-infotech-solution/out/
 │   └── index.html
 ├── website-design-in-dehradun/
 │   └── index.html
-├── web-development-in-delhi/
+├── web-development-in-haridwar/
 │   └── index.html
 ├── sitemap.xml
 ├── robots.txt
+├── feed.xml
+├── llms.txt
+├── llms-full.txt
+├── 4a1c5d9e7f8b2a3c.txt
 ├── .htaccess
 └── _next/
     └── static/
@@ -121,12 +125,20 @@ Set up an FTP deployment action pushing the `out/` directory directly to Hosting
 
 ---
 
-## 5. Post-Deployment Verification Checklist
+## 5. Post-Deployment Verification & IndexNow Ping
 
+### IndexNow Instant Search Engine Notification
+Immediately following every production deploy, run the IndexNow submission script:
+```bash
+npm run indexnow
+```
+This broadcasts all updated URLs directly to Bing, Yandex, and participating search engines via the verified verification key file (`https://www.devbhoomiinfotech.com/4a1c5d9e7f8b2a3c.txt`).
+
+### Post-Deployment Verification Checklist
 - [ ] **HTTPS & www Redirect**: Navigate to `http://devbhoomiinfotech.com` and confirm it redirects to `https://www.devbhoomiinfotech.com/`.
-- [ ] **Trailing Slash Integrity**: Navigate to `/locations` and verify it loads `/locations/` without a 404.
-- [ ] **Geo Pages Static Generation**: Visit `/website-design-in-dehradun/` and `/web-development-in-delhi/` and confirm complete rendering.
-- [ ] **Sitemap Verification**: Visit `https://www.devbhoomiinfotech.com/sitemap.xml` and verify all live URLs and geo slugs are present.
-- [ ] **Robots.txt & llms.txt**: Verify `robots.txt` and `llms.txt` load cleanly.
+- [ ] **Trailing Slash Integrity**: Navigate to `/services` and verify it loads `/services/` without a 404.
+- [ ] **Geo Pages Static Generation**: Visit `/website-design-in-dehradun/` and `/web-development-in-haridwar/` and confirm complete rendering.
+- [ ] **Sitemap & Feeds**: Visit `/sitemap.xml` and `/feed.xml` and verify all live URLs are present.
+- [ ] **Robots.txt & LLMS Files**: Verify `robots.txt`, `llms.txt`, and `llms-full.txt` load cleanly.
 - [ ] **404 Handling**: Enter an invalid URL (e.g. `/test-page-12345/`) and verify the custom 404 page renders.
 - [ ] **Contact Form / WhatsApp**: Verify that the contact form initiates WhatsApp redirection with pre-filled text.
