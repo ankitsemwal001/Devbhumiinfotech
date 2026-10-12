@@ -54,21 +54,6 @@ All schemas are dynamically rendered into the HTML `<head>` or body using `<Json
         "latitude": "30.0869",
         "longitude": "78.2676"
       },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "09:30",
-          "closes": "18:30"
-        }
-      ],
       "areaServed": [
         { "@type": "City", "name": "Rishikesh" },
         { "@type": "City", "name": "Dehradun" },

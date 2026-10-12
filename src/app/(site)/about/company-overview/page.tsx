@@ -212,7 +212,7 @@ export default function CompanyOverviewPage() {
                 <h3 className="font-bold text-slate-900 dark:text-white text-base">
                   Rishikesh Headquarters
                 </h3>
-                <span className="text-xs text-slate-500">Uttarakhand, India (249137)</span>
+                <span className="text-xs text-slate-500">Uttarakhand, India (249201)</span>
               </div>
             </div>
 

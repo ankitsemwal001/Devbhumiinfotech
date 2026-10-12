@@ -100,11 +100,11 @@ export const tailoredWorkflowPage: WhyChoosePageData = {
       title: "Refine & Handover",
       subtitle: "Perfecting The Fit",
       description:
-        "We refine the system with real user feedback and hand over full ownership, code, and training.",
+        "We refine the system with real user feedback and provide comprehensive documentation, deployment, and training.",
       points: [
         "Real-world user testing",
         "Iterative refinements",
-        "Full source code handover",
+        "Deployment and system walkthrough",
         "Team training and documentation",
       ],
     },
@@ -122,9 +122,9 @@ export const tailoredWorkflowPage: WhyChoosePageData = {
         "Primarily Next.js, React, TypeScript, Node.js, and PostgreSQL, chosen for speed, reliability, and long-term maintainability.",
     },
     {
-      question: "Do we own the custom code you build?",
+      question: "How do you ensure our team can operate the software independently?",
       answer:
-        "Completely. On handover you receive full ownership of the source code, repositories, and documentation with no lock-in.",
+        "We provide comprehensive system documentation, architecture guides, and walkthrough sessions so your team can manage daily operations with confidence.",
     },
   ],
   actionText: "Explore Custom Architecture",
