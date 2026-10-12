@@ -69,7 +69,7 @@ export const serviceGroups: ServiceGroup[] = [
       "App Store & Google Play deployment",
       "Ongoing app maintenance & updates",
     ],
-    liveHref: "/services/#mobile-app-development",
+    liveHref: "/services/mobile-app-development/",
     geoServiceSlugs: ["mobile-app-development"],
   },
   {
@@ -106,7 +106,7 @@ export const serviceGroups: ServiceGroup[] = [
       "Content strategy & search-focused blogs",
       "Performance marketing & Google Ads management",
     ],
-    liveHref: "/services/digital-growth/",
+    liveHref: "/services/digital-marketing/",
     geoServiceSlugs: [
       "seo-services",
       "digital-marketing",

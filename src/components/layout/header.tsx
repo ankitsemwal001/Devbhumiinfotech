@@ -181,12 +181,14 @@ export function Header() {
     description: string;
     icon: ReactNode;
     iconBg: string;
+    slug?: string;
+    href?: string;
   }
 
   interface ServiceDetail {
     id: string;
-    kicker: string;
-    badge: string;
+    kicker?: string;
+    badge?: string;
     title: string;
     description: string;
     features: ServiceDetailFeature[];
@@ -200,197 +202,188 @@ export function Header() {
     "ai-automation": {
       id: "ai-automation",
       kicker: "FEATURED SERVICE",
-      badge: "⚡ Most Popular",
+      badge: "Featured",
       title: "AI & Automation",
       description:
-        "Transform your business with intelligent automation and AI-powered solutions that save time, reduce costs, and drive growth.",
+        "Transform your business with intelligent automation and AI-powered solutions that save time, reduce costs, and streamline operations.",
       features: [
         {
           title: "AI Chatbots",
           description: "Custom AI assistants for business, support & sales",
           icon: <MessageSquare className="w-4 h-4 text-blue-600 dark:text-blue-400" />,
           iconBg: "bg-blue-50 dark:bg-blue-950/60 border-blue-200/60 dark:border-blue-800/60",
+          slug: "ai-chatbots",
         },
         {
           title: "Workflow Automation",
           description: "Automate repetitive tasks and streamline operations",
           icon: <Workflow className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />,
           iconBg: "bg-emerald-50 dark:bg-emerald-950/60 border-emerald-200/60 dark:border-emerald-800/60",
+          slug: "workflow-automation",
         },
         {
           title: "Data Processing",
           description: "Extract, process and analyze data with AI",
           icon: <FileText className="w-4 h-4 text-purple-600 dark:text-purple-400" />,
           iconBg: "bg-purple-50 dark:bg-purple-950/60 border-purple-200/60 dark:border-purple-800/60",
+          slug: "data-processing",
         },
         {
           title: "Custom AI Solutions",
-          description: "Tailored AI models for your specific needs",
+          description: "Tailored AI solutions for your specific needs",
           icon: <Cpu className="w-4 h-4 text-amber-600 dark:text-amber-400" />,
           iconBg: "bg-amber-50 dark:bg-amber-950/60 border-amber-200/60 dark:border-amber-800/60",
+          slug: "custom-ai-solutions",
         },
       ],
       exploreHref: "/services/ai-automation/",
-      exploreText: "Explore All AI & Automation Services",
-      ctaHeadline: "Let AI Work for You",
+      exploreText: "Explore all AI & Automation services →",
+      ctaHeadline: "Let AI work for you",
       ctaSubtext:
-        "From chatbots to full business automation, we build AI solutions that deliver real results.",
+        "From chatbots to full business automation, we build AI solutions built around your business goals.",
     },
     "software-development": {
       id: "software-development",
-      kicker: "CORE ENGINEERING",
-      badge: "⚡ High Scalability",
       title: "Software Development",
       description:
-        "Scalable web applications, cloud dashboards, and bespoke enterprise software engineered for reliable business performance.",
+        "Scalable web applications, cloud dashboards, and bespoke software engineered for reliable business performance.",
       features: [
         {
-          title: "Custom Web Apps",
-          description: "Tailored SaaS platforms, internal tools & client portals",
+          title: "Custom Software",
+          description: "Tailored business software designed around your workflows",
           icon: <Code2 className="w-4 h-4 text-blue-600 dark:text-blue-400" />,
           iconBg: "bg-blue-50 dark:bg-blue-950/60 border-blue-200/60 dark:border-blue-800/60",
+          slug: "custom-software",
         },
         {
-          title: "API & Integrations",
-          description: "Secure REST & GraphQL backend services and microservices",
+          title: "SaaS Product Development",
+          description: "Multi-tenant cloud architectures with secure authentication",
           icon: <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
           iconBg: "bg-indigo-50 dark:bg-indigo-950/60 border-indigo-200/60 dark:border-indigo-800/60",
+          slug: "saas-product-development",
         },
         {
-          title: "Cloud Architecture",
-          description: "Scalable serverless infrastructure & distributed databases",
+          title: "Web Applications",
+          description: "Full-stack web apps built for performance and security",
           icon: <Database className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />,
           iconBg: "bg-cyan-50 dark:bg-cyan-950/60 border-cyan-200/60 dark:border-cyan-800/60",
+          slug: "web-applications",
         },
         {
-          title: "System Modernisation",
-          description: "Upgrade legacy codebases with zero business downtime",
+          title: "Business Management Systems",
+          description: "Internal portals, ERP modules, and operational tools",
           icon: <Cpu className="w-4 h-4 text-purple-600 dark:text-purple-400" />,
           iconBg: "bg-purple-50 dark:bg-purple-950/60 border-purple-200/60 dark:border-purple-800/60",
+          slug: "business-management-systems",
         },
       ],
       exploreHref: "/services/software-development/",
-      exploreText: "Explore All Software Development Services",
-      ctaHeadline: "Build Scalable Software",
+      exploreText: "Explore all Software Development services →",
+      ctaHeadline: "Let's discuss your project",
       ctaSubtext:
-        "Engineered with modern Next.js and robust architectures for ambitious enterprises.",
+        "Custom software, SaaS platforms, and internal tools engineered for your business needs.",
     },
     "mobile-app-development": {
       id: "mobile-app-development",
-      kicker: "MOBILE ENGINEERING",
-      badge: "⚡ iOS & Android",
       title: "Mobile Apps",
       description:
-        "Native and cross-platform mobile applications for iOS and Android, built for silky-smooth performance and app-store success.",
+        "Native and cross-platform mobile applications engineered for responsive performance and clean user experiences.",
       features: [
         {
-          title: "Cross-Platform Apps",
-          description: "Unified codebase with React Native and Flutter",
-          icon: <Smartphone className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />,
-          iconBg: "bg-cyan-50 dark:bg-cyan-950/60 border-cyan-200/60 dark:border-cyan-800/60",
-        },
-        {
-          title: "Native iOS & Android",
-          description: "Swift & Kotlin development for deep native device features",
-          icon: <Cpu className="w-4 h-4 text-blue-600 dark:text-blue-400" />,
-          iconBg: "bg-blue-50 dark:bg-blue-950/60 border-blue-200/60 dark:border-blue-800/60",
-        },
-        {
-          title: "Mobile UI/UX Design",
-          description: "Fluid touch gestures, micro-animations & high retention",
-          icon: <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400" />,
-          iconBg: "bg-purple-50 dark:bg-purple-950/60 border-purple-200/60 dark:border-purple-800/60",
-        },
-        {
-          title: "App Store Publishing",
-          description: "End-to-end Store submission, ASO & ongoing releases",
-          icon: <Zap className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />,
+          title: "iOS & Android Development",
+          description: "Mobile applications engineered for reliable performance across devices",
+          icon: <Smartphone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />,
           iconBg: "bg-emerald-50 dark:bg-emerald-950/60 border-emerald-200/60 dark:border-emerald-800/60",
+          slug: "ios-android-app-development",
         },
       ],
-      exploreHref: "/services/#mobile-app-development",
-      exploreText: "Explore All Mobile App Services",
-      ctaHeadline: "Launch Your Mobile App",
+      exploreHref: "/services/mobile-app-development/",
+      exploreText: "Explore all Mobile App services →",
+      ctaHeadline: "Let's discuss your project",
       ctaSubtext:
-        "High-converting mobile experiences crafted for speed, offline sync, and app-store growth.",
+        "Native and cross-platform mobile apps for iOS and Android tailored to your users.",
     },
     "web-development": {
       id: "web-development",
-      kicker: "DIGITAL EXPERIENCES",
-      badge: "⚡ Lightning Fast",
       title: "Web Development",
       description:
-        "High-performance, mobile-first websites and conversion-focused architectures built to represent your brand and convert visitors.",
+        "Modern websites engineered with clean typography, responsive layouts, and search-friendly markup.",
       features: [
         {
           title: "Corporate Websites",
-          description: "Prestigious brand presence with responsive custom layouts",
+          description: "Professional company websites built to present your services clearly",
           icon: <Globe className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />,
           iconBg: "bg-indigo-50 dark:bg-indigo-950/60 border-indigo-200/60 dark:border-indigo-800/60",
+          slug: "business-corporate-websites",
+        },
+        {
+          title: "Website Design (UI/UX)",
+          description: "User experience wireframes, bespoke design systems, and responsive layouts",
+          icon: <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400" />,
+          iconBg: "bg-purple-50 dark:bg-purple-950/60 border-purple-200/60 dark:border-purple-800/60",
+          href: "/services/website-design/",
         },
         {
           title: "E-Commerce Stores",
-          description: "High-speed storefronts with friction-free checkout flows",
+          description: "Product catalogs, cart architectures, and checkout integrations",
           icon: <Zap className="w-4 h-4 text-amber-600 dark:text-amber-400" />,
           iconBg: "bg-amber-50 dark:bg-amber-950/60 border-amber-200/60 dark:border-amber-800/60",
+          slug: "ecommerce",
         },
         {
           title: "Landing Pages",
-          description: "Campaign-focused pages built for high conversion & ads",
+          description: "Targeted campaign pages engineered for inquiry conversion",
           icon: <Layers className="w-4 h-4 text-blue-600 dark:text-blue-400" />,
           iconBg: "bg-blue-50 dark:bg-blue-950/60 border-blue-200/60 dark:border-blue-800/60",
-        },
-        {
-          title: "Speed Optimisation",
-          description: "Fast, lightweight pages tested with Lighthouse benchmarks",
-          icon: <Cpu className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />,
-          iconBg: "bg-emerald-50 dark:bg-emerald-950/60 border-emerald-200/60 dark:border-emerald-800/60",
+          slug: "landing-pages",
         },
       ],
       exploreHref: "/services/web-development/",
-      exploreText: "Explore All Web Development Services",
-      ctaHeadline: "Elevate Your Web Presence",
+      exploreText: "Explore all Web Development services →",
+      ctaHeadline: "Let's discuss your project",
       ctaSubtext:
-        "Clean, modern Next.js websites built to rank on search and convert visitors into qualified leads.",
+        "High-performance websites and bespoke web designs engineered to convert visitors.",
     },
     "digital-growth": {
       id: "digital-growth",
-      kicker: "SEARCH & DISCOVERY",
-      badge: "⚡ GEO & AI Ready",
       title: "Digital Growth",
       description:
-        "Comprehensive search visibility combining traditional SEO, Local SEO in Uttarakhand, Generative Engine Optimisation (GEO), and conversion strategies.",
+        "Comprehensive search visibility combining technical SEO, Generative Engine Optimisation (GEO), and local search strategies.",
       features: [
         {
           title: "Technical SEO",
-          description: "High-intent keyword rankings and flawless search crawling",
+          description: "Technical site structure, crawl optimization, and search rankings",
           icon: <TrendingUp className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />,
           iconBg: "bg-emerald-50 dark:bg-emerald-950/60 border-emerald-200/60 dark:border-emerald-800/60",
+          slug: "seo",
         },
         {
           title: "GEO AI Search",
-          description: "Rank in ChatGPT, Perplexity & Google AI Overviews",
+          description: "Optimizing content structure for citation by AI assistants and answer engines",
           icon: <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400" />,
           iconBg: "bg-purple-50 dark:bg-purple-950/60 border-purple-200/60 dark:border-purple-800/60",
+          slug: "geo",
         },
         {
-          title: "Local SEO & GMB",
+          title: "Local SEO & GBP",
           description: "Google Business Profile optimisation and local search visibility",
           icon: <Globe className="w-4 h-4 text-blue-600 dark:text-blue-400" />,
           iconBg: "bg-blue-50 dark:bg-blue-950/60 border-blue-200/60 dark:border-blue-800/60",
+          slug: "local-seo",
         },
         {
           title: "Conversion CRO",
-          description: "Optimise user journeys to maximize buyer inquiries",
+          description: "Friction-free inquiry flows and data-backed conversion improvements",
           icon: <Zap className="w-4 h-4 text-amber-600 dark:text-amber-400" />,
           iconBg: "bg-amber-50 dark:bg-amber-950/60 border-amber-200/60 dark:border-amber-800/60",
+          slug: "lead-generation-conversion",
         },
       ],
-      exploreHref: "/services/digital-growth/",
-      exploreText: "Explore All Digital Growth Services",
-      ctaHeadline: "Scale Your Digital Growth",
+      exploreHref: "/services/digital-marketing/",
+      exploreText: "Explore all Digital Growth services →",
+      ctaHeadline: "Let's discuss your project",
       ctaSubtext:
-        "Multi-channel search visibility designed to position your brand where high-intent buyers look.",
+        "Search engine optimisation, GEO, and local visibility strategies to grow your reach.",
     },
   };
 
@@ -590,14 +583,20 @@ export function Header() {
                               <div className="flex-1 px-3 xl:px-5 flex flex-col justify-between">
                                 <div>
                                   {/* Kicker + Badge */}
-                                  <div className="flex items-center justify-between mb-2">
-                                    <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-                                      {activeDetail.kicker}
-                                    </span>
-                                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200/60 dark:border-blue-800">
-                                      {activeDetail.badge}
-                                    </span>
-                                  </div>
+                                  {(activeDetail.kicker || activeDetail.badge) && (
+                                    <div className="flex items-center justify-between mb-2">
+                                      {activeDetail.kicker ? (
+                                        <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                                          {activeDetail.kicker}
+                                        </span>
+                                      ) : <span />}
+                                      {activeDetail.badge ? (
+                                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200/60 dark:border-blue-800">
+                                          {activeDetail.badge}
+                                        </span>
+                                      ) : null}
+                                    </div>
+                                  )}
 
                                   {/* Title & Description */}
                                   <h3 className="text-2xl font-bold tracking-wide text-slate-900 dark:text-white">
@@ -609,29 +608,35 @@ export function Header() {
 
                                   {/* 2x2 Feature Grid */}
                                   <div className="grid grid-cols-2 gap-3 xl:gap-3.5">
-                                    {activeDetail.features.map((feat, idx) => (
-                                      <div
-                                        key={idx}
-                                        className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800/80 hover:border-blue-200 dark:hover:border-blue-800/60 hover:bg-white dark:hover:bg-slate-800 transition-all duration-150"
-                                      >
-                                        <div
-                                          className={cn(
-                                            "w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border shadow-2xs",
-                                            feat.iconBg
-                                          )}
+                                    {activeDetail.features.map((feat, idx) => {
+                                      const featHref =
+                                        feat.href || `${activeDetail.exploreHref}#${feat.slug || ""}`;
+                                      return (
+                                        <Link
+                                          key={idx}
+                                          href={featHref}
+                                          onClick={() => setServicesDropdownOpen(false)}
+                                          className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800/80 hover:border-blue-200 dark:hover:border-blue-800/60 hover:bg-white dark:hover:bg-slate-800 transition-all duration-150 group"
                                         >
-                                          {feat.icon}
-                                        </div>
-                                        <div className="min-w-0">
-                                          <h5 className="font-bold text-xs sm:text-sm tracking-wide text-slate-900 dark:text-white leading-snug">
-                                            {feat.title}
-                                          </h5>
-                                          <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug mt-0.5 line-clamp-2">
-                                            {feat.description}
-                                          </p>
-                                        </div>
-                                      </div>
-                                    ))}
+                                          <div
+                                            className={cn(
+                                              "w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border shadow-2xs group-hover:scale-105 transition-transform",
+                                              feat.iconBg
+                                            )}
+                                          >
+                                            {feat.icon}
+                                          </div>
+                                          <div className="min-w-0">
+                                            <h5 className="font-bold text-xs sm:text-sm tracking-wide text-slate-900 dark:text-white leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                              {feat.title}
+                                            </h5>
+                                            <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug mt-0.5 line-clamp-2">
+                                              {feat.description}
+                                            </p>
+                                          </div>
+                                        </Link>
+                                      );
+                                    })}
                                   </div>
                                 </div>
 
@@ -697,16 +702,14 @@ export function Header() {
                                   </p>
                                 </div>
 
-                                {/* WhatsApp CTA Link Button */}
-                                <a
-                                  href={siteConfig.links.whatsapp}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
+                                {/* Consultation CTA Link Button */}
+                                <Link
+                                  href={`/contact/?service=${activeDetail.id}`}
+                                  onClick={() => setServicesDropdownOpen(false)}
                                   className="mt-4 w-full inline-flex items-center justify-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs tracking-wide py-3 px-4 rounded-full shadow-md shadow-blue-600/25 transition-all hover:shadow-lg hover:scale-[1.02]"
                                 >
-                                  <span>Get a Free Consultation</span>
-                                  <ArrowRight className="w-3.5 h-3.5" />
-                                </a>
+                                  <span>Get a Free Consultation →</span>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -945,22 +948,54 @@ export function Header() {
                 />
               </button>
               {mobileExpandedGroup === "services" && (
-                <div className="p-3 space-y-2.5 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
-                  {serviceGroups.map((group) => (
-                    <Link
-                      key={group.id}
-                      href={group.liveHref || `/services/${group.id}/`}
-                      onClick={() => setMobileOpen(false)}
-                      className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900"
-                    >
-                      <div className="font-semibold text-sm text-blue-600 dark:text-blue-400">
-                        {group.title}
+                <div className="p-3 space-y-3 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+                  {serviceGroups.map((group) => {
+                    const detail = SERVICE_DETAILS[group.id];
+                    return (
+                      <div
+                        key={group.id}
+                        className="p-3 rounded-xl bg-slate-50/70 dark:bg-slate-900/40 border border-slate-100 dark:border-slate-800 space-y-2"
+                      >
+                        <Link
+                          href={group.liveHref || `/services/${group.id}/`}
+                          onClick={() => setMobileOpen(false)}
+                          className="block"
+                        >
+                          <div className="font-semibold text-sm text-blue-600 dark:text-blue-400">
+                            {group.title}
+                          </div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5">
+                            {group.summary}
+                          </p>
+                        </Link>
+
+                        {detail?.features && (
+                          <div className="grid grid-cols-1 gap-1.5 pl-2 border-l-2 border-blue-200 dark:border-blue-900">
+                            {detail.features.map((feat, fIdx) => (
+                              <Link
+                                key={fIdx}
+                                href={feat.href || `${detail.exploreHref}#${feat.slug || ""}`}
+                                onClick={() => setMobileOpen(false)}
+                                className="text-xs text-slate-600 dark:text-slate-400 hover:text-blue-600 py-0.5"
+                              >
+                                • {feat.title}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+
+                        <div className="pt-1">
+                          <Link
+                            href={`/contact/?service=${group.id}`}
+                            onClick={() => setMobileOpen(false)}
+                            className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                          >
+                            <span>Get a Free Consultation →</span>
+                          </Link>
+                        </div>
                       </div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 mt-0.5">
-                        {group.summary}
-                      </p>
-                    </Link>
-                  ))}
+                    );
+                  })}
                   <Link
                     href="/services/"
                     onClick={() => setMobileOpen(false)}

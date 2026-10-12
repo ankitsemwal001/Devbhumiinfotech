@@ -41,6 +41,7 @@ export const canonicalMap: Record<string, string> = {
   "/services/digital-marketing/": "/services/digital-marketing/",
   "/services/digital-growth/": "/services/digital-growth/",
   "/services/software-development/": "/services/software-development/",
+  "/services/mobile-app-development/": "/services/mobile-app-development/",
 
   // Top-level aliases that were not in old live sitemap -> canonical under /services/
   "/ai-automation/": "/services/ai-automation/",

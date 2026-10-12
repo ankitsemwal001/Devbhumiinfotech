@@ -18,6 +18,26 @@ export interface ServiceFAQ {
   answer: string;
 }
 
+export interface ServiceSubSection {
+  id: string; // anchor id, e.g. "ai-chatbots"
+  title: string;
+  definition: string;
+  deliverables: string[];
+}
+
+export interface ServiceAtAGlance {
+  whatItIs: string;
+  typicalUseCases: string[];
+  deliverables: string[];
+  typicalProcessLength?: string;
+  engagementModel: string;
+}
+
+export interface ServiceWhoItsFor {
+  idealFor: string[];
+  notNeededWhen: string[];
+}
+
 export interface ServicePageData {
   slug: string;
   title: string;
@@ -35,6 +55,10 @@ export interface ServicePageData {
     heading: string;
     content: string[];
   };
+  answerCapsule?: string;
+  atAGlance?: ServiceAtAGlance;
+  whoItsFor?: ServiceWhoItsFor;
+  subServicesDetailed?: ServiceSubSection[];
   featuresHeading?: string;
   features: ServiceFeature[];
   processHeading: string;
@@ -42,4 +66,6 @@ export interface ServicePageData {
   processSteps: ProcessStep[];
   faqsHeading?: string;
   faqs: ServiceFAQ[];
+  lastUpdated?: string;
+  reviewedBy?: string;
 }
