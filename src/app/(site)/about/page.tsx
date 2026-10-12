@@ -1,67 +1,94 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { verifiedStats } from "@/content/stats";
 import { CtaBannerSection } from "@/modules/home/cta-banner";
-import { Award, Rocket, HeartHandshake } from "lucide-react";
+import { generateBreadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/json-ld";
+import { ShieldCheck, Cpu, HeartHandshake, CheckCircle2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "About Us | Devbhoomi Infotech Solutions Rishikesh",
+  title: "About Us | Devbhoomi Infotech Solutions",
   description:
-    "Learn about Devbhoomi Infotech, the premier IT company, SEO agency, and web development team based in Rishikesh, Uttarakhand.",
+    "Learn about Devbhoomi Infotech Solutions, a technology and digital growth partner based in Rishikesh, Uttarakhand, serving businesses across India.",
   alternates: {
     canonical: `${siteConfig.url}/about/`,
   },
 };
 
 export default function AboutPage() {
+  const breadcrumbs = [
+    { name: "Home", url: `${siteConfig.url}/` },
+    { name: "About Us", url: `${siteConfig.url}/about/` },
+  ];
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+
   return (
     <div className="w-full">
+      <JsonLd data={breadcrumbSchema} />
+
+      {/* Hero Banner */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white text-center px-4">
         <div className="max-w-4xl mx-auto space-y-6">
-          <span className="inline-block text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-4 py-1.5 rounded-full border border-blue-400/20">
+          <span className="inline-block text-xs sm:text-sm font-semibold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-4 py-1.5 rounded-full border border-blue-400/20">
             About Devbhoomi Infotech
           </span>
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
-            Empowering Businesses With <span className="text-emerald-400">Digital Dominance</span>
+          <h1 className="text-4xl sm:text-6xl font-extrabold">
+            Rooted in Uttarakhand,{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+              Building for India
+            </span>
           </h1>
-          <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Headquartered in Rishikesh, Uttarakhand, we craft custom web applications, execute high-intent SEO, and deploy intelligent AI automation systems.
+          <p className="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            We are a technology and digital growth agency headquartered in Rishikesh, crafting custom web systems, business software, and intelligent AI automations.
           </p>
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+      {/* Company Overview Section (id="overview" for navbar anchor) */}
+      <section
+        id="overview"
+        className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950"
+      >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-              Our Journey & Ethos
+              Our Journey & Purpose
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight">
-              Driven by Innovation, Rooted in Uttarakhand
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white ">
+              Engineering Practical Digital Solutions
             </h2>
-            <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-              Devbhoomi Infotech was founded with a singular mission: to provide world-class web engineering and digital growth solutions to businesses locally in Rishikesh, throughout Uttarakhand, and across the globe.
+            <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+              Devbhoomi Infotech Solutions was established with a clear goal: to provide high-standard web engineering, software architecture, and search visibility to businesses in Uttarakhand and across the nation.
             </p>
-            <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-              We reject the one-size-fits-all model. Every code line, SEO keyword, and automated process is custom-engineered to solve actual business bottlenecks and drive verifiable revenue.
+            <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+              We focus on solving tangible operational bottlenecks rather than selling off-the-shelf templates. From responsive business platforms to automated lead pipelines, our solutions are engineered to produce dependable results.
             </p>
 
-            <div className="grid grid-cols-2 gap-6 pt-4">
-              <div className="p-4 rounded-xl bg-slate-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
-                <div className="text-3xl font-extrabold text-blue-600">150+</div>
-                <div className="text-xs font-medium text-gray-500 mt-1">Projects Delivered</div>
-              </div>
-              <div className="p-4 rounded-xl bg-slate-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
-                <div className="text-3xl font-extrabold text-emerald-500">99.8%</div>
-                <div className="text-xs font-medium text-gray-500 mt-1">Client Satisfaction</div>
-              </div>
+            {/* Verified Statistics Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+              {verifiedStats.slice(0, 3).map((stat, i) => (
+                <div
+                  key={i}
+                  className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center"
+                >
+                  <div className="text-3xl font-extrabold text-blue-600 dark:text-blue-400">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs font-semibold text-slate-700 dark:text-slate-300 mt-1">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 h-96 sm:h-[450px]">
+          <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-800 h-80 sm:h-[420px]">
             <Image
-              src="/images/devbhoomi-infotech-hotel-resort-website-rishikesh.webp"
-              alt="Devbhoomi Infotech Team"
+              src="/images/about/dbi-it-solution-about-us.webp"
+              alt="Devbhoomi Infotech Digital Solutions"
               fill
               className="object-cover"
             />
@@ -69,45 +96,180 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Our Core Principles
+      {/* Our Approach Section (id="approach" for navbar anchor) */}
+      <section
+        id="approach"
+        className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200/80 dark:border-slate-800"
+      >
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="inline-block text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 px-3.5 py-1.5 rounded-full border border-blue-200 dark:border-blue-900">
+              Our Methodology
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+              Our Engineering & Growth Approach
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              The fundamental standards behind everything we design, code, and deploy.
+            <p className="text-base text-slate-600 dark:text-slate-300">
+              How we approach technology projects to guarantee clean architecture and clear business outcomes.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-              <Award className="w-10 h-10 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                Uncompromising Quality
+            <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-900/40 text-blue-600 flex items-center justify-center">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                1. Architectural Rigor
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                Zero bloated themes or fragile shortcuts. We write modular, secure, and production-tested code designed to last.
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                We build with Next.js, React, TypeScript, and clean CSS rather than heavy monolithic page builders. This ensures fast Core Web Vitals and zero vendor lock-in.
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-              <Rocket className="w-10 h-10 text-emerald-500 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                Performance-First
+            <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 flex items-center justify-center">
+                <Cpu className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                2. Practical Automation
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                Speed is a feature. We engineer for lightning-quick load times, exceptional Core Web Vitals, and search visibility.
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                We automate manual business overhead using n8n, WhatsApp Cloud API, and AI triage so you never miss an inquiry or follow-up opportunity.
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-              <HeartHandshake className="w-10 h-10 text-purple-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                Long-Term Partnership
+            <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 flex items-center justify-center">
+                <HeartHandshake className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                3. Search & Conversion Focus
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                We act as your dedicated technical partner, supporting your business evolution with ongoing maintenance and guidance.
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Traffic without inquiries does not build a business. We combine traditional Local SEO with Generative Engine Optimisation (GEO) and high-converting UX.
+              </p>
+            </div>
+          </div>
+
+          <div className="pt-4 text-center">
+            <Button asChild variant="outline" className="rounded-full px-7">
+              <Link href="/about/our-approach/">
+                <span>Explore Our Detailed Engineering Methodology & Comparison →</span>
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section (id="why-choose-us" for navbar anchor) */}
+      <section
+        id="why-choose-us"
+        className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950 border-t border-slate-200/80 dark:border-slate-800"
+      >
+        <div className="max-w-7xl mx-auto space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+              Clear Standards
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+              Why Businesses Choose Devbhoomi Infotech
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Direct communication with technical engineers, not middlemen",
+              "Tailored full-stack solutions with no hidden recurring dependencies",
+              "Verified delivery of 20+ web, software, and automation projects",
+              "Clear milestone timelines with regular staging previews",
+              "Transparent pricing with clear scope definitions",
+              "Rooted in Rishikesh with nationwide collaboration experience",
+            ].map((point, index) => (
+              <div
+                key={index}
+                className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start gap-3"
+              >
+                <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                <span className="text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+                  {point}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="pt-8 flex flex-wrap justify-center gap-4">
+            <Button asChild className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8">
+              <Link href="/contact/">Discuss Your Project With Us</Link>
+            </Button>
+            <Button asChild variant="outline" className="rounded-full px-8">
+              <Link href="/about/why-choose-us/">Read All Guarantees & FAQs →</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Engineering Principles & Regional Roots */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200/80 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+              Our Principles
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+              Core Engineering Values That Guide Us
+            </h2>
+            <p className="text-base text-slate-600 dark:text-slate-300">
+              The foundational standards that define our work and long-term client partnerships.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/40 text-blue-600 flex items-center justify-center font-bold">
+                01
+              </div>
+              <h3 className="font-bold text-slate-900 dark:text-white text-base">
+                Performance Over Bloat
+              </h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                We avoid heavy page builders and unoptimized plugins. Every component is engineered for sub-second load times and 90+ Core Web Vitals.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 flex items-center justify-center font-bold">
+                02
+              </div>
+              <h3 className="font-bold text-slate-900 dark:text-white text-base">
+                100% Client Ownership
+              </h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Zero proprietary lock-in. You own your code repository, domain DNS, and server keys with complete administrative freedom.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 flex items-center justify-center font-bold">
+                03
+              </div>
+              <h3 className="font-bold text-slate-900 dark:text-white text-base">
+                Direct Technical Dialogue
+              </h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                You communicate directly with the developers working on your code. No commission-driven account managers or lost requirements.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/40 text-purple-600 flex items-center justify-center font-bold">
+                04
+              </div>
+              <h3 className="font-bold text-slate-900 dark:text-white text-base">
+                Rooted in Rishikesh
+              </h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Headquartered along Dhalwala in Rishikesh, Uttarakhand, bringing top-tier software craftsmanship to regional and nationwide clients.
               </p>
             </div>
           </div>

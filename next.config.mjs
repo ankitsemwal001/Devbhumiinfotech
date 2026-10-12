@@ -4,9 +4,6 @@ const nextConfig = {
 
   trailingSlash: true, // ⭐ THIS IS THE FIX
 
-  typescript: {
-    ignoreBuildErrors: true,
-  },
 
   images: {
     unoptimized: true,

@@ -1,46 +1,70 @@
-import { ServiceFAQ } from "@/types/service";
+export interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
+  category?: string;
+  pending?: boolean; // If pending owner verification, suppressed from live UI & Schema
+}
 
-export const siteFAQs: (ServiceFAQ & { id: number })[] = [
+export const siteFAQs: FAQItem[] = [
   {
     id: 1,
-    question: "What is SEO and why is it important for my business?",
+    question: "What core services does Devbhoomi Infotech provide?",
     answer:
-      "SEO (Search Engine Optimization) is the practice of optimizing your website to rank higher on Google and other search engines. It is crucial because 93% of online experiences start with a search engine, and higher rankings lead to more visibility, traffic, and sales for your business. Our SEO services in Rishikesh help local businesses and startups achieve top rankings for competitive keywords.",
+      "We provide four core technology services: AI & business automation (chatbots, n8n workflows), custom software and SaaS development, responsive website design & web development, and digital growth (technical SEO, local SEO, and generative engine optimisation).",
+    pending: false,
   },
   {
     id: 2,
-    question: "How long does it take to see SEO results?",
+    question: "Do you work with clients outside Uttarakhand?",
     answer:
-      "SEO is a long-term strategy. Most businesses start seeing measurable results within 3-6 months, with significant improvements typically visible after 6-12 months of consistent optimization work.",
+      "Yes. While we are rooted in Rishikesh, Uttarakhand, our engineering and digital growth teams serve clients across India and take on select international projects remotely through structured digital collaboration.",
+    pending: false,
   },
   {
     id: 3,
-    question: "What does web development include?",
+    question: "How does a typical project begin?",
     answer:
-      "Web development includes designing and building websites and web applications: front-end development, back-end development, responsive design, e-commerce functionality, security, and ongoing support.",
+      "Every project begins with a structured discovery consultation. We review your business requirements, analyze existing processes or websites, and prepare a written scope outline with clear timelines before starting development.",
+    pending: false,
   },
   {
     id: 4,
-    question: "How much does a website development project cost?",
+    question: "How is project pricing calculated?",
     answer:
-      "Website costs vary based on complexity, features, and design requirements. Our packages range from ₹15,000 for basic starter websites to ₹40,000+ for premium solutions with advanced features.",
+      "Website packages start from ₹15,000 for standard small-business sites, with comprehensive multi-page platforms starting from ₹40,000. Custom software, AI automation pipelines, and ongoing SEO retainers are quoted individually based on technical scope and required integrations.",
+    pending: false,
   },
   {
     id: 5,
-    question: "What is AI automation and how can it help my business?",
+    question: "Do you engineer custom software and SaaS applications?",
     answer:
-      "AI automation uses intelligent systems to automate repetitive business processes: AI chatbots for customer support, lead sync, document extraction, appointment scheduling, and CRM workflows.",
+      "Yes. We build full-stack web applications, business dashboards, and SaaS platforms using modern technologies such as Next.js, React, Node.js, and cloud database architectures tailored to specific company workflows.",
+    pending: false,
   },
   {
     id: 6,
-    question: "Do you provide support after the project is complete?",
+    question: "What is Generative Engine Optimisation (GEO) and why is it important?",
     answer:
-      "Yes! We provide comprehensive ongoing support and maintenance for all our projects with free support periods and extended maintenance plans.",
+      "Generative Engine Optimisation (GEO) structures your website content, schema, and entity citations so that AI-powered search engines (like Google AI Overviews and ChatGPT) can easily understand and recommend your business in answers.",
+    pending: false,
   },
   {
     id: 7,
-    question: "What makes Devbhoomi Infotech different from other agencies?",
+    question: "What ongoing maintenance and support is provided after launch?",
     answer:
-      "We combine deep technical expertise with strategic business thinking. With 150+ successful projects, we deliver custom solutions tailored to your specific business goals with a strong local presence in Rishikesh.",
+      "We provide post-launch verification, deployment assistance, and handover documentation. Ongoing maintenance retainers and technical support packages are tailored to each client's operational requirements.",
+    pending: false,
+  },
+  {
+    id: 8,
+    question: "What are your standard support and communication hours?",
+    answer:
+      "Our team is available Monday through Saturday from 09:30 AM to 06:30 PM IST for project consultations, progress updates, and support.",
+    pending: false,
   },
 ];
+
+export function getLiveFAQs(): FAQItem[] {
+  return siteFAQs.filter((faq) => !faq.pending);
+}

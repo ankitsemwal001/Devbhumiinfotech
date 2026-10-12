@@ -1,0 +1,1718 @@
+{
+ "services": [
+  {
+   "name": "Website Design",
+   "slug": "website-design",
+   "h1Noun": "Website Design Company",
+   "geoEnabled": true
+  },
+  {
+   "name": "Web Development",
+   "slug": "web-development",
+   "h1Noun": "Web Development Company",
+   "geoEnabled": true
+  },
+  {
+   "name": "SEO Services",
+   "slug": "seo-services",
+   "h1Noun": "SEO Company",
+   "geoEnabled": true
+  },
+  {
+   "name": "Digital Marketing",
+   "slug": "digital-marketing",
+   "h1Noun": "Digital Marketing Agency",
+   "geoEnabled": false
+  },
+  {
+   "name": "Google Ads Management",
+   "slug": "google-ads-management",
+   "h1Noun": "Google Ads Management Company",
+   "geoEnabled": false
+  },
+  {
+   "name": "E-commerce Website Development",
+   "slug": "ecommerce-website-development",
+   "h1Noun": "E-commerce Website Development Company",
+   "geoEnabled": false
+  },
+  {
+   "name": "AI Automation",
+   "slug": "ai-automation",
+   "h1Noun": "AI Automation Company",
+   "geoEnabled": true
+  },
+  {
+   "name": "AI Chatbot Development",
+   "slug": "ai-chatbot-development",
+   "h1Noun": "AI Chatbot Development Company",
+   "geoEnabled": false
+  },
+  {
+   "name": "WhatsApp Automation",
+   "slug": "whatsapp-automation",
+   "h1Noun": "WhatsApp Automation Services",
+   "geoEnabled": false
+  },
+  {
+   "name": "Software Development",
+   "slug": "software-development",
+   "h1Noun": "Software Development Company",
+   "geoEnabled": false
+  },
+  {
+   "name": "Mobile App Development",
+   "slug": "mobile-app-development",
+   "h1Noun": "Mobile App Development Company",
+   "geoEnabled": false
+  },
+  {
+   "name": "Content Writing Services",
+   "slug": "content-writing-services",
+   "h1Noun": "Content Writing Services Company",
+   "geoEnabled": false
+  }
+ ],
+ "locations": [
+  {
+   "name": "Rishikesh",
+   "slug": "rishikesh",
+   "parent": null,
+   "district": "Dehradun",
+   "type": "city",
+   "priority": "high",
+   "published": true,
+   "presence": "hq"
+  },
+  {
+   "name": "Dehradun",
+   "slug": "dehradun",
+   "parent": null,
+   "district": "Dehradun",
+   "type": "city",
+   "priority": "high",
+   "published": true,
+   "presence": "service-area"
+  },
+  {
+   "name": "Delhi",
+   "slug": "delhi",
+   "parent": null,
+   "district": "Delhi NCR",
+   "type": "city",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Noida",
+   "slug": "noida",
+   "parent": null,
+   "district": "Gautam Buddha Nagar",
+   "type": "city",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Haridwar",
+   "slug": "haridwar",
+   "parent": null,
+   "district": "Haridwar",
+   "type": "city",
+   "priority": "high",
+   "published": true,
+   "presence": "service-area"
+  },
+  {
+   "name": "Tapovan",
+   "slug": "tapovan",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Laxman Jhula",
+   "slug": "laxman-jhula",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Ram Jhula",
+   "slug": "ram-jhula",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Swarg Ashram",
+   "slug": "swarg-ashram",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Muni Ki Reti",
+   "slug": "muni-ki-reti",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Triveni Ghat",
+   "slug": "triveni-ghat",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Rishikesh Main Market",
+   "slug": "rishikesh-main-market",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Dehradun Road",
+   "slug": "dehradun-road",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Haridwar Road",
+   "slug": "haridwar-road",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Shivpuri",
+   "slug": "shivpuri",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Dhalwala",
+   "slug": "dhalwala",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Shyampur",
+   "slug": "shyampur",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "IDPL Colony",
+   "slug": "idpl-colony",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Veerbhadra",
+   "slug": "veerbhadra",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Ganga Nagar",
+   "slug": "ganga-nagar",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Ashutosh Nagar",
+   "slug": "ashutosh-nagar",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Gumaniwala",
+   "slug": "gumaniwala",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Bapugram",
+   "slug": "bapugram",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Geeta Nagar",
+   "slug": "geeta-nagar",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Mayakund",
+   "slug": "mayakund",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Railway Road",
+   "slug": "railway-road",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Neelkanth Road",
+   "slug": "neelkanth-road",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Chandreshwar Nagar",
+   "slug": "chandreshwar-nagar",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Raiwala",
+   "slug": "raiwala",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Byasi",
+   "slug": "byasi",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Narendra Nagar",
+   "slug": "narendra-nagar",
+   "parent": "rishikesh",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Rajpur Road",
+   "slug": "rajpur-road",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "IT Park",
+   "slug": "it-park",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Sahastradhara Road",
+   "slug": "sahastradhara-road",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Clock Tower",
+   "slug": "clock-tower",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Paltan Bazaar",
+   "slug": "paltan-bazaar",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "GMS Road",
+   "slug": "gms-road",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Ballupur",
+   "slug": "ballupur",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Chakrata Road",
+   "slug": "chakrata-road",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Patel Nagar",
+   "slug": "patel-nagar",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "ISBT",
+   "slug": "isbt",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Prem Nagar",
+   "slug": "prem-nagar",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Clement Town",
+   "slug": "clement-town",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Vasant Vihar",
+   "slug": "vasant-vihar",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Dalanwala",
+   "slug": "dalanwala",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Race Course",
+   "slug": "race-course",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Jakhan",
+   "slug": "jakhan",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kaulagarh",
+   "slug": "kaulagarh",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Raipur",
+   "slug": "raipur",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Jogiwala",
+   "slug": "jogiwala",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Nehru Colony",
+   "slug": "nehru-colony",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Dharampur",
+   "slug": "dharampur",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Rispana",
+   "slug": "rispana",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Karanpur",
+   "slug": "karanpur",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "EC Road",
+   "slug": "ec-road",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Subhash Nagar",
+   "slug": "subhash-nagar",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Majra",
+   "slug": "majra",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Niranjanpur",
+   "slug": "niranjanpur",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kargi Chowk",
+   "slug": "kargi-chowk",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Balliwala",
+   "slug": "balliwala",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Mothrowala",
+   "slug": "mothrowala",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Mohkampur",
+   "slug": "mohkampur",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Harrawala",
+   "slug": "harrawala",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Sudhowala",
+   "slug": "sudhowala",
+   "parent": "dehradun",
+   "district": "Dehradun",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "SIDCUL",
+   "slug": "sidcul",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "BHEL Ranipur",
+   "slug": "bhel-ranipur",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Jwalapur",
+   "slug": "jwalapur",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Shivalik Nagar",
+   "slug": "shivalik-nagar",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kankhal",
+   "slug": "kankhal",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Har Ki Pauri",
+   "slug": "har-ki-pauri",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Bahadrabad",
+   "slug": "bahadrabad",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Ranipur More",
+   "slug": "ranipur-more",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "high",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Roshnabad",
+   "slug": "roshnabad",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Bhupatwala",
+   "slug": "bhupatwala",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Devpura",
+   "slug": "devpura",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Arya Nagar",
+   "slug": "arya-nagar",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Mayapur",
+   "slug": "mayapur",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Bhimgoda",
+   "slug": "bhimgoda",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Jagjeetpur",
+   "slug": "jagjeetpur",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Haripur Kalan",
+   "slug": "haripur-kalan",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Motichur",
+   "slug": "motichur",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Shantikunj",
+   "slug": "shantikunj",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Patanjali Yogpeeth",
+   "slug": "patanjali-yogpeeth",
+   "parent": "haridwar",
+   "district": "Haridwar",
+   "type": "locality",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Mussoorie",
+   "slug": "mussoorie",
+   "parent": null,
+   "district": "Dehradun",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Doiwala",
+   "slug": "doiwala",
+   "parent": null,
+   "district": "Dehradun",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Selaqui",
+   "slug": "selaqui",
+   "parent": null,
+   "district": "Dehradun",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Vikasnagar",
+   "slug": "vikasnagar",
+   "parent": null,
+   "district": "Dehradun",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Herbertpur",
+   "slug": "herbertpur",
+   "parent": null,
+   "district": "Dehradun",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Sahaspur",
+   "slug": "sahaspur",
+   "parent": null,
+   "district": "Dehradun",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Dakpathar",
+   "slug": "dakpathar",
+   "parent": null,
+   "district": "Dehradun",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Chakrata",
+   "slug": "chakrata",
+   "parent": null,
+   "district": "Dehradun",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Roorkee",
+   "slug": "roorkee",
+   "parent": null,
+   "district": "Haridwar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Bhagwanpur",
+   "slug": "bhagwanpur",
+   "parent": null,
+   "district": "Haridwar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Manglaur",
+   "slug": "manglaur",
+   "parent": null,
+   "district": "Haridwar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Laksar",
+   "slug": "laksar",
+   "parent": null,
+   "district": "Haridwar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Jhabrera",
+   "slug": "jhabrera",
+   "parent": null,
+   "district": "Haridwar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Landhaura",
+   "slug": "landhaura",
+   "parent": null,
+   "district": "Haridwar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Piran Kaliyar",
+   "slug": "piran-kaliyar",
+   "parent": null,
+   "district": "Haridwar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Haldwani",
+   "slug": "haldwani",
+   "parent": null,
+   "district": "Nainital",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Nainital",
+   "slug": "nainital",
+   "parent": null,
+   "district": "Nainital",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Ramnagar",
+   "slug": "ramnagar",
+   "parent": null,
+   "district": "Nainital",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Bhimtal",
+   "slug": "bhimtal",
+   "parent": null,
+   "district": "Nainital",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Bhowali",
+   "slug": "bhowali",
+   "parent": null,
+   "district": "Nainital",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Mukteshwar",
+   "slug": "mukteshwar",
+   "parent": null,
+   "district": "Nainital",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kaladhungi",
+   "slug": "kaladhungi",
+   "parent": null,
+   "district": "Nainital",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Lalkuan",
+   "slug": "lalkuan",
+   "parent": null,
+   "district": "Nainital",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Rudrapur",
+   "slug": "rudrapur",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kashipur",
+   "slug": "kashipur",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Pantnagar",
+   "slug": "pantnagar",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kichha",
+   "slug": "kichha",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Sitarganj",
+   "slug": "sitarganj",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Khatima",
+   "slug": "khatima",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Jaspur",
+   "slug": "jaspur",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Bazpur",
+   "slug": "bazpur",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Gadarpur",
+   "slug": "gadarpur",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Dineshpur",
+   "slug": "dineshpur",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Nanakmatta",
+   "slug": "nanakmatta",
+   "parent": null,
+   "district": "Udham Singh Nagar",
+   "type": "town",
+   "priority": "medium",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Almora",
+   "slug": "almora",
+   "parent": null,
+   "district": "Almora",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Ranikhet",
+   "slug": "ranikhet",
+   "parent": null,
+   "district": "Almora",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Dwarahat",
+   "slug": "dwarahat",
+   "parent": null,
+   "district": "Almora",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Someshwar",
+   "slug": "someshwar",
+   "parent": null,
+   "district": "Almora",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Bageshwar",
+   "slug": "bageshwar",
+   "parent": null,
+   "district": "Bageshwar",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kausani",
+   "slug": "kausani",
+   "parent": null,
+   "district": "Bageshwar",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Pithoragarh",
+   "slug": "pithoragarh",
+   "parent": null,
+   "district": "Pithoragarh",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Didihat",
+   "slug": "didihat",
+   "parent": null,
+   "district": "Pithoragarh",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Dharchula",
+   "slug": "dharchula",
+   "parent": null,
+   "district": "Pithoragarh",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Munsiyari",
+   "slug": "munsiyari",
+   "parent": null,
+   "district": "Pithoragarh",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Berinag",
+   "slug": "berinag",
+   "parent": null,
+   "district": "Pithoragarh",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Gangolihat",
+   "slug": "gangolihat",
+   "parent": null,
+   "district": "Pithoragarh",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Champawat",
+   "slug": "champawat",
+   "parent": null,
+   "district": "Champawat",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Tanakpur",
+   "slug": "tanakpur",
+   "parent": null,
+   "district": "Champawat",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Lohaghat",
+   "slug": "lohaghat",
+   "parent": null,
+   "district": "Champawat",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kotdwar",
+   "slug": "kotdwar",
+   "parent": null,
+   "district": "Pauri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Srinagar Garhwal",
+   "slug": "srinagar-garhwal",
+   "parent": null,
+   "district": "Pauri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Pauri",
+   "slug": "pauri",
+   "parent": null,
+   "district": "Pauri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Lansdowne",
+   "slug": "lansdowne",
+   "parent": null,
+   "district": "Pauri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Dugadda",
+   "slug": "dugadda",
+   "parent": null,
+   "district": "Pauri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Satpuli",
+   "slug": "satpuli",
+   "parent": null,
+   "district": "Pauri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "New Tehri",
+   "slug": "new-tehri",
+   "parent": null,
+   "district": "Tehri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Chamba",
+   "slug": "chamba",
+   "parent": null,
+   "district": "Tehri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Dhanaulti",
+   "slug": "dhanaulti",
+   "parent": null,
+   "district": "Tehri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kanatal",
+   "slug": "kanatal",
+   "parent": null,
+   "district": "Tehri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Ghansali",
+   "slug": "ghansali",
+   "parent": null,
+   "district": "Tehri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kirtinagar",
+   "slug": "kirtinagar",
+   "parent": null,
+   "district": "Tehri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Devprayag",
+   "slug": "devprayag",
+   "parent": null,
+   "district": "Tehri Garhwal",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Uttarkashi",
+   "slug": "uttarkashi",
+   "parent": null,
+   "district": "Uttarkashi",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Barkot",
+   "slug": "barkot",
+   "parent": null,
+   "district": "Uttarkashi",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Purola",
+   "slug": "purola",
+   "parent": null,
+   "district": "Uttarkashi",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Gangotri",
+   "slug": "gangotri",
+   "parent": null,
+   "district": "Uttarkashi",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Yamunotri",
+   "slug": "yamunotri",
+   "parent": null,
+   "district": "Uttarkashi",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Gopeshwar",
+   "slug": "gopeshwar",
+   "parent": null,
+   "district": "Chamoli",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Chamoli",
+   "slug": "chamoli",
+   "parent": null,
+   "district": "Chamoli",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Joshimath",
+   "slug": "joshimath",
+   "parent": null,
+   "district": "Chamoli",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Auli",
+   "slug": "auli",
+   "parent": null,
+   "district": "Chamoli",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Badrinath",
+   "slug": "badrinath",
+   "parent": null,
+   "district": "Chamoli",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Karnaprayag",
+   "slug": "karnaprayag",
+   "parent": null,
+   "district": "Chamoli",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Nandprayag",
+   "slug": "nandprayag",
+   "parent": null,
+   "district": "Chamoli",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Gauchar",
+   "slug": "gauchar",
+   "parent": null,
+   "district": "Chamoli",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Tharali",
+   "slug": "tharali",
+   "parent": null,
+   "district": "Chamoli",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Gairsain",
+   "slug": "gairsain",
+   "parent": null,
+   "district": "Chamoli",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Rudraprayag",
+   "slug": "rudraprayag",
+   "parent": null,
+   "district": "Rudraprayag",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Guptkashi",
+   "slug": "guptkashi",
+   "parent": null,
+   "district": "Rudraprayag",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Ukhimath",
+   "slug": "ukhimath",
+   "parent": null,
+   "district": "Rudraprayag",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  },
+  {
+   "name": "Kedarnath",
+   "slug": "kedarnath",
+   "parent": null,
+   "district": "Rudraprayag",
+   "type": "town",
+   "priority": "low",
+   "published": false,
+   "presence": "service-area"
+  }
+ ]
+}

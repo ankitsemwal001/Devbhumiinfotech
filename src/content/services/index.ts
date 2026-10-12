@@ -1,14 +1,19 @@
 import { ServicePageData } from "@/types/service";
 import { websiteDesignService } from "./website-design";
-import { webDevelopmentService } from "./web-development";
+import { webDevelopmentService, webDevelopmentShortService } from "./web-development";
 import { digitalMarketingService } from "./digital-marketing";
+import { digitalGrowthService } from "./digital-growth";
 import { aiAutomationService } from "./ai-automation";
+import { softwareDevelopmentService } from "./software-development";
 
 export const allServices: ServicePageData[] = [
   websiteDesignService,
   webDevelopmentService,
+  webDevelopmentShortService,
   digitalMarketingService,
+  digitalGrowthService,
   aiAutomationService,
+  softwareDevelopmentService,
 ];
 
 export function getServiceBySlug(slug: string): ServicePageData | undefined {

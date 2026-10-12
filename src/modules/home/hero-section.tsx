@@ -1,100 +1,103 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { motion, type Variants } from "framer-motion";
+import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
 import ParticleBackground from "@/components/common/particle-background";
-
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.15,
-    },
-  },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 16 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
-  },
-};
+import { siteConfig } from "@/config/site";
 
 export function HeroSection() {
-  return (
-    <section className="relative min-h-[90vh] bg-background flex items-center justify-center pt-20 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <ParticleBackground />
+  const trackCtaClick = (label: string) => {
+    if (typeof window !== "undefined" && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: "cta_click",
+        cta_location: "hero",
+        cta_label: label,
+      });
+    }
+  };
 
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute top-24 right-12 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-12 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl" />
+  return (
+    <section className="relative w-full min-h-[580px] lg:min-h-[680px] xl:min-h-[750px] flex items-center overflow-hidden bg-slate-950 text-white">
+      {/* Background Image: devbhoomi_hero_bg.webp with high-contrast gradient overlays */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/devbhoomi_hero_bg.webp"
+          alt="Devbhoomi Infotech Solutions Digital Agency"
+          fill
+          priority
+          sizes="100vw"
+          quality={90}
+          className="object-cover object-center lg:object-right select-none pointer-events-none"
+        />
+        {/* Dark gradient on the left ensures all text remains crisp, vibrant and readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/40 sm:via-slate-950/80 lg:from-slate-950/95 lg:via-slate-950/65 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-transparent to-slate-950/80" />
       </div>
 
-      <motion.div
-        className="relative z-10 max-w-4xl mx-auto text-center"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        <motion.div
-          variants={itemVariants}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 font-semibold text-xs sm:text-sm mb-6 border border-orange-500/20"
-        >
-          <Sparkles className="w-4 h-4" />
-          <span>Digital Growth Partner • In Rishikesh & Worldwide</span>
-        </motion.div>
+      {/* Background Particle Network (Desktop only, non-blocking) */}
+      <div className="absolute inset-0 z-[1] opacity-40 pointer-events-none">
+        <ParticleBackground />
+      </div>
 
-        <motion.h1
-          variants={itemVariants}
-          className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-[1.1] mb-6"
-        >
-          Transform Your Brand With{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500">
-            Next-Gen Web & AI
-          </span>
-        </motion.h1>
+      <div className="relative z-10 w-full max-w-7xl xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-14 xl:pt-16 pb-14 sm:pb-16 lg:pb-20 xl:pb-24">
+        <div className="max-w-xl lg:max-w-2xl xl:max-w-[700px] text-left -translate-y-2 sm:-translate-y-4 lg:-translate-y-6">
+          {/* Eyebrow Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-xs sm:text-sm font-medium mb-5 sm:mb-6 backdrop-blur-sm">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Technology & digital growth partner · Rishikesh, Uttarakhand</span>
+          </div>
 
-        <motion.p
-          variants={itemVariants}
-          className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal"
-        >
-          We build lightning-fast SEO websites, automated workflow systems, and data-driven marketing campaigns designed to capture leads and scale operations.
-        </motion.p>
+          {/* H1 Heading (using ibrand display font) */}
+          <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold mb-5 sm:mb-6 leading-[1.14]">
+            Websites, software and AI automation that{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+              help your business grow
+            </span>
+          </h1>
 
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <Button
-            asChild
-            size="lg"
-            className="rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 h-12 shadow-lg shadow-blue-600/25"
-          >
-            <Link href="/contact" className="flex items-center gap-2">
-              Start Your Project
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
+          {/* Subtitle */}
+          <p className="text-base sm:text-lg text-slate-300 max-w-xl xl:max-w-2xl mb-8 sm:mb-10 leading-relaxed font-normal">
+            From Uttarakhand to clients across India, we build the digital systems — websites, custom software, automation, and search visibility — that turn visitors into enquiries.
+          </p>
 
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="rounded-full border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 px-8 h-12"
-          >
-            <Link href="/#projects">Explore Case Studies</Link>
-          </Button>
-        </motion.div>
-      </motion.div>
+          {/* Action CTAs */}
+          <div className="flex flex-wrap items-center gap-4">
+            <Button
+              asChild
+              size="lg"
+              onClick={() => trackCtaClick("Discuss Your Project")}
+              className="w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 h-12 shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02]"
+            >
+              <Link href="/contact/" className="flex items-center gap-2">
+                <span>Discuss Your Project</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              onClick={() => trackCtaClick("Explore Our Work")}
+              className="w-full sm:w-auto rounded-full border-slate-700 bg-slate-900/60 text-slate-200 hover:bg-slate-800 hover:text-white px-8 h-12 backdrop-blur-sm"
+            >
+              <Link href="/projects/">Explore Our Work</Link>
+            </Button>
+
+            <a
+              href={`tel:${siteConfig.contact.phoneRaw}`}
+              onClick={() => trackCtaClick("Direct Call")}
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all shadow-md hover:scale-105"
+              aria-label={`Call us at ${siteConfig.contact.phone}`}
+              title={`Call ${siteConfig.contact.phone}`}
+            >
+              <Phone className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

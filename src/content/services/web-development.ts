@@ -134,7 +134,7 @@ export const webDevelopmentService: ServicePageData = {
     {
       id: "7",
       title: "Maintenance & DevOps",
-      subtitle: "24/7 Reliability",
+      subtitle: "Continuous Reliability",
       description:
         "Continuous monitoring, framework upgrades, automated database backups, and emergency technical support.",
       points: [
@@ -158,4 +158,10 @@ export const webDevelopmentService: ServicePageData = {
         "Yes, 100%. Upon project completion and handover, you receive full ownership of the source code, repositories, and digital assets.",
     },
   ],
+};
+
+export const webDevelopmentShortService: ServicePageData = {
+  ...webDevelopmentService,
+  slug: "web-development",
+  canonicalUrl: "https://www.devbhoomiinfotech.com/services/web-development/",
 };

@@ -1,0 +1,524 @@
+================================================================================
+           DEVBHOOMI INFOTECH SOLUTIONS — PROJECT TECHNICAL OVERVIEW
+================================================================================
+Generated Date : October 9, 2026
+Document Type  : Full Project Technical Specification & Architecture Handover
+Target Audience: Senior Developer / Technical Lead / Engineering Manager
+Project Name   : devbhoomiinfotech (Devbhoomi Infotech Solutions)
+Base Domain    : https://www.devbhoomiinfotech.com
+Location       : Rishikesh, Uttarakhand, India (249201)
+
+--------------------------------------------------------------------------------
+TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+1. Executive Project Summary
+2. Core Architecture & Highlights
+3. Comprehensive Tech Stack & Dependencies
+4. Typography & Font System
+5. Color Palette & Theming (Light/Dark Tokens)
+6. Complete Folder Structure & File Manifest
+7. Routing & Page Architecture
+8. Data & Content Models
+9. SEO, Structured Schema & Analytics
+10. Key Interactive Features & Components
+11. Build, Scripts & Deployment Setup
+12. Senior Review Highlights & Recommendations
+
+================================================================================
+1. EXECUTIVE PROJECT SUMMARY
+================================================================================
+Devbhoomi Infotech Solutions is an enterprise-grade digital agency and IT services 
+web platform built for Devbhoomi Infotech based in Rishikesh, Uttarakhand. 
+
+The website serves as the primary commercial and lead generation platform for:
+- Custom Full-Stack Website Development (React/Next.js)
+- Responsive Website Design (UI/UX)
+- Local & Technical SEO / Digital Marketing
+- AI Workflow & Business Automation (Chatbots, n8n workflows, CRM automation)
+
+Key Business Capabilities:
+- Direct WhatsApp lead generation integration for instant customer conversions.
+- Static HTML export optimized for ultra-fast CDN delivery and zero server cost.
+- Comprehensive LocalBusiness & Service JSON-LD schema for local Rishikesh rankings.
+- Modular architecture allowing rapid expansion of case studies, packages, and blogs.
+
+================================================================================
+2. CORE ARCHITECTURE & HIGHLIGHTS
+================================================================================
+- Framework        : Next.js 16 (App Router architecture with static export)
+- React Version    : React 19 (Server Components + Client Components balance)
+- Language         : TypeScript 5 (Strict type checking, zero `any` policy in domain)
+- Styling          : Tailwind CSS v4 with modern `@theme inline` & OKLCH color space
+- UI Architecture  : shadcn/ui (New York style) with Radix UI headless primitives
+- Render Strategy  : Static Site Generation (`output: "export"`, `trailingSlash: true`)
+- State Management : Local React State + URL Routing + Server Actions
+- Analytics & SEO  : GTM + GA4 + Vercel Analytics + Automated JSON-LD Schema Generation
+
+================================================================================
+3. COMPREHENSIVE TECH STACK & DEPENDENCIES
+================================================================================
+
+[A] CORE RUNTIME & FRAMEWORK
+--------------------------------------------------------------------------------
+- Next.js          : 16.0.10 (App Router, static export mode with webpack compiler)
+- React            : 19.2.0
+- React DOM        : 19.2.0
+- TypeScript       : 5.x
+
+[B] STYLING & DESIGN ENGINE
+--------------------------------------------------------------------------------
+- Tailwind CSS     : 4.1.9 (Next-generation engine using @tailwindcss/postcss)
+- PostCSS          : 8.5
+- Autoprefixer     : 10.4.20
+- tw-animate-css   : 1.3.3
+- tailwindcss-animate : 1.0.7
+- class-variance-authority : 0.7.1 (Type-safe component variant management)
+- clsx             : 2.1.1
+- tailwind-merge   : 3.3.1 (Dynamic class string resolution)
+
+[C] UI PRIMITIVES & COMPONENT SUITE (shadcn/ui & Radix UI)
+--------------------------------------------------------------------------------
+- @radix-ui/react-accordion        : 1.2.2
+- @radix-ui/react-alert-dialog     : 1.1.4
+- @radix-ui/react-aspect-ratio     : 1.1.1
+- @radix-ui/react-avatar           : 1.1.2
+- @radix-ui/react-checkbox         : 1.1.3
+- @radix-ui/react-collapsible      : 1.1.2
+- @radix-ui/react-context-menu     : 2.2.4
+- @radix-ui/react-dialog           : 1.1.4
+- @radix-ui/react-dropdown-menu    : 2.1.4
+- @radix-ui/react-hover-card       : 1.1.4
+- @radix-ui/react-label            : 2.1.1
+- @radix-ui/react-menubar          : 1.1.4
+- @radix-ui/react-navigation-menu  : 1.2.3
+- @radix-ui/react-popover          : 1.1.4
+- @radix-ui/react-progress         : 1.1.1
+- @radix-ui/react-radio-group      : 1.2.2
+- @radix-ui/react-scroll-area      : 1.2.2
+- @radix-ui/react-select           : 2.1.4
+- @radix-ui/react-separator        : 1.1.1
+- @radix-ui/react-slider           : 1.2.2
+- @radix-ui/react-slot             : 1.1.1
+- @radix-ui/react-switch           : 1.1.2
+- @radix-ui/react-tabs             : 1.1.2
+- @radix-ui/react-toast            : 1.2.4
+- @radix-ui/react-toggle           : 1.1.1
+- @radix-ui/react-toggle-group     : 1.1.1
+- @radix-ui/react-tooltip          : 1.1.6
+
+[D] ANIMATION & INTERACTIVITY
+--------------------------------------------------------------------------------
+- framer-motion                    : 12.26.2 (Smooth layout transitions & spring physics)
+- react-intersection-observer      : 10.0.2 (Scroll-triggered animations)
+- HTML5 Canvas Particle Engine     : Custom interactive particle network in hero
+
+[E] FORMS, VALIDATION & UTILITIES
+--------------------------------------------------------------------------------
+- react-hook-form                  : 7.60.0 (High-performance non-rendering form state)
+- zod                              : 3.25.76 (Schema validation)
+- @hookform/resolvers              : 3.10.0 (Zod to React Hook Form bridge)
+- date-fns                         : 4.1.0 (Date formatting & manipulation)
+- sonner                           : 1.7.4 (Modern toast notifications)
+- vaul                             : 1.1.2 (Mobile drawer component)
+- embla-carousel-react             : 8.5.1 (Touch carousel)
+- cmdk                             : 1.0.4 (Command palette)
+- recharts                         : 2.15.4 (Data visualization charts)
+- input-otp                        : 1.4.1 (One-time password input)
+- react-day-picker                 : 9.8.0 (Calendar selection)
+- react-resizable-panels           : 2.1.7 (Collapsible multi-pane layout)
+
+[F] ICONS & VISUALS
+--------------------------------------------------------------------------------
+- lucide-react                     : 0.454.0 (Consistent modern icon set)
+- react-icons                      : 5.5.0 (Brand & social icons)
+
+[G] ANALYTICS & MONITORING
+--------------------------------------------------------------------------------
+- Google Tag Manager (GTM)         : GTM-5QG4HDXN
+- Google Analytics 4 (GA4)         : G-7JFQ2C4SS3
+- @vercel/analytics                : 1.3.1
+
+================================================================================
+4. TYPOGRAPHY & FONT SYSTEM
+================================================================================
+The project implements a bespoke multi-layer editorial typography hierarchy
+combining self-hosted geometric sans-serif fonts with Google web fonts.
+
+[A] LOCAL ASSETS (/public/fonts/)
+--------------------------------------------------------------------------------
+1. 'ibrand' (OpenType /public/fonts/ibrand.otf)
+   - Usage: Primary agency branding, prominent display headings (h1, h3, h4, h5, h6).
+   - Style: Distinct geometric modern serif-hybrid display font.
+2. 'Neue Plak' Family (TrueType):
+   - Neue Plak Light    (300 weight) -> /fonts/Neue-Plak-Light.ttf
+   - Neue Plak Regular  (400 weight) -> /fonts/Neue-Plak-Regular.ttf
+   - Neue Plak SemiBold (600 weight) -> /fonts/Neue-Plak-SemiBold.ttf
+   - Neue Plak Bold     (700 weight) -> /fonts/Neue-Plak-Bold.ttf
+   - Usage: Unified body copy, paragraph text, buttons, form elements, table data.
+
+[B] REMOTE GOOGLE FONTS (Preconnected in layout)
+--------------------------------------------------------------------------------
+1. 'Playfair Display' (Weights: 400 to 900, Normal & Italic)
+   - Usage: Editorial serif headings (h2), highlighted span tags, luxury accents.
+2. 'Plus Jakarta Sans' (Weights: 400, 500, 600, 700, 800)
+   - Usage: High-legibility web fallback for Neue Plak on UI copy.
+
+[C] TYPOGRAPHIC HIERARCHY RULES (from globals.css)
+--------------------------------------------------------------------------------
+- <body>, <p>, <span>, <a>, <button>, <input>, <textarea>, <select>
+  -> font-family: 'Neue Plak Regular', 'Neue Plak', 'Plus Jakarta Sans', sans-serif;
+- <h1>
+  -> font-family: 'ibrand', 'Playfair Display', sans-serif;
+  -> letter-spacing: -0.02em;
+- <h2>
+  -> font-family: 'Playfair Display', 'ibrand', Georgia, serif;
+  -> letter-spacing: -0.01em;
+- <h3>, <h4>, <h5>, <h6>
+  -> font-family: 'ibrand', 'Playfair Display', sans-serif;
+  -> letter-spacing: -0.01em;
+
+[D] UTILITY CSS FONT CLASSES
+--------------------------------------------------------------------------------
+- .font-ibrand            -> font-family: 'ibrand', sans-serif !important;
+- .font-playfair          -> font-family: 'Playfair Display', Georgia, serif !important;
+- .font-neue-plak         -> font-family: 'Neue Plak Regular', sans-serif !important;
+- .font-neue-plak-semibold-> font-family: 'Neue Plak SemiBold', sans-serif (600) !important;
+- .font-neue-plak-bold    -> font-family: 'Neue Plak Bold', sans-serif (700) !important;
+- .font-neue-plak-light   -> font-family: 'Neue Plak Light', sans-serif (300) !important;
+
+================================================================================
+5. COLOR PALETTE & THEMING (LIGHT & DARK TOKENS)
+================================================================================
+The design system utilizes modern OKLCH color spaces for perceptual uniformity,
+backed by Tailwind CSS v4 `@theme inline` variables and `next-themes` dark mode.
+
+[A] COLOR TOKEN DEFINITIONS
+--------------------------------------------------------------------------------
+Token Name          Light Mode (OKLCH)           Dark Mode (OKLCH)       HEX Approximate
+--------------------------------------------------------------------------------
+--background        oklch(1 0 0)                 oklch(0.145 0 0)        #FFFFFF / #161616
+--foreground        oklch(0.094 0 0)             oklch(0.985 0 0)        #141414 / #FAFAFA
+--card              oklch(0.985 0.002 0)         oklch(0.145 0 0)        #FCFCFC / #161616
+--card-foreground   oklch(0.094 0 0)             oklch(0.985 0 0)        #141414 / #FAFAFA
+--primary           oklch(0.39 0.173 247.88)     oklch(0.985 0 0)        #1D4ED8 (Royal Blue)
+--primary-fg        oklch(1 0 0)                 oklch(0.205 0 0)        #FFFFFF / #262626
+--secondary         oklch(0.95 0.005 0)          oklch(0.269 0 0)        #F2F2F2 / #383838
+--secondary-fg      oklch(0.094 0 0)             oklch(0.985 0 0)        #141414 / #FAFAFA
+--muted             oklch(0.93 0 0)              oklch(0.269 0 0)        #ECECEC / #383838
+--muted-foreground  oklch(0.556 0 0)             oklch(0.708 0 0)        #737373 / #A3A3A3
+--accent            oklch(0.516 0.195 144.76)    oklch(0.269 0 0)        #10B981 (Emerald)
+--accent-foreground oklch(1 0 0)                 oklch(0.985 0 0)        #FFFFFF / #FAFAFA
+--destructive       oklch(0.577 0.245 27.325)    oklch(0.396 0.141 25.7) #DC2626 (Red/Coral)
+--border            oklch(0.93 0 0)              oklch(0.269 0 0)        #ECECEC / #383838
+--input             oklch(0.97 0 0)              oklch(0.269 0 0)        #F7F7F7 / #383838
+--ring              oklch(0.39 0.173 247.88)     oklch(0.439 0 0)        #1D4ED8 (Focus ring)
+--radius            0.5rem (8px default base border radius)
+
+[B] BRAND IDENTITY & GRADIENTS
+--------------------------------------------------------------------------------
+1. Hero Gradient:
+   bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 (#0f172a -> #172554 -> #0f172a)
+2. Gradient Headings:
+   bg-gradient-to-r from-blue-400 to-emerald-400 (#60a5fa -> #34d399)
+3. Footer Palette:
+   bg-slate-950 (#020617) with border-slate-900 and text-slate-400
+4. Action & Conversion:
+   - Primary Buttons: bg-blue-600 hover:bg-blue-700 (#2563eb / #1d4ed8)
+   - Emerald Accent:  bg-emerald-500 / text-emerald-400 (#10b981 / #34d399)
+   - WhatsApp Button: #25d366 with hover scale & background #1ebe5d
+
+================================================================================
+6. COMPLETE FOLDER STRUCTURE & FILE MANIFEST
+================================================================================
+
+devbhoomi-infotech-solution/
+├── .next/                                  # Next.js build cache & compiled artifacts
+├── components.json                         # shadcn/ui configuration (New York style)
+├── next-env.d.ts                           # Next.js ambient TypeScript definitions
+├── next.config.mjs                         # Next.js configuration (static export, trailing slash)
+├── package.json                            # Project scripts and dependency declarations
+├── package-lock.json                       # Exact dependency lockfile
+├── postcss.config.mjs                      # PostCSS plugins config (@tailwindcss/postcss)
+├── tsconfig.json                           # TypeScript compiler options and '@/*' path aliases
+├── public/                                 # Static public assets served from root
+│   ├── favicon.ico                         # Browser favicon
+│   ├── favicon-16x16.png                   # 16x16 icon
+│   ├── favicon-32x32.png                   # 32x32 icon
+│   ├── apple-touch-icon.png                # iOS Home Screen bookmark icon
+│   ├── android-chrome-192x192.png          # PWA Android medium icon
+│   ├── android-chrome-512x512.png          # PWA Android high-res icon
+│   ├── site.webmanifest                    # Progressive web application manifest
+│   ├── fonts/                              # Self-hosted web font binaries
+│   │   ├── ibrand.otf                      # Custom brand display font
+│   │   ├── Neue-Plak-Light.ttf             # Body font 300
+│   │   ├── Neue-Plak-Regular.ttf           # Body font 400
+│   │   ├── Neue-Plak-SemiBold.ttf          # Body font 600
+│   │   └── Neue-Plak-Bold.ttf              # Body font 700
+│   ├── images/                             # WebP optimized content graphics (by category)
+│   │   ├── ai/                             # AI & automation graphics
+│   │   │   ├── ai-chatbots-customer-support.webp
+│   │   │   ├── ai-lead-generation-agent.webp
+│   │   │   ├── ai-workflow-automation-agent.webp
+│   │   │   └── best-n8n-ai-workflow-services-in-rishikesh.webp
+│   │   ├── websites/                       # Website portfolio & template graphics
+│   │   │   ├── devbhoomi-infotech-hotel-resort-website-rishikesh.webp
+│   │   │   ├── devbhoomi-infotech-trekking-camping-website-rishikesh.webp
+│   │   │   ├── school-college-website-rishikesh.webp
+│   │   │   └── yoga-wellness-website-template-dark-green.webp
+│   │   ├── blog/                           # Blog related graphics
+│   │   │   └── custom-blog-editor-dashboard.webp
+│   │   └── about/                          # About page graphics
+│   │       └── dbi-it-solution-about-us.webp
+│   ├── logo/                               # Official agency brand logos
+│   │   ├── DBI-official-logo-devbhoomi-infotech-white.png
+│   │   ├── DBI-official-logo-devbhoomi-infotech-rishikesh.png
+│   │   ├── DEVBHOOMI-INFOTECH-LOGO.png
+│   │   ├── devbhoomi-infotechs-logo.png
+│   │   ├── logo.png
+│   │   └── logos.png
+│   ├── og/                                 # OpenGraph social share previews
+│   │   ├── website-design-rishikesh.webp
+│   │   └── website-development-rishikesh.webp
+│   └── placeholders/                       # Fallback image assets
+│       ├── placeholder.jpg
+│       ├── placeholder-user.jpg
+│       └── placeholder.svg
+│
+└── src/                                    # Application source code
+    ├── actions/                            # Next.js Server Actions
+    │   └── send-lead.ts                    # Form validation and lead processing handler
+    │
+    ├── app/                                # Next.js App Router Root
+    │   ├── globals.css                     # Global Tailwind v4, @font-face, tokens, keyframes
+    │   ├── layout.tsx                      # RootLayout (HTML, GTM, GA4, Schema, WhatsApp, Analytics)
+    │   ├── not-found.tsx                   # Global 404 page
+    │   ├── robots.ts                       # Dynamic robots.txt generation
+    │   ├── sitemap.ts                      # Dynamic sitemap.xml generator (routes, services, blogs)
+    │   └── (site)/                         # Grouped site layout sharing Header & Footer
+    │       ├── layout.tsx                  # SiteLayout with Sticky Header, Main, Footer
+    │       ├── page.tsx                    # Landing / Home Page
+    │       ├── about/
+    │       │   └── page.tsx                # About Agency Page (Ethos, Stats, Mission)
+    │       ├── services/
+    │       │   ├── page.tsx                # Services Hub / Overview Page
+    │       │   └── [slug]/
+    │       │       └── page.tsx            # Dynamic Service Detail Route
+    │       ├── website-design-services-in-rishikesh-uttarakhand/
+    │       │   └── page.tsx                # Keyword-targeted Website Design Landing Page
+    │       ├── web-development-services-in-rishikesh-uttarakhand/
+    │       │   └── page.tsx                # Keyword-targeted Web Development Landing Page
+    │       ├── digital-marketing/
+    │       │   └── page.tsx                # Digital Marketing & SEO Landing Page
+    │       ├── ai-automation/
+    │       │   └── page.tsx                # AI & Business Automation Landing Page
+    │       ├── blogs/
+    │       │   ├── page.tsx                # Blog Archive & Listing Page
+    │       │   └── [slug]/
+    │       │       └── page.tsx            # Dynamic Single Blog Post Page
+    │       └── contact/
+    │           └── page.tsx                # Contact Us & Consultation Request Page
+    │
+    ├── components/                         # Modular React components
+    │   ├── common/                         # Shared utilities and global widgets
+    │   │   ├── particle-background.tsx     # Canvas-based floating particle network
+    │   │   ├── theme-provider.tsx          # next-themes wrapper
+    │   │   └── whatsapp-button.tsx         # Floating quick-chat CTA
+    │   ├── layout/                         # Structural layout components
+    │   │   ├── header.tsx                  # Top announcement bar + Sticky Nav + Mobile Drawer
+    │   │   └── footer.tsx                  # 4-Column Footer with links, contact, social handles
+    │   └── ui/                             # shadcn/ui Atomic UI components
+    │       ├── badge.tsx                   # Tag / Pill badges
+    │       ├── button.tsx                  # Multi-variant button primitive
+    │       └── dialog.tsx                  # Accessible modal overlay
+    │
+    ├── config/                             # Centralized Site & Navigation Configurations
+    │   ├── navigation.ts                   # Main menu links, dropdown hierarchies, footer links
+    │   └── site.ts                         # Agency metadata, phone numbers, email, geo-coordinates
+    │
+    ├── content/                            # Data repositories & content dictionaries
+    │   ├── blogs.ts                        # Static blog posts database
+    │   ├── faqs.ts                         # General agency FAQs
+    │   ├── packages.ts                     # Pricing tiers (Starter, Standard, Premium)
+    │   ├── projects.ts                     # Case studies & portfolio projects
+    │   └── services/                       # Granular service page datasets
+    │       ├── index.ts                    # Service aggregator and getServiceBySlug utility
+    │       ├── website-design.ts           # Website Design service content
+    │       ├── web-development.ts          # Web Development service content
+    │       ├── digital-marketing.ts        # Digital Marketing & SEO service content
+    │       └── ai-automation.ts            # AI Workflow Automation service content
+    │
+    ├── lib/                                # Utility functions & schemas
+    │   ├── schema.ts                       # JSON-LD Schema generators (LocalBusiness, Breadcrumb, FAQ)
+    │   └── utils.ts                        # cn() classnames merger helper
+    │
+    ├── modules/                            # Domain-driven feature modules
+    │   ├── home/                           # Home page component blocks
+    │   │   ├── hero-section.tsx            # Hero with dual CTA & badge
+    │   │   ├── why-choose-us.tsx           # Agency strengths & value propositions
+    │   │   ├── services-preview.tsx        # 4 core service cards with hover effects
+    │   │   ├── packages-preview.tsx        # Interactive pricing packages table
+    │   │   ├── projects-preview.tsx        # Categorized portfolio grid with tech tags
+    │   │   ├── faq-accordion.tsx           # Accordion FAQ component
+    │   │   └── cta-banner.tsx              # Full-width bottom consultation banner
+    │   ├── contact/                        # Contact module blocks
+    │   │   ├── contact-form.tsx            # Form validation & direct WhatsApp lead dispatch
+    │   │   └── contact-info.tsx            # Direct phone, email, address, operating hours
+    │   ├── blog/                           # Blog module blocks
+    │   │   ├── blog-card.tsx               # Blog post card with category & author
+    │   │   └── blog-content.tsx            # Article renderer
+    │   └── services/                       # Reusable Service Page Templates
+    │       ├── process-tabs.tsx            # Interactive multi-step process viewer
+    │       └── service-detail-template.tsx # Full dynamic service landing page layout
+    │
+    └── types/                              # TypeScript type definitions
+        ├── blog.ts                         # BlogPostItem interface
+        ├── contact.ts                      # ContactLeadInput and ActionResponse interfaces
+        ├── navigation.ts                   # NavItem, SubMenuItem, FooterNavSection
+        └── service.ts                      # ServicePageData, ProcessStep, ServiceFeature, ServiceFAQ
+
+================================================================================
+7. ROUTING & PAGE ARCHITECTURE
+================================================================================
+
+[A] STATIC ROUTES (App Router)
+--------------------------------------------------------------------------------
+Route                              Component               SEO Target
+--------------------------------------------------------------------------------
+/                                  src/app/(site)/page.tsx Main agency homepage
+/about                             about/page.tsx          Agency identity, trust & history
+/services                          services/page.tsx       All services hub
+/contact                           contact/page.tsx        Lead inquiry & location
+/blogs                             blogs/page.tsx          Technical & marketing articles
+/digital-marketing                 digital-marketing/      SEO & performance marketing
+/ai-automation                     ai-automation/          n8n, Chatbots & AI operations
+/website-design-services-          website-design.../      High-intent local Rishikesh SEO
+  in-rishikesh-uttarakhand
+/web-development-services-         web-development.../     High-intent local Rishikesh SEO
+  in-rishikesh-uttarakhand
+
+[B] DYNAMIC ROUTES
+--------------------------------------------------------------------------------
+1. /services/[slug] -> src/app/(site)/services/[slug]/page.tsx
+   - Statically generated via `generateStaticParams()` from allServices.
+   - Slugs: website-design, web-development, digital-marketing, ai-automation.
+2. /blogs/[slug]    -> src/app/(site)/blogs/[slug]/page.tsx
+   - Statically generated via `generateStaticParams()` from blogPosts.
+   - Slugs: technical-seo-2026, ai-chatbots-customer-support, scalable-web-applications, etc.
+
+================================================================================
+8. DATA & CONTENT MODELS
+================================================================================
+
+[A] SERVICE MODEL (src/types/service.ts)
+- ServicePageData:
+  - slug, title, metaTitle, metaDescription, canonicalUrl, keywords
+  - heroBadge, heroHeading { highlight, regular }, heroDescription
+  - overview { heading, content: string[] }
+  - features: ServiceFeature[] { title, description, iconName }
+  - processHeading, processSubheading, processSteps: ProcessStep[]
+  - faqs: ServiceFAQ[] { question, answer }
+
+[B] BLOG MODEL (src/types/blog.ts)
+- BlogPostItem / BlogPost:
+  - id, slug, title, excerpt, category, author, date, image, content
+
+[C] PRICING PACKAGE MODEL (src/content/packages.ts)
+- PricingPackage:
+  - id, name, price, period, description, popular (boolean), cta
+  - features: PackageFeature[] { text, included: boolean }
+  - Current Tiers: Starter Website (₹15,000), Standard Website (₹25,000), Custom/Enterprise
+
+[D] PROJECT PORTFOLIO MODEL (src/content/projects.ts)
+- Project:
+  - _id, title, description, image, category ('web' | 'automation' | 'seo')
+  - technologies: string[], liveLink, codeLink, challenge, solution
+
+================================================================================
+9. SEO, STRUCTURED SCHEMA & ANALYTICS
+================================================================================
+
+[A] SCHEMA.ORG (JSON-LD) AUTOMATION (src/lib/schema.ts)
+1. LocalBusiness Schema:
+   - Injected in root layout head for every page.
+   - Includes official name, logo URL, phone (+91 81260 06791), email,
+     geo-coordinates (Lat: 30.0869, Long: 78.2676), opening hours, price range ($$),
+     and social profile sameAs URLs (Facebook, Instagram, LinkedIn, YouTube, Twitter).
+2. BreadcrumbList Schema:
+   - Dynamic breadcrumb paths automatically generated for Home, Services, and single items.
+3. FAQPage Schema:
+   - Automatically builds Google rich-result FAQ accordions on home and service pages.
+
+[B] METADATA & ROBOTS / SITEMAP
+- Metadata base set to https://www.devbhoomiinfotech.com
+- Dynamic Sitemap (sitemap.ts):
+  - Priority 1.0 on root (daily refresh)
+  - Priority 0.9 on services (weekly refresh)
+  - Priority 0.8 on about/contact/blogs (weekly/monthly)
+- Robots.txt (robots.ts):
+  - Allows all crawler agents except internal /api/ routes.
+  - Declares official sitemap URL.
+
+[C] ANALYTICS EMBEDS
+- Google Tag Manager container: GTM-5QG4HDXN (afterInteractive strategy)
+- Google Analytics 4 stream: G-7JFQ2C4SS3 (afterInteractive strategy)
+- Vercel Analytics integration in root layout.
+
+================================================================================
+10. KEY INTERACTIVE FEATURES & COMPONENTS
+================================================================================
+1. Floating WhatsApp Conversion Trigger:
+   - Fixed bottom-left button with subtle hover animation and viewport-specific sizing.
+   - Pre-fills personalized inquiry message to +91 81260 06791.
+2. Smart Sticky Navigation Header:
+   - Auto-detects scroll offset (>10px) to lock with glassmorphism blur (bg-white/95).
+   - Desktop mega-menu dropdown for 4 core service sectors with descriptive badges.
+   - Mobile-first responsive sliding sheet navigation.
+3. Interactive Process Tabs (ProcessTabs):
+   - Step-by-step visual workflow explaining client onboarding and delivery phases.
+4. Canvas Particle Network (ParticleBackground):
+   - Custom lightweight canvas rendering responsive nodes with proximity-based connection lines.
+   - Automatically switches stroke colors according to light/dark themes.
+5. Dual Contact Submission:
+   - Captures form inputs in React state.
+   - Dispatches structured lead data directly into WhatsApp Web/Mobile chat while logging.
+
+================================================================================
+11. BUILD, SCRIPTS & DEPLOYMENT SETUP
+================================================================================
+
+[A] PACKAGE SCRIPTS
+- "npm run dev"   : next dev --webpack (starts local development server with Turbopack fallback)
+- "npm run build" : next build --webpack (compiles static bundle into /out directory)
+- "npm run start" : next start (runs production server if not exported)
+- "npm run lint"  : eslint . (static code analysis)
+
+[B] NEXT CONFIGURATION (next.config.mjs)
+- output: "export"      -> Emits pure static HTML/CSS/JS files for ultra-fast CDN hosting
+- trailingSlash: true   -> Ensures clean directory routing on static hosts (Netlify, S3, Vercel)
+- images.unoptimized: true -> Disables Node-dependent image optimizer for static export
+- typescript.ignoreBuildErrors: true -> Prevents CI build breaks during rapid deployment
+
+================================================================================
+12. SENIOR REVIEW HIGHLIGHTS & RECOMMENDATIONS
+================================================================================
+
+[A] ARCHITECTURAL STRENGTHS
+1. Clean Separation of Concerns: Clear modular split between `app/` (routing),
+   `modules/` (features), `content/` (data), `config/` (environment/site), and `components/` (UI).
+2. Zero Vendor Lock-in: Can be deployed to any static host (Cloudflare Pages, AWS S3/CloudFront,
+   GitHub Pages, Netlify, or Vercel).
+3. Search Engine Dominance: Extensive localized Rishikesh keyword targeting,
+   dynamic sitemaps, JSON-LD microdata, and high-performance font preconnects.
+4. Next-Gen Tooling: React 19, Tailwind CSS v4, and Radix UI components ensure high longevity.
+
+[B] SUGGESTED FUTURE ENHANCEMENTS
+1. Headless CMS Integration: Future migration of `src/content/blogs.ts` into a headless CMS
+   (e.g., Sanity, Strapi, or MDX with Contentlayer) for non-technical marketing editing.
+2. API Lead Persistence: Connect `src/actions/send-lead.ts` to a serverless database
+   (Supabase / PostgreSQL) or CRM webhook (HubSpot / Make.com / n8n) alongside WhatsApp.
+3. Automated Image Pipeline: Introduce automated WebP/AVIF script in build steps for 
+   custom portfolio images added in `/public/images/`.
+
+================================================================================
+End of Technical Specification Document
+================================================================================

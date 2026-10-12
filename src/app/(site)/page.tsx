@@ -1,47 +1,83 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/modules/home/hero-section";
-import { WhyChooseUsSection } from "@/modules/home/why-choose-us";
+import { TrustBar } from "@/modules/home/trust-bar";
+import { AboutBrief } from "@/modules/home/about-brief";
 import { ServicesPreviewSection } from "@/modules/home/services-preview";
-import { PackagesPreviewSection } from "@/modules/home/packages-preview";
+import { WhyChooseUsSection } from "@/modules/home/why-choose-us";
 import { ProjectsPreviewSection } from "@/modules/home/projects-preview";
+import { TestimonialsSection } from "@/modules/home/testimonials-section";
+import { ProcessSection } from "@/modules/home/process-section";
+import { PackagesPreviewSection } from "@/modules/home/packages-preview";
+import { ExploreRegionsSection } from "@/modules/home/explore-regions-section";
+import { InsightsPreviewSection } from "@/modules/home/insights-preview";
 import { FaqAccordionSection } from "@/modules/home/faq-accordion";
-import { CtaBannerSection } from "@/modules/home/cta-banner";
+import { ContactSection } from "@/modules/home/contact-section";
 import { siteConfig } from "@/config/site";
 import { siteFAQs } from "@/content/faqs";
 import { generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
-  title: "Devbhoomi Infotech Solutions | AI, Automation & Web Development in Rishikesh",
+  title: "Devbhoomi Infotech — Web, Software & AI Automation in Rishikesh, Uttarakhand",
   description:
-    "Devbhoomi Infotech Solutions is the top AI, automation, web and software development company in Rishikesh, India. We build SEO-optimized websites, AI-powered automation systems, and scalable digital solutions.",
+    "Technology and digital growth partner rooted in Rishikesh, Uttarakhand. We engineer custom websites, business software, AI automations, and search visibility for clients across India.",
   alternates: {
-    canonical: siteConfig.url,
+    canonical: `${siteConfig.url}/`,
   },
 };
 
 export default function HomePage() {
   const faqSchema = generateFAQSchema(siteFAQs);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: siteConfig.url },
+    { name: "Home", url: `${siteConfig.url}/` },
   ]);
 
   return (
     <div className="w-full">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={faqSchema} />
+
+      {/* 1. Hero Section */}
       <HeroSection />
-      <WhyChooseUsSection />
+
+      {/* 2. Trust Bar (Verified stats only) */}
+      <TrustBar />
+
+      {/* 3. About (Brief) */}
+      <AboutBrief />
+
+      {/* 4. Services (4 Core Groups) */}
       <ServicesPreviewSection />
+
+      {/* 5. Why Choose Us */}
+      <WhyChooseUsSection />
+
+      {/* 6. Projects (Categorized with honest badges) */}
       <ProjectsPreviewSection />
+
+     
+
+      {/* 8. Process (6-Step Disciplined Methodology) */}
+      <ProcessSection />
+
+      {/* 9. Packages & Pricing (id="packages") */}
       <PackagesPreviewSection />
+
+     
+
+       {/* 7. Client Testimonials & Feedback (Verified only) */}
+      <TestimonialsSection />
+
+   
+
+      {/* 12. Contact & Conversion */}
+      <ContactSection />
+      {/* 11. FAQ (Answer-first Q&As with Schema) */}
       <FaqAccordionSection />
-      <CtaBannerSection />
+       {/* 10. Insights (Latest 3 verified blog articles) */}
+      <InsightsPreviewSection />
+         {/* 8. Regional Service Explorer */}
+      <ExploreRegionsSection />
     </div>
   );
 }

@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     category: "SEO",
     author: "Devbhoomi SEO Team",
     date: "Jan 15, 2026",
-    image: "/images/custom-blog-editor-dashboard.webp",
+    image: "/images/blog/custom-blog-editor-dashboard.webp",
     slug: "technical-seo-2026",
     content:
       "Technical SEO is the foundation of digital search dominance. Learn how site structure, Core Web Vitals, JSON-LD Schema, and mobile-first indexing can catapult your business rankings in Rishikesh and nationwide.",
@@ -32,10 +32,10 @@ export const blogPosts: BlogPost[] = [
     category: "AI",
     author: "AI Automation Team",
     date: "Jan 12, 2026",
-    image: "/images/best-n8n-ai-workflow-services-in-rishikesh.webp",
+    image: "/images/ai/best-n8n-ai-workflow-services-in-rishikesh.webp",
     slug: "ai-chatbots-customer-support",
     content:
-      "Modern AI assistants and automated WhatsApp workflows enable businesses to engage potential clients 24/7 without growing operational overhead.",
+      "Modern AI assistants and automated WhatsApp workflows enable businesses to engage potential clients around the clock without growing operational overhead.",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
     category: "Web Dev",
     author: "Engineering Team",
     date: "Jan 10, 2026",
-    image: "/images/yoga-wellness-website-template-dark-green.webp",
+    image: "/images/websites/yoga-wellness-website-template-dark-green.webp",
     slug: "scalable-web-applications",
     content:
       "Scalable web architecture combines Next.js Server Components, lightweight state management, edge deployment, and clean code principles.",
@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
     category: "SEO",
     author: "Devbhoomi SEO Team",
     date: "Jan 8, 2026",
-    image: "/images/devbhoomi-infotech-hotel-resort-website-rishikesh.webp",
+    image: "/images/websites/devbhoomi-infotech-hotel-resort-website-rishikesh.webp",
     slug: "ecommerce-seo-best-practices",
     content:
       "Drive consistent organic revenue with targeted category keyword optimization, fast checkout funnels, and structured product reviews.",
@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
     category: "Digital Marketing",
     author: "Marketing Strategist",
     date: "Jan 5, 2026",
-    image: "/images/school-college-website-rishikesh.webp",
+    image: "/images/websites/school-college-website-rishikesh.webp",
     slug: "digital-marketing-trends-2026",
     content:
       "From hyper-targeted local geo-campaigns to conversational AI search, explore the strategies driving maximum ROI for companies.",

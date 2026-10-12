@@ -57,7 +57,7 @@ export default async function BlogPostDetailPage({ params }: BlogPostPageProps) 
           {post.category}
         </span>
 
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-white ">
           {post.title}
         </h1>
 

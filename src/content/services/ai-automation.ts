@@ -18,7 +18,7 @@ export const aiAutomationService: ServicePageData = {
     highlight: "Rishikesh",
   },
   heroDescription:
-    "Transform manual business operations with intelligent chatbots, automated customer lead funnels, and custom AI agents that work 24/7.",
+    "Transform manual business operations with intelligent chatbots, automated customer lead funnels, and custom AI agents that work continuously.",
   overview: {
     heading: "Save Hundreds of Hours with Intelligent Automation",
     content: [
