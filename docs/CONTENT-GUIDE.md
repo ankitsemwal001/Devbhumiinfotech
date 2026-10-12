@@ -7,7 +7,7 @@ This document details the business information, credentials, and verification po
 ## 1. Company Identity & Registration
 
 - [ ] **Legal / Registered Entity Name**: Confirm if the legal registration is _Devbhoomi Infotech_ or _Devbhoomi Infotech Solutions_.
-- [ ] **Registered Postcode Resolution**: Verify the exact PIN code between `249201` (Rishikesh Dhalwala) and `249137` (Muni Ki Reti/Tehri Garhwal). Currently set to `249201`.
+- [ ] **Registered Postcode Resolution**: Currently set to `249201`. Owner: confirm against your Google Business Profile address (the old live footer said 249137).
 - [ ] **Founding Year**: Provide the formal inception year (e.g. 2021) to add a factual _"Founded in [Year]"_ line on `/about/`.
 
 ---
@@ -45,7 +45,9 @@ This document details the business information, credentials, and verification po
 The platform actively serves two primary economic regions: **Uttarakhand** and **Delhi NCR**.
 
 ### 4.1 Regional Market Profiles
+
 When writing or expanding geo-specific content, adhere to these localized industry profiles:
+
 1. **Rishikesh & Ganga Valley**: Yoga teacher training (YTT), wellness centers, luxury riverside camps, white-water rafting agencies, organic cafes, ayurvedic clinics.
 2. **Dehradun & Doon Valley**: Premier boarding schools, universities, IT Park software firms, dental & multi-specialty hospitals, retail showrooms, architects.
 3. **Delhi & National Capital Region (NCR)**: High-growth tech startups, SaaS platforms, direct-to-consumer (D2C) brands, financial consulting firms, corporate agencies.
@@ -53,6 +55,7 @@ When writing or expanding geo-specific content, adhere to these localized indust
 5. **Haridwar & SIDCUL**: Manufacturing facilities, pharmaceutical formulations, packaging units, pilgrimage hospitality.
 
 ### 4.2 Anti-Doorway Page Rules
+
 - Every programmatic geo landing page generated via `[geoSlug]` MUST present genuine value:
   - Specific turnaround times and technology stack details.
   - Localized industry challenges and advantages.

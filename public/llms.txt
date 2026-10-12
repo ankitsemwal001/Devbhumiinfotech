@@ -9,7 +9,6 @@ Devbhoomi Infotech Solutions is an IT and digital growth agency specializing in 
 - **Primary Website**: https://www.devbhoomiinfotech.com
 - **Phone**: +91 81260 06791
 - **Email**: infotechdevbhoomi@gmail.com
-- **Business Hours**: Monday - Saturday, 09:30 AM - 06:30 PM IST
 
 ## Core Practice Areas
 1. **AI & Business Automation**: Custom AI agents, conversational chatbots, automated CRM/lead pipelines, and n8n/API workflow automations.

@@ -65,13 +65,6 @@ export function generateLocalBusinessSchema() {
             name: "India",
           },
         ],
-        openingHoursSpecification:
-          siteConfig.contact.openingHours.schemaSpecification.map((spec) => ({
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: spec.dayOfWeek,
-            opens: spec.opens,
-            closes: spec.closes,
-          })),
         sameAs: verifiedSameAs,
       },
       {

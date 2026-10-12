@@ -140,20 +140,16 @@ export function Footer() {
                   {siteConfig.contact.email}
                 </a>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Clock className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>{siteConfig.contact.openingHours.days} ({siteConfig.contact.openingHours.hours})</span>
-              </li>
             </ul>
 
             {/* Service Areas */}
             <div className="pt-2 border-t border-slate-900">
               <div className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
-                Primary Service Hubs:
+                Areas We Serve:
               </div>
               <div className="flex flex-wrap gap-x-2 gap-y-1 text-xs text-slate-400 leading-relaxed">
-                <Link href="/website-design-in-rishikesh/" className="hover:text-blue-400 transition-colors">
-                  Rishikesh
+                <Link href="/website-design-services-in-rishikesh-uttarakhand/" className="hover:text-blue-400 transition-colors">
+                  Rishikesh (HQ)
                 </Link>
                 <span>·</span>
                 <Link href="/website-design-in-dehradun/" className="hover:text-blue-400 transition-colors">
@@ -164,15 +160,7 @@ export function Footer() {
                   Haridwar
                 </Link>
                 <span>·</span>
-                <Link href="/web-development-in-roorkee/" className="hover:text-blue-400 transition-colors">
-                  Roorkee
-                </Link>
-                <span>·</span>
-                <Link href="/website-design-in-haldwani/" className="hover:text-blue-400 transition-colors">
-                  Haldwani
-                </Link>
-                <span>·</span>
-                <span className="text-slate-500">Across Uttarakhand & India</span>
+                <span className="text-slate-500">Across Uttarakhand & Pan-India</span>
               </div>
             </div>
           </div>

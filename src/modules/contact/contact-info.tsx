@@ -32,7 +32,7 @@ export function ContactInfo() {
               {siteConfig.contact.phone}
             </a>
             <p className="text-xs text-slate-500 mt-0.5">
-              {siteConfig.contact.openingHours.days} ({siteConfig.contact.openingHours.hours})
+              Direct line for project inquiries & consultations
             </p>
           </div>
         </div>
