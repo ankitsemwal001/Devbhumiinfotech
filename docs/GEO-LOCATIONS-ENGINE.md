@@ -2,180 +2,96 @@
 
 ## 1. Overview & Business Objective
 
-The **Programmatic GEO Engine** powers local organic search visibility for Devbhoomi Infotech Solutions across Northern India's prime commercial, technological, and tourism areas.
+The **Programmatic GEO Engine** powers local organic search visibility for Devbhoomi Infotech across Uttarakhand's prime economic, technological, and tourism hubs.
 
-Rather than relying on generic, nationwide landing pages, the engine statically compiles hyper-localized service pages under the URL scheme:
+Rather than publishing hundreds of thin, cross-multiplied doorway pages across cities where the company lacks physical presence, the platform adheres strictly to Google's spam policies and the owner's operational facts:
+- **Headquarters**: Near Dhalwala, Rishikesh, Uttarakhand (PIN: `249137`).
+- **Local Service Area**: Rishikesh, Dehradun, and Haridwar.
+- **Global Delivery**: Remote technology partner serving clients worldwide.
+
+Statically compiled local service pages follow the URL scheme:
 ```
 https://www.devbhoomiinfotech.com/${serviceSlug}-in-${locationSlug}/
 ```
-Examples:
-- `/website-design-in-dehradun/`
-- `/web-development-in-delhi/`
-- `/ai-automation-in-noida/`
-- `/seo-services-in-rishikesh/`
 
-Each page combines service specifications with hyper-local business intelligence, demographic relevance, and automated Schema.org structured data.
+Active Examples:
+- `/website-design-in-dehradun/`
+- `/web-development-in-haridwar/`
+- `/seo-services-in-rishikesh/`
+- `/ai-automation-in-dehradun/`
+
+Each page combines service specifications with authentic local business context, distinct FAQs, and Schema.org structured data.
 
 ---
 
 ## 2. Central Locations Dataset (`locations.json`)
 
-The entire geo architecture is driven by the single root dataset: `locations.json`.
+The geo architecture is defined in `locations.json` and parsed by `src/content/locations/geo-page-data.ts`.
 
-### Structure
-```json
-{
-  "services": [
-    {
-      "name": "Website Design",
-      "slug": "website-design",
-      "h1Noun": "Website Design Company"
-    },
-    {
-      "name": "Web Development",
-      "slug": "web-development",
-      "h1Noun": "Web Development Company"
-    },
-    {
-      "name": "SEO Services",
-      "slug": "seo-services",
-      "h1Noun": "SEO Company"
-    },
-    {
-      "name": "Digital Marketing",
-      "slug": "digital-marketing",
-      "h1Noun": "Digital Marketing Agency"
-    },
-    {
-      "name": "Google Ads Management",
-      "slug": "google-ads-management",
-      "h1Noun": "Google Ads Management Company"
-    },
-    {
-      "name": "E-commerce Website Development",
-      "slug": "ecommerce-website-development",
-      "h1Noun": "E-commerce Website Development Company"
-    },
-    {
-      "name": "AI Automation",
-      "slug": "ai-automation",
-      "h1Noun": "AI Automation Company"
-    },
-    {
-      "name": "AI Chatbot Development",
-      "slug": "ai-chatbot-development",
-      "h1Noun": "AI Chatbot Development Company"
-    },
-    {
-      "name": "WhatsApp Automation",
-      "slug": "whatsapp-automation",
-      "h1Noun": "WhatsApp Automation Services"
-    }
-  ],
-  "locations": [
-    {
-      "name": "Rishikesh",
-      "slug": "rishikesh",
-      "parent": null,
-      "district": "Dehradun",
-      "type": "city",
-      "priority": "high",
-      "published": true
-    },
-    {
-      "name": "Dehradun",
-      "slug": "dehradun",
-      "parent": null,
-      "district": "Dehradun",
-      "type": "city",
-      "priority": "high",
-      "published": true
-    },
-    {
-      "name": "Delhi",
-      "slug": "delhi",
-      "parent": null,
-      "district": "Delhi NCR",
-      "type": "city",
-      "priority": "high",
-      "published": true
-    },
-    {
-      "name": "Noida",
-      "slug": "noida",
-      "parent": null,
-      "district": "Gautam Buddha Nagar",
-      "type": "city",
-      "priority": "high",
-      "published": true
-    }
-  ]
-}
+### Strict Anti-Doorway Guardrails
+To prevent thin pages and doorway penalties:
+1. **Physical & Earned Presence Only**: Only locations with confirmed physical operations (Rishikesh HQ) or active, nearby service capability within Uttarakhand (Dehradun, Haridwar) are set to `published: true`.
+2. **Unpublished External Markets**: Regional metros such as Delhi, Noida, Gurgaon, and peripheral towns remain `published: false` until physical office leases or verified on-site client representations are established.
+3. **Four Geo-Enabled Services**: Only 4 core disciplines are geo-indexed:
+   - Website Design (`website-design`)
+   - Web Development (`web-development`)
+   - SEO Services (`seo-services`)
+   - AI Automation (`ai-automation`)
+4. **Legacy URL Preservation**: For Rishikesh, legacy URLs (`/website-design-services-in-rishikesh-uttarakhand/` and `/web-development-services-in-rishikesh-uttarakhand/`) are retained to preserve equity, leaving 2 programmatic pages for Rishikesh (`seo-services-in-rishikesh` and `ai-automation-in-rishikesh`).
+
+### Exactly 10 Published SSG Pages
+```
+4 services × 2 service-area cities (Dehradun, Haridwar) = 8 pages
++ 2 services × 1 HQ city (Rishikesh)                    = 2 pages
+─────────────────────────────────────────────────────────────────
+Total Earned Geo Pages                                  = 10 pages
 ```
 
 ---
 
-## 3. Areas We Serve
+## 3. Published Regional Hubs
 
-The homepage regional section (`<ExploreRegionsSection />`) highlights 3 published hubs:
-
-| Area | Region | Economic Focus | Delivery Approach |
+| Hub | Role | Primary Economic Focus | Delivery Approach |
 | :--- | :--- | :--- | :--- |
-| **Dehradun** | Doon Valley, UK | State administrative capital, IT Park, universities & healthcare institutions | Physical proximity, enterprise engineering at regional cost structure |
-| **Haridwar** | Haridwar, UK | Industrial manufacturing, SIDCUL, healthcare & hospitality | Remote delivery and on-site alignment across Uttarakhand |
-| **Rishikesh** | Ganga Valley, UK | Global capital for yoga teacher training (YTT), luxury wellness retreats, adventure travel | Headquarters location, direct communication, tailored direct-booking engines |
+| **Rishikesh** | **Headquarters (HQ)** | Wellness retreats, yoga teacher training (YTT), adventure sports, ayurvedic centers | On-site consultations, direct collaboration, local business support |
+| **Dehradun** | **Service Area** | State administrative capital, IT Park, higher education, healthcare institutions | Regional delivery, agile engineering, local meetings across Doon Valley |
+| **Haridwar** | **Service Area** | Manufacturing facilities, SIDCUL industrial corridor, pharmaceuticals, hospitality | Remote technical delivery and regional coordination across Haridwar district |
 
 ---
 
-## 4. Homepage Explorer Component (`<ExploreRegionsSection />`)
+## 4. Homepage Section: "Based in Rishikesh. Working worldwide."
 
-Located at line 80 of `src/app/(site)/page.tsx`:
+The homepage regional section (`src/modules/home/explore-regions-section.tsx`) reinforces truthful geographic positioning:
 
-1. **Step 1: Service Switcher**: Allows visitors to toggle between the 9 technology disciplines (Website Design, Web Development, SEO, AI Automation, etc.).
-2. **Step 2: Live Search Bar (Pre-City Position)**:
-   - Built with an overlap-proof flexbox container (`flex items-center gap-3 px-4 py-3.5 bg-slate-900`).
-   - The `<Search />` icon is positioned in-flow before the input, guaranteeing the search icon and placeholder text never overlap.
-   - Searches across all 42+ published locations dynamically in real time.
-3. **Step 3: Location Cards Grid**:
-   - Default state (empty query): Displays the **4 main cities** (Dehradun, Delhi, Rishikesh, Noida) with customized badges and service previews.
-   - Searching state: Displays all locations matching the search query with a result count badge and reset button.
-4. **Step 4: Show More Locations CTA**:
-   - Prominent gradient button linking directly to `/locations/`.
+1. **Rishikesh HQ Card**: Highlights the headquarters base with direct links to local services.
+2. **Local Clients in Uttarakhand Cards**: Features Dehradun and Haridwar with links to localized web and software services.
+3. **Remote Clients Worldwide Card**: Directs international and out-of-state visitors to the project consultation and intake form (`/contact/`).
 
 ---
 
 ## 5. Central Locations Directory (`/locations/`)
 
 Located at `src/app/(site)/locations/page.tsx` using `<LocationsDirectory />`:
-
-- **Complete Geographic Coverage**: Displays all 42+ published locations.
-- **Filter Tabs**:
-  - `All Hubs` (42+)
-  - `Delhi NCR & Noida`
-  - `Dehradun Hub`
-  - `Rishikesh Valley`
-  - `Haridwar & SIDCUL`
-  - `Commercial Towns` (Mussoorie, Roorkee, Haldwani, Nainital, Rudrapur, Kotdwar)
-- **Interactive Service Switcher**: Changes target links dynamically so every location card updates its destination URL (e.g. `/web-development-in-delhi/`).
-- **Live Search Input**: Instant locality and district filter with clear button.
+- Features the 3 published Uttarakhand hubs (Rishikesh, Dehradun, Haridwar).
+- Allows toggling between the 4 geo-enabled services to view corresponding local service pages.
+- Highlights the remote delivery model for international and out-of-region clients.
 
 ---
 
 ## 6. Programmatic Static Generation Workflow (`[geoSlug]`)
 
-1. **Static Param Enumeration**:
-   `src/content/locations/geo-page-data.ts` exports `getAllPublishedGeoSlugs()`:
+1. **Param Enumeration (`src/content/locations/geo-page-data.ts`)**:
+   `getAllPublishedGeoSlugs()` filters published locations and returns exactly the 10 approved slugs for static pre-rendering at build time:
    ```typescript
    export function getAllPublishedGeoSlugs(): Array<{ geoSlug: string }> {
-     // Cross-multiplies 9 published services × 42 published locations
-     // Returns 378+ statically generated HTML routes
+     return getPublishedGeoCombinations().map((combo) => ({
+       geoSlug: `${combo.serviceSlug}-in-${combo.locationSlug}`,
+     }));
    }
    ```
 2. **Page Compilation (`src/app/(site)/[geoSlug]/page.tsx`)**:
-   Runs `generateMetadata()` and renders `<GeoServiceTemplate data={data} />`.
-3. **Dynamic Regional Context (`getIndustryProfile`)**:
-   Injects authentic industry challenges based on location slug and district:
-   - Selects correct regional suffix (`NCR` for Delhi/Noida vs `Uttarakhand` for Doon/Ganga Valley).
-   - Generates distinct `features`, `keyFacts`, `processSteps`, and `faqs`.
-4. **FAQ Default State**:
-   All FAQ items on geo landing pages initialize with `openFaqIndex = null` (closed by default) to eliminate layout shift and unnecessary scrolling on mobile devices.
+   Generates localized metadata and renders `<GeoServiceTemplate data={data} />`.
+3. **Hand-Written Local Intelligence (`src/content/locations/location-facts.ts`)**:
+   Supplies unique local business profiles, verified district facts, and city-specific FAQs.
+4. **Uniqueness Quality Gate (`scripts/check-geo.mjs`)**:
+   Evaluates 5-word-shingle Jaccard similarity across all pairwise pages sharing the same service. All pages must remain below `0.55` (current scores range between 0.006 and 0.033).

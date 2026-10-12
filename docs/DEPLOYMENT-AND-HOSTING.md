@@ -76,17 +76,19 @@ ErrorDocument 404 /404.html
 ## 4. Production Build & Deployment Steps
 
 ### Step 1: Pre-Build Quality Checks
-Ensure there are no compilation errors or broken links:
+Run the complete automated verification suite, typecheck, and linter:
 ```bash
-npm run check:content
+npm run verify
 npx tsc --noEmit
 npm run lint
 ```
+`npm run verify` validates all 7 compliance gates (claims denylist, geo uniqueness, canonical URLs, content verification, linked schema graph, link integrity, and llms.txt synchronization).
 
 ### Step 2: Compile Static Export
 ```bash
 npm run build
 ```
+This automatically compiles `public/feed.xml` and `public/llms-full.txt` from content files, then executes Next.js static export.
 This produces the standalone static folder:
 ```
 devbhoomi-infotech-solution/out/

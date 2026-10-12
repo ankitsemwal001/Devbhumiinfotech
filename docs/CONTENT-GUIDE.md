@@ -1,29 +1,29 @@
 # Content Guide & Owner Verification Checklist
 
-This document details the business information, credentials, and verification points required from the business owner to elevate pages from planned to live, and maintain factual integrity across all programmatic landing pages.
+This document details the business information, credentials, and verification points required from the business owner to elevate pages from planned to live, and maintain factual integrity across all pages.
 
 ---
 
 ## 1. Company Identity & Registration
 
-- [ ] **Legal / Registered Entity Name**: Confirm if the legal registration is _Devbhoomi Infotech_ or _Devbhoomi Infotech Solutions_.
-- [ ] **Registered Postcode Resolution**: Currently set to `249137`. Owner: confirm against your Google Business Profile address (the old live footer said 249137).
-- [ ] **Founding Year**: Provide the formal inception year (e.g. 2021) to add a factual _"Founded in [Year]"_ line on `/about/`.
+- [ ] **Legal / Registered Entity Name**: Confirm if the formal legal registration is _Devbhoomi Infotech_ or _Devbhoomi Infotech Solutions_.
+- [ ] **Registered Postcode Resolution**: Verified in codebase as `249137` (Near Dhalwala, Rishikesh).
+- [ ] **Founding Year**: Provide the formal inception year (e.g. 2021) to activate the _"Founded in [Year]"_ line on `/about/`.
 
 ---
 
 ## 2. Profiles & Verifiable Channels
 
 - [ ] **Google Business Profile (GBP)**:
-  - Provide direct GBP Maps link.
-  - Provide direct GBP Review link for customer feedback requests.
+  - Provide direct GBP Maps link for the Rishikesh headquarters.
+  - Provide direct GBP review link for customer feedback requests.
 - [ ] **Social Media Profile URLs**:
-  - Instagram profile URL
   - LinkedIn company page URL
+  - Instagram profile URL
   - Facebook page URL
   - YouTube channel URL
   - X / Twitter profile URL
-    _(Note: Social icons are hidden until valid profile URLs are populated in `src/config/site.ts`)_.
+  *(Note: Social icons and schema sameAs links remain suppressed until valid URLs are populated in `src/config/site.ts`)*.
 
 ---
 
@@ -40,42 +40,45 @@ This document details the business information, credentials, and verification po
 
 ---
 
-## 4. Geo Location & Regional Content Standards
+## 4. Geographic Positioning & Regional Content Standards
 
-The platform actively serves two primary economic regions: **Uttarakhand** and **Delhi NCR**.
+The platform's positioning is:
+> **"Headquartered in Rishikesh, Uttarakhand — serving clients worldwide, remotely."**
 
-### 4.1 Regional Market Profiles
+### 4.1 Local SEO Focus (Uttarakhand)
+Local search optimization is restricted to 3 earned locations:
+1. **Rishikesh (HQ)**: Wellness retreats, yoga teacher training (YTT), adventure sports, local retail, ayurvedic clinics.
+2. **Dehradun (Service Area)**: Regional institutions, universities, IT Park software firms, healthcare organizations.
+3. **Haridwar (Service Area)**: Manufacturing facilities, pharmaceutical formulations, SIDCUL industrial units, pilgrimage hospitality.
 
-When writing or expanding geo-specific content, adhere to these localized industry profiles:
-
-1. **Rishikesh & Ganga Valley**: Yoga teacher training (YTT), wellness centers, luxury riverside camps, white-water rafting agencies, organic cafes, ayurvedic clinics.
-2. **Dehradun & Doon Valley**: Regional boarding schools, universities, IT Park software firms, dental & multi-specialty hospitals, retail showrooms, architects.
-3. **Delhi & National Capital Region (NCR)**: High-growth tech startups, SaaS platforms, direct-to-consumer (D2C) brands, financial consulting firms, corporate agencies.
-4. **Noida & IT Corridor**: Software product companies, commercial real estate developers, fintech applications, industrial logistics.
-5. **Haridwar & SIDCUL**: Manufacturing facilities, pharmaceutical formulations, packaging units, pilgrimage hospitality.
-
-### 4.2 Anti-Doorway Page Rules
-
-- Every programmatic geo landing page generated via `[geoSlug]` MUST present genuine value:
-  - Specific turnaround times and technology stack details.
-  - Localized industry challenges and advantages.
-  - Distinct service FAQs and localized schema markup.
-  - Cross-links to related services and neighbouring localities within the same hub.
+### 4.2 Anti-Doorway Guardrails for External Markets
+- External metropolitan markets (such as Delhi, Noida, Gurgaon) and distant towns remain `published: false` in `locations.json` until verified on-site presence or office leases exist.
+- International clients are served through global, topic-first service pages in English, not through auto-generated country or city landing pages.
 
 ---
 
-## 5. Operational Hours & Service Promises
+## 5. International Client Delivery Verification
 
-- [ ] **Confirmed Support Hours**: Standard hours are set to Monday - Saturday, 09:30 AM - 06:30 PM IST. If extended emergency support is offered, provide the exact SLA.
-- [ ] **Response Time**: Confirm inquiry response expectations (e.g. within 24 business hours).
-- [ ] **Training Courses**: Confirm whether offline/online IT training programs are still offered. (Kept out of primary navigation until confirmed).
+To promote the planned guide `/about/working-with-us-remotely/` to live, the owner must provide:
+- [ ] **Time Zone Collaboration**: Standard working hours (IST) and typical overlap hours for clients in Europe, North America, and APAC.
+- [ ] **Communication Channels**: Slack / Microsoft Teams / WhatsApp / Google Meet protocols.
+- [ ] **International Billing & Currencies**: Supported international payment methods (wire transfer, Stripe, international invoices) and quoting currencies (USD, EUR, GBP, INR).
+- [ ] **Contract & IP Transfer**: Standard Master Services Agreement (MSA) and IP assignment terms for cross-border engagements.
 
 ---
 
-## 6. Pricing & Scope Disclaimers
+## 6. Operational Hours & Support Promises
 
-- [ ] **"Starting from" Confirmation**:
+- [ ] **Confirmed Support Hours**: Standard business hours (e.g. Monday - Saturday, 09:30 AM - 06:30 PM IST). Operating hours schema nodes remain omitted until confirmed.
+- [ ] **Response Time**: Confirm client response expectation (e.g. within 24 business hours).
+- [ ] **Training Courses**: Confirm whether IT training courses are still offered. (Kept out of primary navigation until confirmed).
+
+---
+
+## 7. Pricing & Scope Disclaimers
+
+- [ ] **"Starting from" Tiers**:
   - Starter Website: ₹15,000 (starting from)
   - Standard Website: ₹25,000 (starting from)
   - Comprehensive Website: ₹40,000 (starting from)
-- [ ] **Exclusions**: Note that custom domain registration, third-party hosting fees, GST, and external paid APIs (e.g. OpenAI tokens, WhatsApp Cloud API fees) are billed directly by respective providers.
+- [ ] **Exclusions**: Note that custom domain registration, third-party hosting fees, GST, and external paid APIs (e.g. OpenAI tokens, WhatsApp Cloud API) are billed directly by respective providers.
